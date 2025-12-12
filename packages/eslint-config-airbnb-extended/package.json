@@ -31,17 +31,20 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
     },
     "./legacy": {
-      "import": "./dist/legacy.js",
-      "require": "./dist/legacy.cjs"
+      "types": "./dist/legacy.d.cts",
+      "require": "./dist/legacy.cjs",
+      "default": "./dist/legacy.cjs"
     },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.cts",
   "scripts": {
     "prebuild": "pnpm check:updates",
@@ -56,13 +59,13 @@
   },
   "devDependencies": {
     "@types/confusing-browser-globals": "^1.0.3",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "tsdown": "catalog:",
     "tsx": "catalog:"
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^15.0.0 || ^16.0.0",
     "@stylistic/eslint-plugin": "^5.0.0",
-    "@types/eslint-plugin-jsx-a11y": "^6.0.0",
     "eslint": "^9.0.0",
     "eslint-import-resolver-typescript": "^4.0.0",
     "eslint-plugin-import": "^2.0.0",
@@ -78,9 +81,6 @@
       "optional": true
     },
     "@stylistic/eslint-plugin": {
-      "optional": true
-    },
-    "@types/eslint-plugin-jsx-a11y": {
       "optional": true
     },
     "eslint": {
