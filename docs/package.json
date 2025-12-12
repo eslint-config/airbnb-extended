@@ -22,7 +22,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.6.0"
+    "@vercel/analytics": "^1.6.1"
   },
   "devDependencies": {
     "vitepress": "^1.6.4",
