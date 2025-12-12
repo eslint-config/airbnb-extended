@@ -36,7 +36,6 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | **Strict**         | Enables strict mode rules.                                                   |
 | **Style**          | Covers general code style rules such as spacing, quotes, and semicolons.     |
 | **Stylistic**      | Uses `@stylistic/eslint-plugin` for consistent formatting.                   |
-| **Stylistic Plus** | Adds supplementary rules introduced by ESLint Stylistic.                     |
 | **Variables**      | Validates variable declarations, usage, and scoping rules.                   |
 
 ### Node Rules {#node-rules}
@@ -71,7 +70,6 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | **Base**                     | Adjusts ESLint by disabling rules covered by TypeScript and enabling ones that benefit from type-checking.                              |
 | **Stylistic**                | Uses `@stylistic/eslint-plugin` to enforce consistent TypeScript code formatting.                                                       |
-| **Stylistic Plus**           | Adds supplementary TypeScript rules introduced by ESLint Stylistic.                                                                     |
 | **TypeScript ESLint**        | Rules powered by `typescript-eslint`.                                                                                                   |
 | **Imports**                  | Activates `eslint-plugin-import-x` rules needed for TypeScript while disabling rules already covered by TypeScript to avoid redundancy. |
 | **TypeScript ESLint Strict** | See [Strict TypeScript ESLint](../customization/strict-rules.md#strict-typescript-rules).                                               |

@@ -61,7 +61,7 @@
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^15.0.0 || ^16.0.0",
-    "@stylistic/eslint-plugin": "^3.0.0",
+    "@stylistic/eslint-plugin": "^5.0.0",
     "@types/eslint-plugin-jsx-a11y": "^6.0.0",
     "eslint": "^9.0.0",
     "eslint-import-resolver-typescript": "^4.0.0",
