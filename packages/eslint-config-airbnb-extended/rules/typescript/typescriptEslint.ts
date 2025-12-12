@@ -18,7 +18,6 @@ const typescriptEslintRules = {
   rules: {
     // Require that function overload signatures be consecutive.
     // https://typescript-eslint.io/rules/adjacent-overload-signatures
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/adjacent-overload-signatures': 'off',
 
     // Require consistently using either T[] or Array<T> for arrays.
@@ -54,7 +53,6 @@ const typescriptEslintRules = {
 
     // Enforce specifying generic type arguments on type annotation or constructor name of a constructor call.
     // https://typescript-eslint.io/rules/consistent-generic-constructors
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/consistent-generic-constructors': 'off',
 
     // Require or disallow the Record type.
@@ -68,7 +66,6 @@ const typescriptEslintRules = {
 
     // Enforce consistent usage of type assertions.
     // https://typescript-eslint.io/rules/consistent-type-assertions
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/consistent-type-assertions': 'off',
 
     // Enforce type definitions to consistently use either interface or type.
@@ -492,7 +489,6 @@ const typescriptEslintRules = {
 
     // Enforce the use of for-of loop over the standard for loop where possible.
     // https://typescript-eslint.io/rules/prefer-for-of
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/prefer-for-of': 'off',
 
     // Enforce using function types instead of interfaces with call signatures.
