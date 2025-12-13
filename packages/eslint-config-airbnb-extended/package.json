@@ -30,22 +30,13 @@
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.cts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.mjs"
-    },
-    "./legacy": {
-      "types": "./dist/legacy.d.cts",
-      "require": "./dist/legacy.cjs",
-      "default": "./dist/legacy.cjs"
-    },
+    ".": "./dist/index.mjs",
+    "./legacy": "./dist/legacy.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
+  "types": "./dist/index.d.mts",
   "scripts": {
     "prebuild": "pnpm check:updates",
     "build": "tsdown",

@@ -1,30 +1,18 @@
 import { defineConfig } from 'tsdown';
 
-import type { UserConfig } from 'tsdown';
-
 export default defineConfig((options) => {
   const { watch } = options;
 
-  const common = {
+  return {
+    entry: ['index.ts', 'legacy.ts'],
     dts: true,
+    format: 'esm',
     outDir: 'dist',
     platform: 'node',
     treeshake: !watch,
     minify: !watch,
+    exports: true,
     nodeProtocol: true,
     unbundle: true,
-  } satisfies UserConfig;
-
-  return [
-    {
-      ...common,
-      entry: 'index.ts',
-      format: ['cjs', 'esm'],
-    },
-    {
-      ...common,
-      entry: 'legacy.ts',
-      format: 'cjs',
-    },
-  ];
+  };
 });
