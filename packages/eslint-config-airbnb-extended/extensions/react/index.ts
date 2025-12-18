@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
 import reactRecommendedExtensionsConfig from '@/extensions/react/recommended';
 import reactTypescriptExtensionsConfig from '@/extensions/react/typescript';
 

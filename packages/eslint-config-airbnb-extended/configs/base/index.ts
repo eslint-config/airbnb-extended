@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
 import baseRecommendedConfig from '@/configs/base/recommended';
 import baseTypescriptConfig from '@/configs/base/typescript';
 

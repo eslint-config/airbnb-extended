@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
 import nextRecommendedConfig from '@/configs/next/recommended';
 import nextTypescriptConfig from '@/configs/next/typescript';
 

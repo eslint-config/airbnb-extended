@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
 import baseRecommendedExtensionsConfig from '@/extensions/base/recommended';
 import baseTypescriptExtensionsConfig from '@/extensions/base/typescript';
+
 import type { Linter } from 'eslint';
 
 const baseExtensions = {

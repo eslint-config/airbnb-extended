@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
 import importXPluginConfig from '@/plugins/importXPlugin';
 import nextPlugin from '@/plugins/nextPlugin';
 import nodePlugin from '@/plugins/nodePlugin';
