@@ -8,6 +8,6 @@ const nextRecommendedConfig = [
   ...reactRecommendedConfig,
   ...Object.values(nextConfig),
   ...nextRecommendedExtensionsConfig,
-] satisfies Linter.Config[];
+] as Linter.Config[];
 
 export default nextRecommendedConfig;
