@@ -35,13 +35,7 @@ const typescriptStylisticRules = {
 
     // enforce consistent spacing in type annotation
     // https://eslint.style/rules/type-annotation-spacing
-    '@stylistic/type-annotation-spacing': [
-      'error',
-      {
-        before: false,
-        after: true,
-      },
-    ],
+    '@stylistic/type-annotation-spacing': 'error',
 
     // enforce consistent spacing inside TypeScript type generics
     // https://eslint.style/rules/type-generic-spacing
