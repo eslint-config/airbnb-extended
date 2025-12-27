@@ -63,9 +63,9 @@
     "prettier": "^3.7.4",
     "prettier-plugin-packagejson": "^2.5.20",
     "typescript": "catalog:",
-    "typescript-eslint": "^8.50.0"
+    "typescript-eslint": "^8.50.1"
   },
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.26.2",
   "engines": {
     "node": ">=16.0.0",
     "npm": "please-use-pnpm",
