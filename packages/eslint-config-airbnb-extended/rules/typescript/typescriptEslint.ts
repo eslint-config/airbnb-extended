@@ -449,6 +449,10 @@ const typescriptEslintRules = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': es6Rules.rules['no-useless-constructor'],
 
+    // Disallow default values that will never be used.
+    // https://typescript-eslint.io/rules/no-useless-default-assignment
+    '@typescript-eslint/no-useless-default-assignment': 'off',
+
     // Disallow empty exports that don't change anything in a module file.
     // https://typescript-eslint.io/rules/no-useless-empty-export
     '@typescript-eslint/no-useless-empty-export': 'off',
