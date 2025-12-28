@@ -16,7 +16,7 @@
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "type": "module",
   "exports": {
-    "./base": "./tsconfig.base.json",
+    "./base": "./src/tsconfig.base.json",
     "./package.json": "./package.json"
   },
   "scripts": {
