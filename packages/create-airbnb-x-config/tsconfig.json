@@ -1,9 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@airbnb-extended/typescript-config/base",
   "compilerOptions": {
-    "composite": true,
-    "outDir": "./dist",
-    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]

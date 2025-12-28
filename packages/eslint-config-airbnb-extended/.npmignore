@@ -4,13 +4,6 @@
 # Not ignored folders
 !dist
 
-# Ignored folders
-dist/tsconfig.tsbuildinfo
-dist/@types/*
-dist/script/*
-
 # Note Ignored files
 !package.json
 !README.md
-!dist/@types/index.d.ts
-!dist/@types/legacy.d.ts

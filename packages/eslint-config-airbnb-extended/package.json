@@ -42,6 +42,10 @@
     "build": "tsdown",
     "build:dev": "tsdown --watch",
     "check:updates": "tsx script/checkUpdates.ts",
+    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
