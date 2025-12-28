@@ -1,11 +1,10 @@
 import baseConfig from '@/configs/base/config';
 import baseRecommendedExtensionsConfig from '@/extensions/base/recommended';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const baseRecommendedConfig = [
+const baseRecommendedConfig = defineConfigArray([
   ...Object.values(baseConfig),
   ...baseRecommendedExtensionsConfig,
-] as Linter.Config[];
+]);
 
 export default baseRecommendedConfig;

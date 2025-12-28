@@ -1,12 +1,10 @@
 import getImportSettings from '@/helpers/getImportSettings';
-import styleRules from '@/rules/style';
-import { allFiles, jsFiles } from '@/utils';
+import { styleInternalRules } from '@/rules/style';
+import { allFiles, defineConfigArray, jsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
+const dangleRules = styleInternalRules['no-underscore-dangle'];
 
-const dangleRules = styleRules.rules['no-underscore-dangle'];
-
-const reactRecommendedExtensionsConfig = [
+const reactRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/react-settings-extensions-configurations',
     files: jsFiles,
@@ -71,6 +69,6 @@ const reactRecommendedExtensionsConfig = [
   //   files: allFiles,
   //   ...getStylisticLegacyConfig('react'),
   // },
-] satisfies Linter.Config[];
+]);
 
 export default reactRecommendedExtensionsConfig;

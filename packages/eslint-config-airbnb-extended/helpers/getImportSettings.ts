@@ -8,7 +8,7 @@ import {
   tsExtensionsWithReactDTS,
 } from '@/utils';
 
-import type { Linter } from 'eslint';
+import type { ConfigRaw } from '@/types/common.types';
 
 interface GetImportSettingsParams {
   javascript: boolean;
@@ -16,7 +16,7 @@ interface GetImportSettingsParams {
   jsx: boolean;
 }
 
-type GetImportSettings = (params: GetImportSettingsParams) => Linter.Config['settings'];
+type GetImportSettings = (params: GetImportSettingsParams) => ConfigRaw['settings'];
 
 const getImportSettings: GetImportSettings = (params) => {
   const { javascript, typescript, jsx } = params;

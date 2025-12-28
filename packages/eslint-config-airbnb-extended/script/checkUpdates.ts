@@ -27,12 +27,14 @@ import typescriptStylisticRules from '@/rules/typescript/typescriptStylistic';
 const getRulesArray = (prefix: string, arr: string[]) =>
   arr.filter((rule) => rule.startsWith(prefix));
 
+const getRules = (obj: { rules?: unknown }) => Object.keys(obj.rules ?? {});
+
 const checkImportsUpdates = async () => {
   const prefix = 'import-x/';
 
-  const localRules = getRulesArray(prefix, Object.keys(importsRules.rules));
-  const deprecatedLocalRules = getRulesArray(prefix, Object.keys(deprecatedImportsRules.rules));
-  const remoteRules = Object.keys(importXPlugin.rules);
+  const localRules = getRulesArray(prefix, getRules(importsRules));
+  const deprecatedLocalRules = getRulesArray(prefix, getRules(deprecatedImportsRules));
+  const remoteRules = getRules(importXPlugin);
 
   if (localRules.length + deprecatedLocalRules.length === remoteRules.length) return true;
 
@@ -47,14 +49,14 @@ const checkNodeUpdates = async () => {
   const prefix = 'n/';
 
   const localRules = getRulesArray(prefix, [
-    ...Object.keys(nodeBaseRules.rules),
-    ...Object.keys(nodeGlobalsRules.rules),
-    ...Object.keys(nodePromisesRules.rules),
-    ...Object.keys(nodeNoUnsupportedFeaturesRules.rules),
+    ...getRules(nodeBaseRules),
+    ...getRules(nodeGlobalsRules),
+    ...getRules(nodePromisesRules),
+    ...getRules(nodeNoUnsupportedFeaturesRules),
   ]);
 
-  const deprecatedLocalRules = getRulesArray(prefix, Object.keys(deprecatedNodeBaseRules.rules));
-  const remoteRules = nodePlugin.rules ? Object.keys(nodePlugin.rules) : [];
+  const deprecatedLocalRules = getRulesArray(prefix, getRules(deprecatedNodeBaseRules));
+  const remoteRules = nodePlugin.rules ? getRules(nodePlugin.rules) : [];
 
   if (localRules.length + deprecatedLocalRules.length === remoteRules.length) return true;
 
@@ -68,9 +70,9 @@ const checkNodeUpdates = async () => {
 const checkReactUpdates = async () => {
   const prefix = 'react/';
 
-  const localRules = getRulesArray(prefix, Object.keys(reactBaseRules.rules));
-  const deprecatedLocalRules = getRulesArray(prefix, Object.keys(deprecatedReactBaseRules.rules));
-  const remoteRules = Object.keys(reactPlugin.rules);
+  const localRules = getRulesArray(prefix, getRules(reactBaseRules));
+  const deprecatedLocalRules = getRulesArray(prefix, getRules(deprecatedReactBaseRules));
+  const remoteRules = getRules(reactPlugin);
 
   if (localRules.length + deprecatedLocalRules.length === remoteRules.length) return true;
 
@@ -84,13 +86,10 @@ const checkReactUpdates = async () => {
 const checkReactJsxA11yUpdates = async () => {
   const prefix = 'jsx-a11y/';
 
-  const localRules = getRulesArray(prefix, Object.keys(reactJsxA11yRules.rules));
-  const deprecatedLocalRules = getRulesArray(
-    prefix,
-    Object.keys(deprecatedReactJsxA11yRules.rules),
-  );
+  const localRules = getRulesArray(prefix, getRules(reactJsxA11yRules));
+  const deprecatedLocalRules = getRulesArray(prefix, getRules(deprecatedReactJsxA11yRules));
 
-  const remoteRules = reactJsxA11yPlugin.rules ? Object.keys(reactJsxA11yPlugin.rules) : [];
+  const remoteRules = reactJsxA11yPlugin.rules ? getRules(reactJsxA11yPlugin.rules) : [];
 
   if (localRules.length + deprecatedLocalRules.length === remoteRules.length) return true;
 
@@ -104,8 +103,8 @@ const checkReactJsxA11yUpdates = async () => {
 const checkReactHooksUpdates = async () => {
   const prefix = 'react-hooks/';
 
-  const localRules = getRulesArray(prefix, Object.keys(reactHooksRules.rules));
-  const remoteRules = Object.keys(reactHooksPlugin.rules);
+  const localRules = getRulesArray(prefix, getRules(reactHooksRules));
+  const remoteRules = getRules(reactHooksPlugin);
 
   // FIXME: ISSUE
   if (localRules.length !== remoteRules.length) return true;
@@ -120,14 +119,11 @@ const checkNextUpdates = async () => {
 
   const localRules = [
     ...new Set(
-      getRulesArray(prefix, [
-        ...Object.keys(nextBaseRules.rules),
-        ...Object.keys(nextCoreWebVitalsRules.rules),
-      ]),
+      getRulesArray(prefix, [...getRules(nextBaseRules), ...getRules(nextCoreWebVitalsRules)]),
     ),
   ];
 
-  const remoteRules = Object.keys(nextPlugin.rules);
+  const remoteRules = getRules(nextPlugin);
 
   if (localRules.length === remoteRules.length) return true;
 
@@ -141,15 +137,15 @@ const checkStylisticUpdates = async () => {
 
   const localRules = getRulesArray(prefix, [
     ...new Set([
-      ...Object.keys(stylisticRules.rules),
-      ...Object.keys(deprecatedStylisticRules.rules),
-      ...Object.keys(typescriptStylisticRules.rules),
-      ...Object.keys(reactStylisticRules.rules),
-      ...Object.keys(deprecatedReactStylisticRules.rules),
+      ...getRules(stylisticRules),
+      ...getRules(deprecatedStylisticRules),
+      ...getRules(typescriptStylisticRules),
+      ...getRules(reactStylisticRules),
+      ...getRules(deprecatedReactStylisticRules),
     ]),
   ]);
 
-  const remoteRules = Object.keys(stylisticPlugin.rules);
+  const remoteRules = getRules(stylisticPlugin);
 
   if (localRules.length === remoteRules.length) return true;
 
@@ -162,13 +158,13 @@ const checkTypescriptEslintUpdates = async () => {
   const prefix = '@typescript-eslint/';
 
   const localRules = getRulesArray(prefix, [
-    ...Object.keys(typescriptEslintRules.rules),
-    ...Object.keys(deprecatedTypescriptEslintRules.rules),
+    ...getRules(typescriptEslintRules),
+    ...getRules(deprecatedTypescriptEslintRules),
   ]);
 
   const remoteRules =
     'rules' in typescriptEslintPlugin && typescriptEslintPlugin.rules
-      ? Object.keys(typescriptEslintPlugin.rules)
+      ? getRules(typescriptEslintPlugin.rules)
       : [];
 
   if (localRules.length === remoteRules.length) return true;

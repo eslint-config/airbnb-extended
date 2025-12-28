@@ -1,7 +1,6 @@
 import reactTypescriptExtensionsConfig from '@/extensions/react/typescript';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactTypescriptConfig: Linter.Config[] = reactTypescriptExtensionsConfig;
+const reactTypescriptConfig = defineConfigArray(reactTypescriptExtensionsConfig);
 
 export default reactTypescriptConfig;

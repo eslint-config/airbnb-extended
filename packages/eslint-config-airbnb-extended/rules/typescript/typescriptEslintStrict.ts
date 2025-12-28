@@ -1,8 +1,6 @@
-import { tsFiles } from '@/utils';
+import { defineConfigObject, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const typescriptEslintStrictRules = {
+const typescriptEslintStrictRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-eslint/strict',
   files: tsFiles,
   rules: {
@@ -223,6 +221,6 @@ const typescriptEslintStrictRules = {
       },
     ],
   },
-} satisfies Linter.Config;
+});
 
 export default typescriptEslintStrictRules;

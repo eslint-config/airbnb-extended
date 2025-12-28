@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nextCoreWebVitalsRules = {
+const nextCoreWebVitalsRules = defineConfigObject({
   name: 'airbnb/config/next/core-web-vitals',
   files: allFiles,
   rules: {
@@ -14,6 +12,6 @@ const nextCoreWebVitalsRules = {
     // https://nextjs.org/docs/messages/no-sync-scripts
     '@next/next/no-sync-scripts': 'error',
   },
-} satisfies Linter.Config;
+});
 
 export default nextCoreWebVitalsRules;

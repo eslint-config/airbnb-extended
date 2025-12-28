@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactHooksRules = {
+const reactHooksRules = defineConfigObject({
   name: 'airbnb/config/react-hooks',
   files: allFiles,
   languageOptions: {
@@ -21,6 +19,6 @@ const reactHooksRules = {
     // https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/src/rules/RulesOfHooks.ts
     'react-hooks/rules-of-hooks': 'error',
   },
-} satisfies Linter.Config;
+});
 
 export default reactHooksRules;

@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nodeBaseRules = {
+const nodeBaseRules = defineConfigObject({
   name: 'airbnb/config/node/base',
   files: allFiles,
   rules: {
@@ -135,9 +133,9 @@ const nodeBaseRules = {
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/process-exit-as-throw.md
     'n/process-exit-as-throw': 'error',
   },
-} satisfies Linter.Config;
+});
 
-export const deprecatedNodeBaseRules = {
+export const deprecatedNodeBaseRules = defineConfigObject({
   name: 'airbnb/config/node/base/deprecated',
   files: allFiles,
   rules: {
@@ -151,6 +149,6 @@ export const deprecatedNodeBaseRules = {
     // @deprecated
     'n/shebang': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default nodeBaseRules;
