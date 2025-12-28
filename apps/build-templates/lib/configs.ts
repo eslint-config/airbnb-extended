@@ -39,6 +39,7 @@ export const imports: Config = ({ type, configurations, strictConfig }) => {
     '',
     "import { includeIgnoreFile } from '@eslint/compat';",
     "import js from '@eslint/js';",
+    "import { defineConfig } from 'eslint/config';",
     importStatement,
     ...(configurations.prettier
       ? [
@@ -78,7 +79,7 @@ export const jsConfig: Config = ({ type, language, strictConfig }) => {
   })();
 
   return [
-    'const jsConfig = [',
+    'const jsConfig = defineConfig([',
     [
       '// ESLint recommended rules',
       '{',
@@ -86,7 +87,7 @@ export const jsConfig: Config = ({ type, language, strictConfig }) => {
       '},',
       ...jsArray,
     ],
-    '];',
+    ']);',
   ];
 };
 
@@ -109,16 +110,16 @@ export const reactConfig: Config = ({ type, language, strictConfig }) => {
   const nextArray = ['// Next.js plugin', 'plugins.next,'];
 
   const legacyArray = [
-    'const reactConfig = [',
+    'const reactConfig = defineConfig([',
     ['// Airbnb React recommended config', '...configs.react.recommended,'],
     language === legacyConfigs.REACT_HOOKS
       ? ['// Airbnb React hooks config', '...configs.react.hooks,']
       : [],
-    '];',
+    ']);',
   ];
 
   const extendedArray = [
-    `const ${language}Config = [`,
+    `const ${language}Config = defineConfig([`,
     [
       ...reactArray,
       ...(isNextJs ? nextArray : []),
@@ -126,7 +127,7 @@ export const reactConfig: Config = ({ type, language, strictConfig }) => {
       `...configs.${language}.recommended,`,
       ...(hasStrictReactConfig ? ['// Strict React config', 'rules.react.strict,'] : []),
     ],
-    '];',
+    ']);',
   ];
 
   return isLegacy ? legacyArray : extendedArray;
@@ -135,14 +136,14 @@ export const reactConfig: Config = ({ type, language, strictConfig }) => {
 // NODE CONFIG
 
 export const nodeConfig = [
-  'const nodeConfig = [',
+  'const nodeConfig = defineConfig([',
   [
     '// Node plugin',
     'plugins.node,',
     '// Airbnb Node recommended config',
     '...configs.node.recommended,',
   ],
-  '];',
+  ']);',
 ];
 
 // TYPESCRIPT CONFIG
@@ -154,15 +155,15 @@ export const typescriptConfig: Config = ({ type, language, strictConfig }) => {
   const hasStrictTypescriptConfig = strictConfig.includes(strictConfigs.TYPESCRIPT);
 
   const legacyArray = [
-    'const typescriptConfig = [',
+    'const typescriptConfig = defineConfig([',
     language === legacyConfigs.BASE
       ? ['// Airbnb base TypeScript config', '...configs.base.typescript,']
       : ['// Airbnb React TypeScript config', '...configs.react.typescript,'],
-    '];',
+    ']);',
   ];
 
   const extendedArray = [
-    'const typescriptConfig = [',
+    'const typescriptConfig = defineConfig([',
     [
       '// TypeScript ESLint plugin',
       'plugins.typescriptEslint,',
@@ -174,7 +175,7 @@ export const typescriptConfig: Config = ({ type, language, strictConfig }) => {
       ...(language === runtimes.REACT ? reactArray : []),
       ...(language === runtimes.NEXT ? nextArray : []),
     ],
-    '];',
+    ']);',
   ];
 
   return isLegacy ? legacyArray : extendedArray;
@@ -183,7 +184,7 @@ export const typescriptConfig: Config = ({ type, language, strictConfig }) => {
 // Prettier Config
 
 export const prettierConfig = [
-  'const prettierConfig = [',
+  'const prettierConfig = defineConfig([',
   [
     '// Prettier plugin',
     '{',
@@ -201,7 +202,7 @@ export const prettierConfig = [
     ],
     '},',
   ],
-  '];',
+  ']);',
 ];
 
 // DEFAULT CONFIG
@@ -216,7 +217,7 @@ export const defaultConfig: Config = ({ type, language, languagePreference, conf
   const prettierArray = ['// Prettier config', '...prettierConfig,'];
 
   return [
-    'export default [',
+    'export default defineConfig([',
     [
       '// Ignore files and folders listed in .gitignore',
       'includeIgnoreFile(gitignorePath),',
@@ -232,6 +233,6 @@ export const defaultConfig: Config = ({ type, language, languagePreference, conf
       ...(languagePreference === languagePreferences.TYPESCRIPT ? typescriptArray : []),
       ...(configurations.prettier ? prettierArray : []),
     ],
-    '];',
+    ']);',
   ];
 };
