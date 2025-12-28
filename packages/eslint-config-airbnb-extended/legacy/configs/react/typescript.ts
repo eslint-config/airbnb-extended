@@ -1,9 +1,7 @@
 import legacyBaseTypescriptConfig from '@/legacy/configs/base/typescript';
-import { allFiles, tsExtensionsWithReactDTS, tsFiles } from '@/utils';
+import { allFiles, defineConfigArray, tsExtensionsWithReactDTS, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyReactTypescriptConfig = [
+const legacyReactTypescriptConfig = defineConfigArray([
   ...legacyBaseTypescriptConfig,
   {
     name: 'airbnb/config/react-configurations/typescript/legacy',
@@ -41,6 +39,6 @@ const legacyReactTypescriptConfig = [
       'import/extensions': tsExtensionsWithReactDTS,
     },
   },
-] as Linter.Config[];
+]);
 
 export default legacyReactTypescriptConfig;

@@ -1,7 +1,6 @@
 import legacyReactConfig from '@/legacy/configs/react/config';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyReactHooksConfig: Linter.Config[] = [legacyReactConfig.hooks];
+const legacyReactHooksConfig = defineConfigArray([legacyReactConfig.hooks]);
 
 export default legacyReactHooksConfig;

@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyNodeRules = {
+const legacyNodeRules = defineConfigObject({
   name: 'airbnb/config/node/legacy',
   files: allFiles,
   rules: {
@@ -42,6 +40,6 @@ const legacyNodeRules = {
     // disallow use of synchronous methods (off by default)
     'no-sync': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default legacyNodeRules;

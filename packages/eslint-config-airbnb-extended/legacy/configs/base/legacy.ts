@@ -1,11 +1,9 @@
 import globals from 'globals';
 
 import legacyBaseConfig from '@/legacy/configs/base/config';
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyBaseLegacyConfig = [
+const legacyBaseLegacyConfig = defineConfigArray([
   legacyBaseConfig.bestPractices,
   legacyBaseConfig.errors,
   legacyBaseConfig.node,
@@ -44,6 +42,6 @@ const legacyBaseLegacyConfig = [
       strict: ['error', 'safe'],
     },
   },
-] as Linter.Config[];
+]);
 
 export default legacyBaseLegacyConfig;

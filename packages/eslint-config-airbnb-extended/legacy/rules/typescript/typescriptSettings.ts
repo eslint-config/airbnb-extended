@@ -1,8 +1,6 @@
-import { allFiles, tsExtensionsResolver } from '@/utils';
+import { allFiles, defineConfigObject, tsExtensionsResolver } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyTypescriptSettingsRules = {
+const legacyTypescriptSettingsRules = defineConfigObject({
   name: 'airbnb/config/typescript/settings/legacy',
   files: allFiles,
   settings: {
@@ -24,6 +22,7 @@ const legacyTypescriptSettingsRules = {
     // Resolve type definition packages
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
-} as Linter.Config;
+  rules: {},
+});
 
 export default legacyTypescriptSettingsRules;

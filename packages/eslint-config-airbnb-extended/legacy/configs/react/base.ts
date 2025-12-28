@@ -1,7 +1,6 @@
 import legacyBaseRecommendedConfig from '@/legacy/configs/base/recommended';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyReactBaseConfig: Linter.Config[] = legacyBaseRecommendedConfig;
+const legacyReactBaseConfig = defineConfigArray(legacyBaseRecommendedConfig);
 
 export default legacyReactBaseConfig;
