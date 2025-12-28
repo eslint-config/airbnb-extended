@@ -1,7 +1,6 @@
 import legacyTypescriptConfig from '@/legacy/configs/typescript/config';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyBaseTypescriptConfig: Linter.Config[] = Object.values(legacyTypescriptConfig);
+const legacyBaseTypescriptConfig = defineConfigArray(Object.values(legacyTypescriptConfig));
 
 export default legacyBaseTypescriptConfig;

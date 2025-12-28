@@ -1,8 +1,6 @@
-import { tsFiles } from '@/utils';
+import { defineConfigObject, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const typescriptBaseRules = {
+const typescriptBaseRules = defineConfigObject({
   name: 'airbnb/config/typescript/base',
   files: tsFiles,
   rules: {
@@ -29,6 +27,6 @@ const typescriptBaseRules = {
     'no-with': 'off', // ts(1101) & ts(2410)
     'valid-typeof': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default typescriptBaseRules;

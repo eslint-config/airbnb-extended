@@ -23,4 +23,4 @@ These packages are no longer maintained. To ensure continued compatibility and k
 
 ## Migration {#migration}
 
-Please refer to the [migration guide](./migration) for more details.
+Please refer to the [migration guide](../migration/upgrade-to-extended) for more details.

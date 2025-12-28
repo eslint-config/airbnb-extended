@@ -4,10 +4,11 @@ Version **v3** is the biggest upgrade so far, introducing several long-awaited i
 
 ### What’s new in v3
 
-- **ESM-only architecture** — the entire package now uses native ES modules
-- **Redesigned CLI options** aligned with clearer, more explicit configurations
-- **Updated dependencies** — all packages are upgraded to their latest stable versions
-- **All batteries included** — everything you need ships out of the box
+- **Significantly smaller package** — the new version reduces the unpacked size by ~72% compared to the previous release.
+- **ESM-only architecture** - the entire package now uses native ES modules
+- **Redesigned CLI options** - aligned with clearer, more explicit configurations
+- **Updated dependencies** - all packages are upgraded to their latest stable versions
+- **All batteries included** - everything you need ships out of the box
 
 …and much much more
 

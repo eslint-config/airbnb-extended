@@ -18,6 +18,7 @@ cache
 # misc
 .DS_Store
 *.pem
+.temp
 
 # debug
 *.log

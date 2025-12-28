@@ -1,17 +1,17 @@
 import stylistic from '@stylistic/eslint-plugin';
 
-import type { Linter } from 'eslint';
+import type { ConfigRaw } from '@/types/common.types';
 
 type GetStylisticLegacyConfigLanguage = 'javascript' | 'typescript' | 'react';
 
-type GetStylisticLegacyConfig = (language: GetStylisticLegacyConfigLanguage) => Linter.Config;
+type GetStylisticLegacyConfig = (language: GetStylisticLegacyConfigLanguage) => ConfigRaw;
 
 const getStylisticLegacyConfig: GetStylisticLegacyConfig = (language) => {
   const legacyConfig = stylistic.configs['disable-legacy'];
   const REACT = 'react/';
   const TYPESCRIPT = '@typescript-eslint/';
 
-  const rules = Object.entries(legacyConfig.rules ?? {}).reduce<Linter.Config['rules'] | null>(
+  const rules = Object.entries(legacyConfig.rules ?? {}).reduce<ConfigRaw['rules'] | null>(
     (acc, [key, value]) => {
       if (language === 'javascript') {
         const condition = !key.startsWith(REACT) && !key.startsWith(TYPESCRIPT);

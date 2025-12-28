@@ -1,8 +1,6 @@
-import { tsFiles } from '@/utils';
+import { defineConfigObject, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyTypescriptOverridesRules = {
+const legacyTypescriptOverridesRules = defineConfigObject({
   name: 'airbnb/config/typescript/overrides/legacy',
   files: tsFiles,
   rules: {
@@ -33,6 +31,6 @@ const legacyTypescriptOverridesRules = {
     // Disable `import/no-unresolved`, see README.md for details
     'import/no-unresolved': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default legacyTypescriptOverridesRules;

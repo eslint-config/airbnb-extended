@@ -25,17 +25,17 @@ features:
     title: Airbnb Base Configuration
     details: Built on top of Airbnb's highly opinionated ESLint config.
   - icon: 🔄
-    title: 1:1 Replacement for Airbnb Configs
+    title: 1:1 Replacement
     details: Provides a one-to-one replacement for Old Airbnb ESLint configs.
+  - icon: 🔋
+    title: All batteries included
+    details: All required ESLint plugins and resolvers are bundled internally.
   - icon: 📦
     title: TypeScript Support
     details: Out-of-the-box TypeScript support for all your code.
-  - icon: ⚙️
+  - icon: 🛠️
     title: Customizable
     details: Easily extend or modify settings to match your project's coding style.
-  - icon: 📑
-    title: Pre-configured Rules
-    details: Ready-to-go rules that enforce consistent coding practices.
   - icon: 💻
     title: CLI Utility for Quick Setup
     details: Set up your project in seconds with a simple command-line tool.

@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nextBaseRules = {
+const nextBaseRules = defineConfigObject({
   name: 'airbnb/config/next/base',
   files: allFiles,
   rules: {
@@ -90,6 +88,6 @@ const nextBaseRules = {
     // https://nextjs.org/docs/messages/no-unwanted-polyfillio
     '@next/next/no-unwanted-polyfillio': 'warn',
   },
-} satisfies Linter.Config;
+});
 
 export default nextBaseRules;

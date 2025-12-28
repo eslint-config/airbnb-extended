@@ -2,9 +2,9 @@ import plugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 import getDevDepsList from '@/helpers/getDevDepsList';
-import { allFiles, jsExtensions, jsExtensionsWithReact } from '@/utils';
+import { allFiles, defineConfigObject, jsExtensions, jsExtensionsWithReact } from '@/utils';
 
-import type { Linter } from 'eslint';
+import type { ConfigRules } from '@/types/common.types';
 
 export const legacyImportsInternalRules = {
   // Static analysis:
@@ -276,9 +276,9 @@ export const legacyImportsInternalRules = {
   // https://github.com/import-js/eslint-plugin-import/blob/d5fc8b670dc8e6903dbb7b0894452f60c03089f5/docs/rules/no-empty-named-blocks.md
   // TODO, semver-minor: enable
   'import/no-empty-named-blocks': 'off',
-} satisfies Linter.RulesRecord;
+} satisfies ConfigRules;
 
-const legacyImportsRules = {
+const legacyImportsRules = defineConfigObject({
   name: 'airbnb/config/import/legacy',
   files: allFiles,
   plugins: {
@@ -304,6 +304,6 @@ const legacyImportsRules = {
     'import/ignore': ['node_modules', String.raw`\.(coffee|scss|css|less|hbs|svg|json)$`],
   },
   rules: legacyImportsInternalRules,
-} as Linter.Config;
+});
 
 export default legacyImportsRules;

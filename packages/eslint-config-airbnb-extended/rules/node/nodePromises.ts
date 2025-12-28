@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nodePromisesRules = {
+const nodePromisesRules = defineConfigObject({
   name: 'airbnb/config/node/promises',
   files: allFiles,
   rules: {
@@ -14,6 +12,6 @@ const nodePromisesRules = {
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-promises/fs.md
     'n/prefer-promises/fs': 'error',
   },
-} satisfies Linter.Config;
+});
 
 export default nodePromisesRules;

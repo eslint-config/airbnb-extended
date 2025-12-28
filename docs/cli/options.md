@@ -12,15 +12,15 @@ Each answer updates the final ESLint setup for your project. If you prefer to sk
 ::: code-group
 
 ```sh [npm]
-$ npx create-airbnb-x-config --ts --react --use-pnpm
+$ npx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
 ```
 
 ```sh [yarn]
-$ yarn dlx create-airbnb-x-config --ts --react --use-pnpm
+$ yarn dlx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
 ```
 
 ```sh [pnpm]
-$ pnpx create-airbnb-x-config --ts --react --use-pnpm
+$ pnpx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
 ```
 
 :::
@@ -36,45 +36,60 @@ Here’s the full list of options you can use:
 - `-v, --version` → Show the current CLI version.
 - `-h, --help` → Display help info.
 
-### Config Type {#config-type}
+### Config {#config}
 
-- `--extended` → Use **extended configuration** (modern, TypeScript-first, opinionated defaults).
-- `--legacy` → Use **legacy configuration** (1:1 Airbnb replacement in flat config).
+The following values are available for `--config`:
+
+- `extended` → Use **extended configuration** (modern, TypeScript-first, opinionated defaults).
+- `legacy` → Use **legacy configuration** (1:1 Airbnb replacement in flat config).
 
 ### Language {#language}
 
-- `--ts, --typescript` → Setup for a **TypeScript** project.
-- `--js, --javascript` → Setup for a **JavaScript** project.
+The following values are available for `--lang`:
 
-### Prettier {#prettier}
+- `typescript` → Setup for a **TypeScript** project.
+- `javascript` → Setup for a **JavaScript** project.
 
-- `--prettier` → Add Prettier integration (`eslint-plugin-prettier`, `eslint-config-prettier`).
+### Formatter {#formatter}
 
-### Frameworks & Runtimes {#frameworks}
+The following values are available for `--formatter`:
 
-- `--react` → Add React rules (`eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`).
-- `--remix, --react-router` → Same as `--react` rules.
-- `--next` → Add Next.js rules (`@next/eslint-plugin-next`).
-- `--node` → Add Node.js rules (`eslint-plugin-n`).
+- `prettier` → Add Prettier integration (`eslint-plugin-prettier`, `eslint-config-prettier`).
+
+### Runtime {#runtime}
+
+The following values are available for `--runtime`:
+
+- `react` → Add React rules (`eslint-plugin-react`, `eslint-plugin-react-hooks`, and `eslint-plugin-jsx-a11y`).
+- `remix` → Same as `react` runtime rules.
+- `react-router` → Same as `react` runtime rules.
+- `next` → Add Next.js rules (`@next/eslint-plugin-next`).
+- `node` → Add Node.js rules (`eslint-plugin-n`).
 
 ### Strict Rules {#strict-rules}
 
-- `--strict-import-config` → Enable **strict Import** rules.
-- `--strict-react-config` → Enable **strict React** rules.
-- `--strict-typescript-config` → Enable **strict TypeScript** rules.
+The following values are available for `--strict`:
+
+- `import` → Enable **strict Import** rules.
+- `react` → Enable **strict React** rules.
+- `typescript` → Enable **strict TypeScript** rules.
 
 ### Legacy Config Variants {#legacy-configs}
 
-- `--legacy-base-config` → Legacy Base config.
-- `--legacy-react-config` → Legacy React config.
-- `--legacy-react-hooks-config` → Legacy React Hooks config.
+The following values are available for `--legacy`:
+
+- `base` → Legacy Base config.
+- `react` → Legacy React config.
+- `react-hooks` → Legacy React Hooks config.
 
 ### Package Managers {#package-managers}
 
-- `--use-npm` → Use npm for installs.
-- `--use-yarn` → Use Yarn for installs.
-- `--use-pnpm` → Use pnpm for installs.
-- `--use-bun` → Use Bun for installs.
+The following values are available for `--pm`:
+
+- `npm` → Use npm for installs.
+- `yarn` → Use Yarn for installs.
+- `pnpm` → Use pnpm for installs.
+- `bun` → Use Bun for installs.
 
 ### File & Install Options {#file-install-options}
 

@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const importsStrictRules = {
+const importsStrictRules = defineConfigObject({
   name: 'airbnb/config/import-x/strict',
   files: allFiles,
   rules: {
@@ -66,6 +64,6 @@ const importsStrictRules = {
       },
     ],
   },
-} satisfies Linter.Config;
+});
 
 export default importsStrictRules;

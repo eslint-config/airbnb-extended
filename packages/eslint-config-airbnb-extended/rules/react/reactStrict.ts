@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactStrictRules = {
+const reactStrictRules = defineConfigObject({
   name: 'airbnb/config/react/strict',
   files: allFiles,
   rules: {
@@ -87,6 +85,6 @@ const reactStrictRules = {
     // Disabling it because prop-types are deprecated
     'react/prop-types': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default reactStrictRules;

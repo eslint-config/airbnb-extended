@@ -116,15 +116,15 @@ Example installation command:
 ::: code-group
 
 ```sh [npm]
-npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended eslint-import-resolver-typescript typescript-eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 ```sh [yarn]
-yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended eslint-import-resolver-typescript typescript-eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 ```sh [pnpm]
-pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended eslint-import-resolver-typescript typescript-eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 :::

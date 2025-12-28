@@ -9,7 +9,7 @@
   <a href="https://eslint-airbnb-extended.nishargshah.dev/config/installation">Config</a> |
   <a href="https://eslint-airbnb-extended.nishargshah.dev/cli/guide">CLI</a> |
   <a href="https://eslint-airbnb-extended.nishargshah.dev/guide/why">Why</a> |
-  <a href="https://eslint-airbnb-extended.nishargshah.dev/guide/migration">Migration</a> |
+  <a href="https://eslint-airbnb-extended.nishargshah.dev/migration/upgrade-to-extended">Migration</a> |
   <a href="https://eslint-airbnb-extended.nishargshah.dev/contribute/guide">Contributing</a>
 </p>
 

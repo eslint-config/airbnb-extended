@@ -1,12 +1,17 @@
 import getDevDepsList from '@/helpers/getDevDepsList';
-import { jsExtensions, jsExtensionsRule, tsExtensions, tsExtensionsRule, tsFiles } from '@/utils';
-
-import type { Linter } from 'eslint';
+import {
+  defineConfigObject,
+  jsExtensions,
+  jsExtensionsRule,
+  tsExtensions,
+  tsExtensionsRule,
+  tsFiles,
+} from '@/utils';
 
 /**
  * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/typescript.ts
  */
-const typescriptImportsRules = {
+const typescriptImportsRules = defineConfigObject({
   name: 'airbnb/config/typescript/import-x',
   files: tsFiles,
   rules: {
@@ -39,6 +44,6 @@ const typescriptImportsRules = {
     // warn on accessing default export property names that are also named exports
     'import-x/no-named-as-default-member': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default typescriptImportsRules;

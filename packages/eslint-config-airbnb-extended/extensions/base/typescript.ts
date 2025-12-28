@@ -2,11 +2,9 @@ import { configs } from 'typescript-eslint';
 
 import getImportSettings from '@/helpers/getImportSettings';
 import getStylisticLegacyConfig from '@/helpers/getStylisticLegacyConfig';
-import { jsFiles, tsFiles, tsFileWithoutReact } from '@/utils';
+import { defineConfigArray, jsFiles, tsFiles, tsFileWithoutReact } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const baseTypescriptExtensionsConfig = [
+const baseTypescriptExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/base-typescript-settings-extensions-configurations',
     files: tsFileWithoutReact,
@@ -22,6 +20,6 @@ const baseTypescriptExtensionsConfig = [
     name: 'airbnb/config/base-typescript-disable-type-checked',
     files: jsFiles,
   },
-] as Linter.Config[];
+]);
 
 export default baseTypescriptExtensionsConfig;

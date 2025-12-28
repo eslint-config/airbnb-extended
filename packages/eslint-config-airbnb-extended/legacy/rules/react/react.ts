@@ -1,14 +1,12 @@
 import plugin from 'eslint-plugin-react';
 import globals from 'globals';
 
-import legacyStyleRules from '@/legacy/rules/style';
-import { allFiles, jsExtensionsWithReact } from '@/utils';
+import { legacyStyleInternalRules } from '@/legacy/rules/style';
+import { allFiles, defineConfigObject, jsExtensionsWithReact } from '@/utils';
 
-import type { Linter } from 'eslint';
+const dangleRules = legacyStyleInternalRules['no-underscore-dangle'];
 
-const dangleRules = legacyStyleRules.rules['no-underscore-dangle'];
-
-const legacyReactBaseRules = {
+const legacyReactBaseRules = defineConfigObject({
   name: 'airbnb/config/react/legacy',
   files: allFiles,
   plugins: {
@@ -770,6 +768,6 @@ const legacyReactBaseRules = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/9668ee0762acd5c23f53cd3a372e2d8d9563944d/docs/rules/jsx-props-no-spread-multi.md
     'react/jsx-props-no-spread-multi': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default legacyReactBaseRules;

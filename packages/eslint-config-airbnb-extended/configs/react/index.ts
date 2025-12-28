@@ -1,14 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-
 import reactRecommendedConfig from '@/configs/react/recommended';
 import reactTypescriptConfig from '@/configs/react/typescript';
 
-import type { Linter } from 'eslint';
-
 const react = {
-  recommended: reactRecommendedConfig as Linter.Config[],
-  typescript: reactTypescriptConfig as Linter.Config[],
-  all: [...reactRecommendedConfig, ...reactTypescriptConfig] as Linter.Config[],
+  recommended: reactRecommendedConfig,
+  typescript: reactTypescriptConfig,
+  all: [...reactRecommendedConfig, ...reactTypescriptConfig],
 } as const;
 
 export default react;

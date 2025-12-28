@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactStylisticRules = {
+const reactStylisticRules = defineConfigObject({
   name: 'airbnb/config/react/stylistic',
   files: allFiles,
   rules: {
@@ -105,9 +103,9 @@ const reactStylisticRules = {
     // Off due to 'react/jsx-wrap-multilines'
     '@stylistic/jsx-wrap-multilines': 'off',
   },
-} satisfies Linter.Config;
+});
 
-export const deprecatedReactStylisticRules = {
+export const deprecatedReactStylisticRules = defineConfigObject({
   name: 'airbnb/config/react/stylistic/deprecated',
   files: allFiles,
   rules: {
@@ -116,6 +114,6 @@ export const deprecatedReactStylisticRules = {
     // Off due to 'react/jsx-indent'
     '@stylistic/jsx-indent': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default reactStylisticRules;

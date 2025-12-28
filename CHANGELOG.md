@@ -1,3 +1,24 @@
+## 3.0.0 (2025-12-28)
+
+### 🚨 Breaking Change
+
+- **Significantly smaller package** — the new version reduces the unpacked size by ~72% compared to the previous release.
+- **ESM-only architecture** - the entire package now uses native ES modules
+- **Redesigned CLI options** - aligned with clearer, more explicit configurations
+- **Updated dependencies** - all packages are upgraded to their latest stable versions
+- **All batteries included** - everything you need ships out of the box
+
+### 🚀 Migration
+
+- Guide: https://eslint-airbnb-extended.nishargshah.dev/migration/upgrade-to-v3
+
+### ❤️ Thank You
+
+- Gualtiero @maiolica
+- Alexey Immoreev @luixo
+- Vida Xie @9romise
+- Sam Garfinkel @sgarfinkel
+
 ## 2.3.3 (2025-11-29)
 
 ### 🩹 Fixes

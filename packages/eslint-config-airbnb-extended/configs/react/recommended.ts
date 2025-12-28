@@ -1,11 +1,10 @@
 import reactConfig from '@/configs/react/config';
 import reactRecommendedExtensionsConfig from '@/extensions/react/recommended';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactRecommendedConfig = [
+const reactRecommendedConfig = defineConfigArray([
   ...Object.values(reactConfig),
   ...reactRecommendedExtensionsConfig,
-] as Linter.Config[];
+]);
 
 export default reactRecommendedConfig;

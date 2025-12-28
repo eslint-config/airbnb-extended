@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nodeGlobalsRules = {
+const nodeGlobalsRules = defineConfigObject({
   name: 'airbnb/config/node/globals',
   files: allFiles,
   rules: {
@@ -34,6 +32,6 @@ const nodeGlobalsRules = {
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/url.md
     'n/prefer-global/url': ['error', 'always'],
   },
-} satisfies Linter.Config;
+});
 
 export default nodeGlobalsRules;

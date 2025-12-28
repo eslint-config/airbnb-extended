@@ -70,10 +70,6 @@ export default defineConfig({
             text: 'Why',
             link: '/guide/why',
           },
-          {
-            text: 'Migration',
-            link: '/guide/migration',
-          },
         ],
       },
       {
@@ -131,20 +127,24 @@ export default defineConfig({
         ],
       },
       {
+        text: 'Migration',
+        items: [
+          {
+            text: 'Upgrade to Extended',
+            link: '/migration/upgrade-to-extended',
+          },
+          {
+            text: 'Upgrade to v3',
+            link: '/migration/upgrade-to-v3',
+          },
+        ],
+      },
+      {
         text: 'Contribute',
         items: [
           {
             text: 'Contributing',
             link: '/contribute/guide',
-          },
-        ],
-      },
-      {
-        text: 'Migration',
-        items: [
-          {
-            text: 'Upgrade to v3',
-            link: '/migration/upgrade-to-v3',
           },
         ],
       },

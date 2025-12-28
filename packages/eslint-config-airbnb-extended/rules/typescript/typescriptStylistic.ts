@@ -1,21 +1,19 @@
-import stylisticRules from '@/rules/stylistic';
-import { tsFiles } from '@/utils';
+import { stylisticInternalRules } from '@/rules/stylistic';
+import { defineConfigObject, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const typescriptStylisticRules = {
+const typescriptStylisticRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-stylistic',
   files: tsFiles,
   rules: {
     // require trailing commas in multiline object literals
     // https://eslint.style/rules/comma-dangle
     '@stylistic/comma-dangle': [
-      stylisticRules.rules['@stylistic/comma-dangle'][0],
+      stylisticInternalRules['@stylistic/comma-dangle'][0],
       {
-        ...stylisticRules.rules['@stylistic/comma-dangle'][1],
-        enums: stylisticRules.rules['@stylistic/comma-dangle'][1].arrays,
-        generics: stylisticRules.rules['@stylistic/comma-dangle'][1].arrays,
-        tuples: stylisticRules.rules['@stylistic/comma-dangle'][1].arrays,
+        ...stylisticInternalRules['@stylistic/comma-dangle'][1],
+        enums: stylisticInternalRules['@stylistic/comma-dangle'][1].arrays,
+        generics: stylisticInternalRules['@stylistic/comma-dangle'][1].arrays,
+        tuples: stylisticInternalRules['@stylistic/comma-dangle'][1].arrays,
       },
     ],
 
@@ -26,9 +24,9 @@ const typescriptStylisticRules = {
     // require spaces around operators
     // https://eslint.style/rules/space-infix-ops
     '@stylistic/space-infix-ops': [
-      stylisticRules.rules['@stylistic/space-infix-ops'][0],
+      stylisticInternalRules['@stylistic/space-infix-ops'][0],
       {
-        ...stylisticRules.rules['@stylistic/space-infix-ops'][1],
+        ...stylisticInternalRules['@stylistic/space-infix-ops'][1],
         ignoreTypes: false,
       },
     ],
@@ -45,6 +43,6 @@ const typescriptStylisticRules = {
     // https://eslint.style/rules/type-named-tuple-spacing
     '@stylistic/type-named-tuple-spacing': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default typescriptStylisticRules;

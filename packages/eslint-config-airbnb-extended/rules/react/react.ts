@@ -1,10 +1,8 @@
 import globals from 'globals';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactBaseRules = {
+const reactBaseRules = defineConfigObject({
   name: 'airbnb/config/react',
   files: allFiles,
   languageOptions: {
@@ -674,9 +672,9 @@ const reactBaseRules = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
     'react/void-dom-elements-no-children': 'error',
   },
-} satisfies Linter.Config;
+});
 
-export const deprecatedReactBaseRules = {
+export const deprecatedReactBaseRules = defineConfigObject({
   name: 'airbnb/config/react/deprecated',
   files: allFiles,
   rules: {
@@ -688,6 +686,6 @@ export const deprecatedReactBaseRules = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
     'react/jsx-space-before-closing': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default reactBaseRules;

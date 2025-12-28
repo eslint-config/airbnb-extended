@@ -1,15 +1,13 @@
 import plugin from '@stylistic/eslint-plugin';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigPlugin } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const stylisticPlugin = {
+const stylisticPlugin = defineConfigPlugin({
   name: 'airbnb/config/plugin/stylistic',
   files: allFiles,
   plugins: {
     '@stylistic': plugin,
   },
-} satisfies Linter.Config;
+});
 
 export default stylisticPlugin;
