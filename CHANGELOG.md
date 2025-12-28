@@ -2,6 +2,7 @@
 
 ### 🚨 Breaking Change
 
+- **Significantly smaller package** — the new version reduces the unpacked size by ~72% compared to the previous release.
 - **ESM-only architecture** - the entire package now uses native ES modules
 - **Redesigned CLI options** - aligned with clearer, more explicit configurations
 - **Updated dependencies** - all packages are upgraded to their latest stable versions
