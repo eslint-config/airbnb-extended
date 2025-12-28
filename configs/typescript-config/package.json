@@ -1,0 +1,33 @@
+{
+  "name": "@airbnb-extended/typescript-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript Config",
+  "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
+  "bugs": {
+    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "directory": "packages/typescript-config"
+  },
+  "license": "MIT",
+  "author": "Nisharg Shah <nishargshah3101@gmail.com>",
+  "exports": {
+    "./base": "./tsconfig.base.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@airbnb-extended/eslint-config": "workspace:*",
+    "@airbnb-extended/lint-staged-config": "workspace:*",
+    "@airbnb-extended/prettier-config": "workspace:*"
+  }
+}
