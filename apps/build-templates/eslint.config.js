@@ -1,6 +1,7 @@
 import config from '@airbnb-extended/eslint-config/base';
+import { defineConfig } from 'eslint/config';
 
-export default [
+export default defineConfig([
   ...config,
   // Disable Dependencies Import Issue for Templates ESLint Files
   // {
@@ -10,4 +11,4 @@ export default [
   //     'import-x/no-extraneous-dependencies': 'off',
   //   },
   // },
-];
+]);

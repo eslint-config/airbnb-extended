@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Base",
   "compilerOptions": {
-   "target": "esnext",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],

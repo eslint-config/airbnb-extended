@@ -2,7 +2,6 @@
   "name": "@airbnb-extended/lint-staged-config",
   "version": "3.0.0",
   "private": true,
-  "type": "module",
   "description": "Lint Staged Config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
@@ -15,6 +14,7 @@
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
+  "type": "module",
   "exports": {
     "./base": "./src/lint-staged-base.config.js",
     "./root": "./src/lint-staged-root.config.js",
@@ -30,7 +30,7 @@
     "@airbnb-extended/eslint-config": "workspace:*",
     "@airbnb-extended/prettier-config": "workspace:*"
   },
-    "engines": {
+  "engines": {
     "node": ">=24.0.0"
   }
 }

@@ -2,7 +2,6 @@
   "name": "@airbnb-extended/typescript-config",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "description": "TypeScript Config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
@@ -15,6 +14,7 @@
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
+  "type": "module",
   "exports": {
     "./base": "./tsconfig.base.json",
     "./package.json": "./package.json"
@@ -30,7 +30,7 @@
     "@airbnb-extended/lint-staged-config": "workspace:*",
     "@airbnb-extended/prettier-config": "workspace:*"
   },
-    "engines": {
+  "engines": {
     "node": ">=24.0.0"
   }
 }
