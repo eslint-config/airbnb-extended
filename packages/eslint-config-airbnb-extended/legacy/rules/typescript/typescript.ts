@@ -4,7 +4,7 @@ import getDevDepsList from '@/helpers/getDevDepsList';
 import legacyBestPracticesRules from '@/legacy/rules/best-practices';
 import legacyErrorsRules from '@/legacy/rules/errors';
 import legacyEs6Rules from '@/legacy/rules/es6';
-import legacyImportsRules from '@/legacy/rules/imports';
+import { legacyImportsInternalRules } from '@/legacy/rules/imports';
 import legacyStyleRules from '@/legacy/rules/style';
 import legacyVariablesRules from '@/legacy/rules/variables';
 import { jsExtensions, tsExtensions, tsFiles } from '@/utils';
@@ -14,7 +14,6 @@ import type { Linter } from 'eslint';
 const { rules: baseBestPracticesRules } = legacyBestPracticesRules;
 const { rules: baseErrorsRules } = legacyErrorsRules;
 const { rules: baseES6Rules } = legacyEs6Rules;
-const { rules: baseImportsRules } = legacyImportsRules;
 const { rules: baseStyleRules } = legacyStyleRules;
 const { rules: baseVariablesRules } = legacyVariablesRules;
 
@@ -247,10 +246,10 @@ const legacyTypescriptBaseRules = {
     // Append 'ts' and 'tsx' to Airbnb 'import/extensions' rule
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     'import/extensions': [
-      baseImportsRules['import/extensions'][0],
-      baseImportsRules['import/extensions'][1],
+      legacyImportsInternalRules['import/extensions'][0],
+      legacyImportsInternalRules['import/extensions'][1],
       {
-        ...baseImportsRules['import/extensions'][2],
+        ...legacyImportsInternalRules['import/extensions'][2],
         ts: 'never',
         tsx: 'never',
       },
