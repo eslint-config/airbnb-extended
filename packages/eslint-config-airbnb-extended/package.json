@@ -63,6 +63,10 @@
     "typescript-eslint": "^8.50.1"
   },
   "devDependencies": {
+    "@airbnb-extended/eslint-config": "workspace:*",
+    "@airbnb-extended/lint-staged-config": "workspace:*",
+    "@airbnb-extended/prettier-config": "workspace:*",
+    "@airbnb-extended/typescript-config": "workspace:*",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "tsdown": "catalog:",
