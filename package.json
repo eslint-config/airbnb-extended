@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-airbnb-extended-project",
-  "version": "3.0.0-beta-5",
+  "name": "@airbnb-extended/project",
+  "version": "3.0.0",
   "description": "Eslint Airbnb Config Extended Project",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
@@ -24,9 +24,9 @@
     "cli:dev": "pnpm --filter create-airbnb-x-config dev",
     "cli:start": "pnpm --filter create-airbnb-x-config start",
     "config:build": "pnpm --filter eslint-config-airbnb-extended build",
-    "docs:build": "pnpm --filter eslint-airbnb-extended-docs build",
-    "docs:dev": "pnpm --filter eslint-airbnb-extended-docs dev",
-    "docs:preview": "pnpm --filter eslint-airbnb-extended-docs preview",
+    "docs:build": "pnpm --filter @airbnb-extended/docs build",
+    "docs:dev": "pnpm --filter @airbnb-extended/docs dev",
+    "docs:preview": "pnpm --filter @airbnb-extended/docs preview",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
     "fresh:init": "pnpm clean:workspace && pnpm clean:generated-folders",
@@ -37,8 +37,8 @@
     "pkg:publish": "pnpm -r build && pnpm changeset publish",
     "prepare": "husky || true",
     "script:lint": "bash -e ./scripts/lint.sh",
-    "templates:build": "pnpm --filter build-templates build",
-    "templates:dev": "pnpm --filter build-templates dev",
+    "templates:build": "pnpm --filter @airbnb-extended/build-templates build",
+    "templates:dev": "pnpm --filter @airbnb-extended/build-templates dev",
     "typecheck": "pnpm -r typecheck"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "create-airbnb-x-config",
-  "version": "3.0.0-beta-5",
+  "version": "3.0.0",
   "description": "Airbnb Extended Config CLI",
   "keywords": [
     "eslint",

@@ -1,6 +1,6 @@
 {
-  "name": "build-templates",
-  "version": "3.0.0-beta-5",
+  "name": "@airbnb-extended/build-templates",
+  "version": "3.0.0",
   "private": true,
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
