@@ -44,6 +44,6 @@ const legacyBaseLegacyConfig = [
       strict: ['error', 'safe'],
     },
   },
-] satisfies Linter.Config[];
+] as Linter.Config[];
 
 export default legacyBaseLegacyConfig;

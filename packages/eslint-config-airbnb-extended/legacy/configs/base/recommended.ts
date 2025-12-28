@@ -15,6 +15,6 @@ const legacyBaseRecommendedConfig = [
       },
     },
   },
-] satisfies Linter.Config[];
+] as Linter.Config[];
 
 export default legacyBaseRecommendedConfig;
