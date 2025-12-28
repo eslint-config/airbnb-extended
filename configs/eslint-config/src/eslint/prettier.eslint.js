@@ -1,15 +1,16 @@
+import { defineConfig } from 'eslint/config';
 import { rules as prettierConfigRules } from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-const customPrettierESLintConfig = [
-  // Prettier Plugin
+export const prettierConfig = defineConfig([
+  // Prettier plugin
   {
     name: 'prettier/plugin/config',
     plugins: {
       prettier: prettierPlugin,
     },
   },
-  // Prettier Config
+  // Prettier config
   {
     name: 'prettier/config',
     rules: {
@@ -17,6 +18,4 @@ const customPrettierESLintConfig = [
       'prettier/prettier': 'error',
     },
   },
-];
-
-export default customPrettierESLintConfig;
+]);

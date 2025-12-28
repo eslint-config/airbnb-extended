@@ -3,24 +3,17 @@ import promisePlugin from 'eslint-plugin-promise';
 import unicornPlugin from 'eslint-plugin-unicorn';
 
 import { configs, plugins } from 'eslint-config-airbnb-extended';
+import { defineConfig } from 'eslint/config';
 
-const customJSESLintConfig = [
-  // ESLint Recommended Rules
-  {
-    name: 'js/config',
-    ...js.configs.recommended,
-  },
-  // Stylistic Plugin
-  plugins.stylistic,
-  // Import X Plugin
-  plugins.importX,
-  // Airbnb Base Recommended Config
-  ...configs.base.recommended,
-  // Promise Config
+const promiseConfig = defineConfig([
+  // Promise config
   promisePlugin.configs['flat/recommended'],
-  // Unicorn Config
+]);
+
+const unicornConfig = defineConfig([
+  // Unicorn config
   unicornPlugin.configs.recommended,
-  // Unicorn Config Rules
+  // Unicorn config rules
   {
     name: 'x/unicorn/rules',
     rules: {
@@ -43,14 +36,22 @@ const customJSESLintConfig = [
       'unicorn/no-array-sort': 'off',
     },
   },
-  // Disable process.exit() rule for CLI
-  {
-    name: 'x/unicorn/disable-process-exit-rule-for-cli',
-    files: ['packages/create-airbnb-x-config/**/*.{ts,tsx}'],
-    rules: {
-      'unicorn/no-process-exit': 'off',
-    },
-  },
-];
+]);
 
-export default customJSESLintConfig;
+export const jsConfig = defineConfig([
+  // ESLint recommended rules
+  {
+    name: 'js/config',
+    ...js.configs.recommended,
+  },
+  // Stylistic plugin
+  plugins.stylistic,
+  // Import X plugin
+  plugins.importX,
+  // Airbnb base recommended config
+  ...configs.base.recommended,
+  // Promise config
+  ...promiseConfig,
+  // Unicorn config
+  ...unicornConfig,
+]);
