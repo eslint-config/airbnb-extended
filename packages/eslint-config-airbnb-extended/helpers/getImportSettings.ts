@@ -10,7 +10,7 @@ import {
 
 import type { ConfigRaw } from '@/types/common.types';
 
-interface GetImportSettingsParams {
+export interface GetImportSettingsParams {
   javascript: boolean;
   typescript: boolean;
   jsx: boolean;

@@ -2,6 +2,7 @@
 
 import allConfigs from '@/configs';
 import allExtensions from '@/extensions';
+import allHelpers from '@/helpers';
 import allPlugins from '@/plugins';
 import allRules from '@/rules';
 
@@ -12,3 +13,5 @@ export const configs = allConfigs;
 export const plugins = allPlugins;
 
 export const extensions = allExtensions;
+
+export const helpers = allHelpers;
