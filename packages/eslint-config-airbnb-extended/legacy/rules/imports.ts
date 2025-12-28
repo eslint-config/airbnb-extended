@@ -1,12 +1,10 @@
+import plugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 import getDevDepsList from '@/helpers/getDevDepsList';
 import { allFiles, jsExtensions, jsExtensionsWithReact } from '@/utils';
 
 import type { Linter } from 'eslint';
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const plugin = require('eslint-plugin-import');
 
 const legacyImportsRules = {
   name: 'airbnb/config/import/legacy',
@@ -304,6 +302,6 @@ const legacyImportsRules = {
     // TODO, semver-minor: enable
     'import/no-empty-named-blocks': 'off',
   },
-} satisfies Linter.Config;
+} as Linter.Config;
 
 export default legacyImportsRules;
