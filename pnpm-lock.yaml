@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    eslint:
+      specifier: ^9.39.2
+      version: 9.39.2
     tsdown:
       specifier: ^0.16.8
       version: 0.16.8
@@ -36,8 +39,11 @@ importers:
         specifier: ^24.10.4
         version: 24.10.4
       eslint:
-        specifier: ^9.39.2
+        specifier: 'catalog:'
         version: 9.39.2
+      eslint-config-airbnb-extended:
+        specifier: workspace:*
+        version: link:packages/eslint-config-airbnb-extended
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -87,6 +93,9 @@ importers:
       '@eslint/js':
         specifier: ^9.39.2
         version: 9.39.2
+      eslint:
+        specifier: 'catalog:'
+        version: 9.39.2
       eslint-config-airbnb-extended:
         specifier: workspace:*
         version: link:../../packages/eslint-config-airbnb-extended
@@ -135,6 +144,18 @@ importers:
         specifier: ^1.6.1
         version: 1.6.1(vue@3.5.26(typescript@5.9.3))
     devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:../configs/eslint-config
+      '@airbnb-extended/lint-staged-config':
+        specifier: workspace:*
+        version: link:../configs/lint-staged-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:../configs/prettier-config
+      '@airbnb-extended/typescript-config':
+        specifier: workspace:*
+        version: link:../configs/typescript-config
       vitepress:
         specifier: ^1.6.4
         version: 1.6.4(@algolia/client-search@5.46.2)(@types/node@24.10.4)(change-case@5.4.4)(postcss@8.5.6)(search-insights@2.17.3)(typescript@5.9.3)
@@ -160,6 +181,18 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2
     devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:../../configs/eslint-config
+      '@airbnb-extended/lint-staged-config':
+        specifier: workspace:*
+        version: link:../../configs/lint-staged-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:../../configs/prettier-config
+      '@airbnb-extended/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript-config
       '@types/cross-spawn':
         specifier: ^6.0.6
         version: 6.0.6
@@ -215,6 +248,18 @@ importers:
         specifier: ^8.50.1
         version: 8.50.1(eslint@9.39.2)(typescript@5.9.3)
     devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:../../configs/eslint-config
+      '@airbnb-extended/lint-staged-config':
+        specifier: workspace:*
+        version: link:../../configs/lint-staged-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:../../configs/prettier-config
+      '@airbnb-extended/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript-config
       '@types/confusing-browser-globals':
         specifier: ^1.0.3
         version: 1.0.3
@@ -3272,8 +3317,8 @@ packages:
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
 
-  ts-api-utils@2.2.0:
-    resolution: {integrity: sha512-L6f5oQRAoLU1RwXz0Ab9mxsE7LtxeVB6AIR1lpkZMsOyg/JXeaxBaXa/FVCBZyNr9S9I4wkHrlZTklX+im+WMw==}
+  ts-api-utils@2.3.0:
+    resolution: {integrity: sha512-6eg3Y9SF7SsAvGzRHQvvc1skDAhwI4YQ32ui1scxD1Ccr0G5qIIbUBT3pFTKX8kmWIQClHobtUdNuaBgwdfdWg==}
     engines: {node: '>=18.12'}
     peerDependencies:
       typescript: '>=4.8.4'
@@ -4530,7 +4575,7 @@ snapshots:
       eslint: 9.39.2
       ignore: 7.0.5
       natural-compare: 1.4.0
-      ts-api-utils: 2.2.0(typescript@5.9.3)
+      ts-api-utils: 2.3.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -4572,7 +4617,7 @@ snapshots:
       '@typescript-eslint/utils': 8.50.1(eslint@9.39.2)(typescript@5.9.3)
       debug: 4.4.3
       eslint: 9.39.2
-      ts-api-utils: 2.2.0(typescript@5.9.3)
+      ts-api-utils: 2.3.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -4589,7 +4634,7 @@ snapshots:
       minimatch: 9.0.5
       semver: 7.7.3
       tinyglobby: 0.2.15
-      ts-api-utils: 2.2.0(typescript@5.9.3)
+      ts-api-utils: 2.3.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -6769,7 +6814,7 @@ snapshots:
 
   trim-lines@3.0.1: {}
 
-  ts-api-utils@2.2.0(typescript@5.9.3):
+  ts-api-utils@2.3.0(typescript@5.9.3):
     dependencies:
       typescript: 5.9.3
 
