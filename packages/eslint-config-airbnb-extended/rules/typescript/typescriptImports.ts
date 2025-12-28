@@ -1,12 +1,5 @@
 import getDevDepsList from '@/helpers/getDevDepsList';
-import {
-  defineConfigObject,
-  jsExtensions,
-  jsExtensionsRule,
-  tsExtensions,
-  tsExtensionsRule,
-  tsFiles,
-} from '@/utils';
+import { defineConfigObject, jsExtensionsRule, tsExtensionsRule, tsFiles } from '@/utils';
 
 /**
  * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/typescript.ts
@@ -28,9 +21,7 @@ const typescriptImportsRules = defineConfigObject({
     'import-x/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: getDevDepsList(
-          [...jsExtensions, ...tsExtensions].map((ext) => ext.slice(1)).join(','),
-        ),
+        devDependencies: getDevDepsList('typescript'),
         optionalDependencies: false,
         peerDependencies: true,
         bundledDependencies: true,
