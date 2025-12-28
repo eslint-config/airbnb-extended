@@ -20,54 +20,24 @@ importers:
 
   .:
     devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:configs/eslint-config
+      '@airbnb-extended/lint-staged-config':
+        specifier: workspace:*
+        version: link:configs/lint-staged-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:configs/prettier-config
       '@changesets/cli':
         specifier: ^2.29.8
         version: 2.29.8(@types/node@24.10.4)
-      '@eslint/compat':
-        specifier: ^2.0.0
-        version: 2.0.0(eslint@9.39.2)
-      '@eslint/js':
-        specifier: ^9.39.2
-        version: 9.39.2
-      '@stylistic/eslint-plugin':
-        specifier: ^5.6.1
-        version: 5.6.1(eslint@9.39.2)
       '@types/node':
         specifier: ^24.10.4
         version: 24.10.4
       eslint:
         specifier: ^9.39.2
         version: 9.39.2
-      eslint-config-airbnb-extended:
-        specifier: workspace:*
-        version: link:packages/eslint-config-airbnb-extended
-      eslint-config-prettier:
-        specifier: ^10.1.8
-        version: 10.1.8(eslint@9.39.2)
-      eslint-import-resolver-typescript:
-        specifier: ^4.4.4
-        version: 4.4.4(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2))(eslint-plugin-import@2.32.0)(eslint@9.39.2)
-      eslint-plugin-import:
-        specifier: ^2.32.0
-        version: 2.32.0(@typescript-eslint/parser@8.50.1(eslint@9.39.2)(typescript@5.9.3))(eslint-import-resolver-typescript@4.4.4)(eslint@9.39.2)
-      eslint-plugin-import-x:
-        specifier: ^4.16.1
-        version: 4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2)
-      eslint-plugin-jsx-a11y:
-        specifier: ^6.10.2
-        version: 6.10.2(eslint@9.39.2)
-      eslint-plugin-prettier:
-        specifier: ^5.5.4
-        version: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.2))(eslint@9.39.2)(prettier@3.7.4)
-      eslint-plugin-promise:
-        specifier: ^7.2.1
-        version: 7.2.1(eslint@9.39.2)
-      eslint-plugin-unicorn:
-        specifier: ^62.0.0
-        version: 62.0.0(eslint@9.39.2)
-      eslint-plugin-unused-imports:
-        specifier: ^4.3.0
-        version: 4.3.0(@typescript-eslint/eslint-plugin@8.50.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -80,12 +50,12 @@ importers:
       prettier-plugin-packagejson:
         specifier: ^2.5.20
         version: 2.5.20(prettier@3.7.4)
+      tsc-files:
+        specifier: ^1.1.4
+        version: 1.1.4(typescript@5.9.3)
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
-      typescript-eslint:
-        specifier: ^8.50.1
-        version: 8.50.1(eslint@9.39.2)(typescript@5.9.3)
 
   apps/build-templates:
     dependencies:
@@ -93,9 +63,71 @@ importers:
         specifier: workspace:*
         version: link:../../packages/create-airbnb-x-config
     devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:../../configs/eslint-config
+      '@airbnb-extended/lint-staged-config':
+        specifier: workspace:*
+        version: link:../../configs/lint-staged-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:../../configs/prettier-config
+      '@airbnb-extended/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript-config
       tsx:
         specifier: 'catalog:'
         version: 4.21.0
+
+  configs/eslint-config:
+    devDependencies:
+      '@eslint/compat':
+        specifier: ^2.0.0
+        version: 2.0.0(eslint@9.39.2)
+      '@eslint/js':
+        specifier: ^9.39.2
+        version: 9.39.2
+      eslint-config-airbnb-extended:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-airbnb-extended
+      eslint-config-prettier:
+        specifier: ^10.1.8
+        version: 10.1.8(eslint@9.39.2)
+      eslint-plugin-prettier:
+        specifier: ^5.5.4
+        version: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.2))(eslint@9.39.2)(prettier@3.7.4)
+      eslint-plugin-promise:
+        specifier: ^7.2.1
+        version: 7.2.1(eslint@9.39.2)
+      eslint-plugin-unicorn:
+        specifier: ^62.0.0
+        version: 62.0.0(eslint@9.39.2)
+      eslint-plugin-unused-imports:
+        specifier: ^4.3.0
+        version: 4.3.0(@typescript-eslint/eslint-plugin@8.50.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)
+
+  configs/lint-staged-config:
+    devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
+
+  configs/prettier-config: {}
+
+  configs/typescript-config:
+    devDependencies:
+      '@airbnb-extended/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@airbnb-extended/lint-staged-config':
+        specifier: workspace:*
+        version: link:../lint-staged-config
+      '@airbnb-extended/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
 
   docs:
     dependencies:
@@ -3250,6 +3282,12 @@ packages:
     resolution: {integrity: sha512-EDyGAwH1gO0Ausm9gV6T2nUvBgXT5kGoCMJPllOaooZ+4VvJiKBdZE7wK18N1deEowhcUptS+5GXZK8U/fvpwA==}
     peerDependencies:
       typescript: '>=4.0.0'
+
+  tsc-files@1.1.4:
+    resolution: {integrity: sha512-RePsRsOLru3BPpnf237y1Xe1oCGta8rmSYzM76kYo5tLGsv5R2r3s64yapYorGTPuuLyfS9NVbh9ydzmvNie2w==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=3'
 
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
@@ -6738,6 +6776,10 @@ snapshots:
   ts-declaration-location@1.0.7(typescript@5.9.3):
     dependencies:
       picomatch: 4.0.3
+      typescript: 5.9.3
+
+  tsc-files@1.1.4(typescript@5.9.3):
+    dependencies:
       typescript: 5.9.3
 
   tsconfig-paths@3.15.0:
