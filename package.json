@@ -32,7 +32,7 @@
     "fresh:init": "pnpm clean:workspace && pnpm clean:generated-folders",
     "lint": "eslint .",
     "lint:fix": "pnpm --silent lint --fix",
-    "lint:inspector": "pnpx @eslint/config-inspector --config eslint-inspector.config.mjs",
+    "lint:inspector": "pnpx @eslint/config-inspector --config eslint-inspector.config.js",
     "pkg:prepare": "pnpm changeset && pnpm changeset version",
     "pkg:publish": "pnpm -r build && pnpm changeset publish",
     "prepare": "husky || true",
