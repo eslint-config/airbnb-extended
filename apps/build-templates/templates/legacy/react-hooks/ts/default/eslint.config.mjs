@@ -2,44 +2,45 @@
  * THIS FILE WAS AUTO-GENERATED.
  * PLEASE DO NOT EDIT IT MANUALLY.
  * ===============================
- * IF YOU'RE COPYING THIS INTO AN ESLINT CONFIG, REMOVE THIS COMMENT BLOCK.
+ * IF YOU COPY THIS INTO AN ESLINT CONFIG, REMOVE THIS COMMENT BLOCK.
  */
 
 import path from 'node:path';
 
 import { includeIgnoreFile } from '@eslint/compat';
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import { configs } from 'eslint-config-airbnb-extended/legacy';
 
 const gitignorePath = path.resolve('.', '.gitignore');
 
-const jsConfig = [
-  // ESLint Recommended Rules
+const jsConfig = defineConfig([
+  // ESLint recommended rules
   {
     name: 'js/config',
     ...js.configs.recommended,
   },
-];
+]);
 
-const reactConfig = [
-  // Airbnb React Recommended Config
+const reactConfig = defineConfig([
+  // Airbnb React recommended config
   ...configs.react.recommended,
-  // Airbnb React Hooks Config
+  // Airbnb React hooks config
   ...configs.react.hooks,
-];
+]);
 
-const typescriptConfig = [
-  // Airbnb React TypeScript Config
+const typescriptConfig = defineConfig([
+  // Airbnb React TypeScript config
   ...configs.react.typescript,
-];
+]);
 
-export default [
-  // Ignore .gitignore files/folder in eslint
+export default defineConfig([
+  // Ignore files and folders listed in .gitignore
   includeIgnoreFile(gitignorePath),
-  // Javascript Config
+  // JavaScript config
   ...jsConfig,
-  // React Config
+  // React config
   ...reactConfig,
-  // TypeScript Config
+  // TypeScript config
   ...typescriptConfig,
-];
+]);
