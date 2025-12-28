@@ -1,14 +1,13 @@
 import config from '@airbnb-extended/eslint-config/base';
-import { defineConfig } from 'eslint/config';
+import { defineConfig } from '@airbnb-extended/eslint-config/utils';
 
 export default defineConfig([
   ...config,
   // Disable process.exit() rule for CLI
-  // {
-  //   name: 'x/unicorn/disable-process-exit-rule-for-cli',
-  //   files: ['packages/create-airbnb-x-config/**/*.{ts,tsx}'],
-  //   rules: {
-  //     'unicorn/no-process-exit': 'off',
-  //   },
-  // },
+  {
+    name: 'x/unicorn/disable-process-exit-rule-for-cli',
+    rules: {
+      'unicorn/no-process-exit': 'off',
+    },
+  },
 ]);
