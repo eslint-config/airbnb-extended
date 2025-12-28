@@ -5,7 +5,7 @@ import type { Linter } from 'eslint';
 
 const baseConfigExtended = {
   ...baseConfig,
-  importsStrict: importsStrictRules,
+  importsStrict: importsStrictRules as Linter.Config,
 } satisfies Record<string, Linter.Config>;
 
 export default baseConfigExtended;

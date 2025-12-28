@@ -1,14 +1,11 @@
-/* eslint-disable @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
+import nodeRecommendedExtensionsConfig from '@/extensions/node/recommended';
 
 import type { Linter } from 'eslint';
 
-/**
- * as is given due to less size of index.d.ts
- */
 const nodeExtensions = {
-  get recommended(): Linter.Config[] {
-    return require('@/extensions/node/recommended').default;
-  },
-};
+  recommended: nodeRecommendedExtensionsConfig as Linter.Config[],
+} as const;
 
 export default nodeExtensions;

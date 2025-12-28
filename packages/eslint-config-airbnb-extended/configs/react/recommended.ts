@@ -6,6 +6,6 @@ import type { Linter } from 'eslint';
 const reactRecommendedConfig = [
   ...Object.values(reactConfig),
   ...reactRecommendedExtensionsConfig,
-] satisfies Linter.Config[];
+] as Linter.Config[];
 
 export default reactRecommendedConfig;

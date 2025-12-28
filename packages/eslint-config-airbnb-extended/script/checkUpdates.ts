@@ -17,18 +17,12 @@ import nodePromisesRules from '@/rules/node/nodePromises';
 import reactBaseRules, { deprecatedReactBaseRules } from '@/rules/react/react';
 import reactHooksRules from '@/rules/react/reactHooks';
 import reactJsxA11yRules, { deprecatedReactJsxA11yRules } from '@/rules/react/reactJsxA11y';
-import reactStylisticRules, {
-  deprecatedReactStylisticPlusRules,
-} from '@/rules/react/reactStylistic';
+import reactStylisticRules, { deprecatedReactStylisticRules } from '@/rules/react/reactStylistic';
 import stylisticRules, { deprecatedStylisticRules } from '@/rules/stylistic';
-import stylisticPlusRules from '@/rules/stylisticPlus';
 import typescriptEslintRules, {
   deprecatedTypescriptEslintRules,
 } from '@/rules/typescript/typescriptEslint';
-import typescriptStylisticRules, {
-  deprecatedTypescriptStylisticRules,
-} from '@/rules/typescript/typescriptStylistic';
-import typescriptStylisticPlusRules from '@/rules/typescript/typescriptStylisticPlus';
+import typescriptStylisticRules from '@/rules/typescript/typescriptStylistic';
 
 const getRulesArray = (prefix: string, arr: string[]) =>
   arr.filter((rule) => rule.startsWith(prefix));
@@ -150,11 +144,8 @@ const checkStylisticUpdates = async () => {
       ...Object.keys(stylisticRules.rules),
       ...Object.keys(deprecatedStylisticRules.rules),
       ...Object.keys(typescriptStylisticRules.rules),
-      ...Object.keys(deprecatedTypescriptStylisticRules.rules),
       ...Object.keys(reactStylisticRules.rules),
-      ...Object.keys(deprecatedReactStylisticPlusRules.rules),
-      ...Object.keys(stylisticPlusRules.rules),
-      ...Object.keys(typescriptStylisticPlusRules.rules),
+      ...Object.keys(deprecatedReactStylisticRules.rules),
     ]),
   ]);
 

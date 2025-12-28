@@ -120,8 +120,6 @@ const getSkipInstall: GetSkipInstall = (opts) => {
 
 const getArgs: GetArgs = async () => {
   const opts = getProgramOptions();
-  // FIXME
-  console.log(opts);
 
   return {
     config: getConfig(opts),

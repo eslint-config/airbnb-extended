@@ -56,7 +56,7 @@ Choose the style of configuration you want:
 
 ### Extended Config Prompts {#extended-prompts}
 
-If you selected **Extended**, The CLI will **automatically include** `@stylistic/eslint-plugin@^3.1.0` and `eslint-plugin-import-x`. The following questions apply only to **Extended** configs.
+If you selected **Extended**, The CLI will **automatically include** `@stylistic/eslint-plugin` and `eslint-plugin-import-x`. The following questions apply only to **Extended** configs.
 
 #### 4. Are you using? {#are-you-using-extended}
 

@@ -6,9 +6,9 @@ export default defineConfig((options) => {
   return {
     entry: ['index.ts', 'legacy.ts'],
     dts: true,
-    format: ['cjs', 'esm'],
+    format: 'esm',
     outDir: 'dist',
-    platform: 'browser',
+    platform: 'node',
     treeshake: !watch,
     minify: !watch,
     exports: true,

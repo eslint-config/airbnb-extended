@@ -1,20 +1,14 @@
-/* eslint-disable @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+
+import nextRecommendedConfig from '@/configs/next/recommended';
+import nextTypescriptConfig from '@/configs/next/typescript';
 
 import type { Linter } from 'eslint';
 
-/**
- * as is given due to less size of index.d.ts
- */
 const next = {
-  get recommended(): Linter.Config[] {
-    return require('@/configs/next/recommended').default;
-  },
-  get typescript(): Linter.Config[] {
-    return require('@/configs/next/typescript').default;
-  },
-  get all(): Linter.Config[] {
-    return [...next.recommended, ...next.typescript];
-  },
-};
+  recommended: nextRecommendedConfig as Linter.Config[],
+  typescript: nextTypescriptConfig as Linter.Config[],
+  all: [...nextRecommendedConfig, ...nextTypescriptConfig] as Linter.Config[],
+} as const;
 
 export default next;

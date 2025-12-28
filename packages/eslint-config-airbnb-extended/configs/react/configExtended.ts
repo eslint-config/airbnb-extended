@@ -5,7 +5,7 @@ import type { Linter } from 'eslint';
 
 const reactConfigExtended = {
   ...reactConfig,
-  strict: reactStrictRules,
+  strict: reactStrictRules as Linter.Config,
 } satisfies Record<string, Linter.Config>;
 
 export default reactConfigExtended;
