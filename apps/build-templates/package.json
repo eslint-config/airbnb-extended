@@ -2,6 +2,7 @@
   "name": "@airbnb-extended/build-templates",
   "version": "3.0.0",
   "private": true,
+  "description": "Build Templates",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
     "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
