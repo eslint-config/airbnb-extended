@@ -4,7 +4,7 @@ import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import { defineConfig } from '../eslint-utils.js';
 
 const unusedImportConfig = defineConfig([
-  // Unused import config
+  // Unused Imports config
   {
     name: 'unused-imports/config',
     plugins: {
@@ -17,11 +17,11 @@ const unusedImportConfig = defineConfig([
 ]);
 
 export const importConfig = defineConfig([
-  // Unused import config
+  // Unused Imports config
   ...unusedImportConfig,
-  // Strict import rules
+  // Strict imports rules
   rules.base.importsStrict,
-  // Import x config rules
+  // Import X rules
   {
     name: 'x/import-x/rules',
     rules: {

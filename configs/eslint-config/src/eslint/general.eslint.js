@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config';
+import { defineConfig } from '../eslint-utils.js';
 
 export const generalConfig = defineConfig([
   // General ESLint rules

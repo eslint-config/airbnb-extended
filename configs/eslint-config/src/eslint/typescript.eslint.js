@@ -1,5 +1,6 @@
-import { defineConfig } from '../eslint-utils.js';
 import { configs, plugins, rules } from 'eslint-config-airbnb-extended';
+
+import { defineConfig } from '../eslint-utils.js';
 
 export const tsConfig = defineConfig([
   // TypeScript ESLint plugin

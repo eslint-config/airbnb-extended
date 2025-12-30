@@ -1,6 +1,6 @@
 {
   "name": "@airbnb-extended/typescript-config",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
   "description": "TypeScript Config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",

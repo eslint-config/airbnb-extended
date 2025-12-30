@@ -1,8 +1,9 @@
 import js from '@eslint/js';
-import { defineConfig } from '../eslint-utils.js';
 import { configs, plugins } from 'eslint-config-airbnb-extended';
 import promisePlugin from 'eslint-plugin-promise';
 import unicornPlugin from 'eslint-plugin-unicorn';
+
+import { defineConfig } from '../eslint-utils.js';
 
 const promiseConfig = defineConfig([
   // Promise config
@@ -12,7 +13,7 @@ const promiseConfig = defineConfig([
 const unicornConfig = defineConfig([
   // Unicorn config
   unicornPlugin.configs.recommended,
-  // Unicorn config rules
+  // Unicorn rules
   {
     name: 'x/unicorn/rules',
     rules: {
@@ -35,10 +36,18 @@ const unicornConfig = defineConfig([
       'unicorn/no-array-sort': 'off',
     },
   },
+  // Disable for Prettier and Lint Staged config files
+  {
+    name: 'x/unicorn/disable-for-prettier-lint-staged',
+    files: ['**/prettier.config.js', '**/lint-staged.config.js'],
+    rules: {
+      'unicorn/prefer-export-from': 'off',
+    },
+  },
 ]);
 
 export const jsConfig = defineConfig([
-  // ESLint recommended rules
+  // ESLint recommended config
   {
     name: 'js/config',
     ...js.configs.recommended,

@@ -1,11 +1,11 @@
-import { defineConfig } from './eslint-utils.js';
-
 import config from './eslint-base.config.js';
+import { defineConfig, globalIgnores } from './eslint-utils.js';
 
 export default defineConfig([
+  // Ignores every everything except root files
   {
-    name: 'x/ignore-everything-except-root',
-    ignores: ['apps/**', 'configs/**', 'docs/**', 'packages/**'],
+    ...globalIgnores(['apps/**', 'configs/**', 'docs/**', 'packages/**']),
+    name: 'x/ignore-everything-except-root-files',
   },
   ...config,
 ]);
