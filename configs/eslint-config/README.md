@@ -30,3 +30,10 @@ import config from '@airbnb-extended/eslint-config/root';
 
 export default config;
 ```
+
+### Utils
+
+```js
+// eslint.config.js
+import { defineConfig, globalIgnores } from '@airbnb-extended/eslint-config/utils';
+```
