@@ -2,7 +2,7 @@
 
 The `rules` are the **building blocks** of each config. Every config is just a collection of these rule groups.
 
-### Base Rules {#base-rules}
+## Base Rules {#base-rules}
 
 | Rule Group         | Description                                                                  |
 | ------------------ | ---------------------------------------------------------------------------- |
@@ -16,7 +16,20 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | **Stylistic**      | Uses `@stylistic/eslint-plugin` for consistent formatting.                   |
 | **Variables**      | Validates variable declarations, usage, and scoping rules.                   |
 
-### Node Rules {#node-rules}
+### Example {#base-rules-example}
+
+```ts
+import { rules } from 'eslint-config-airbnb-extended';
+
+export default [
+  // Best Practices
+  rules.base.bestPractices,
+  // Imports
+  rules.base.imports,
+];
+```
+
+## Node Rules {#node-rules}
 
 | Rule Group                  | Description                                                                                     |
 | --------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -25,7 +38,18 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | **Promises**                | Enforces using promise based variants of core modules such as `fs` and `dns` variant.           |
 | **No Unsupported Features** | Prevents usage of Node features not supported in your target version.                           |
 
-### React Rules {#react-rules}
+### Example {#node-rules-example}
+
+```ts
+import { rules } from 'eslint-config-airbnb-extended';
+
+export default [
+  // Promises
+  rules.node.promises,
+];
+```
+
+## React Rules {#react-rules}
 
 | Rule Group            | Description                                                              |
 | --------------------- | ------------------------------------------------------------------------ |
@@ -35,14 +59,38 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | **Stylistic**         | Ensures consistent styling inside JSX and React code.                    |
 | **React Strict**      | See [Strict React](../customization/strict-rules.md#strict-react-rules). |
 
-### Next.js Rules {#nextjs-rules}
+### Example {#react-rules-example}
+
+```ts
+import { rules } from 'eslint-config-airbnb-extended';
+
+export default [
+  // JSX Accessibility
+  rules.react.jsxA11y,
+  // Hooks
+  rules.react.hooks,
+];
+```
+
+## Next.js Rules {#nextjs-rules}
 
 | Rule Group          | Description                                                            |
 | ------------------- | ---------------------------------------------------------------------- |
 | **Base**            | Applies general Next.js linting best practices.                        |
 | **Core Web Vitals** | Enforces performance and SEO improvements recommended by Next.js team. |
 
-### TypeScript Rules {#typescript-rules}
+### Example {#nextjs-rules-example}
+
+```ts
+import { rules } from 'eslint-config-airbnb-extended';
+
+export default [
+  // Base
+  rules.next.base,
+];
+```
+
+## TypeScript Rules {#typescript-rules}
 
 | Rule Group                   | Description                                                                                                                             |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,3 +99,16 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | **TypeScript ESLint**        | Rules powered by `typescript-eslint`.                                                                                                   |
 | **Imports**                  | Activates `eslint-plugin-import-x` rules needed for TypeScript while disabling rules already covered by TypeScript to avoid redundancy. |
 | **TypeScript ESLint Strict** | See [Strict TypeScript ESLint](../customization/strict-rules.md#strict-typescript-rules).                                               |
+
+### Example {#typescript-rules-example}
+
+```ts
+import { rules } from 'eslint-config-airbnb-extended';
+
+export default [
+  // Base
+  rules.typescript.base,
+  // Imports
+  rules.typescript.imports,
+];
+```

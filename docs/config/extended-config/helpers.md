@@ -25,9 +25,11 @@ import { helpers } from 'eslint-config-airbnb-extended';
 
 const { jsFiles, tsFiles } = helpers;
 
-export default {
-  files: [...jsFiles, ...tsFiles],
-};
+export default [
+  {
+    files: [...jsFiles, ...tsFiles],
+  },
+];
 ```
 
 ## getDevDepsList(language) {#get-dev-deps-list}
@@ -53,16 +55,18 @@ import { helpers } from 'eslint-config-airbnb-extended';
 
 const { getDevDepsList } = helpers;
 
-export default {
-  rules: {
-    'import-x/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: getDevDepsList('typescript'),
-      },
-    ],
+export default [
+  {
+    rules: {
+      'import-x/no-extraneous-dependencies': [
+        'error',
+        {
+          devDependencies: getDevDepsList('typescript'),
+        },
+      ],
+    },
   },
-};
+];
 ```
 
 ## getImportSettings(params) {#get-import-settings}
@@ -89,11 +93,13 @@ type GetImportSettingsParams = {
 ```ts
 import { getImportSettings } from '@/helpers';
 
-export default {
-  settings: getImportSettings({
-    javascript: false,
-    typescript: true,
-    jsx: true,
-  }),
-};
+export default [
+  {
+    settings: getImportSettings({
+      javascript: false,
+      typescript: true,
+      jsx: true,
+    }),
+  },
+];
 ```
