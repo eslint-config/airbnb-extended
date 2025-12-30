@@ -17,7 +17,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 const gitignorePath = path.resolve('.', '.gitignore');
 
 const jsConfig = defineConfig([
-  // ESLint recommended rules
+  // ESLint recommended config
   {
     name: 'js/config',
     ...js.configs.recommended,
@@ -42,7 +42,7 @@ const typescriptConfig = defineConfig([
   plugins.typescriptEslint,
   // Airbnb base TypeScript config
   ...configs.base.typescript,
-  // Strict TypeScript config
+  // Strict TypeScript rules
   rules.typescript.typescriptEslintStrict,
 ]);
 

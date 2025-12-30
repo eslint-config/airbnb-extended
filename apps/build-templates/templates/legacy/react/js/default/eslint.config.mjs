@@ -15,7 +15,7 @@ import { configs } from 'eslint-config-airbnb-extended/legacy';
 const gitignorePath = path.resolve('.', '.gitignore');
 
 const jsConfig = defineConfig([
-  // ESLint recommended rules
+  // ESLint recommended config
   {
     name: 'js/config',
     ...js.configs.recommended,

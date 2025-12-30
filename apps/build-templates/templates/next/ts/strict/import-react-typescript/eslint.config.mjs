@@ -15,7 +15,7 @@ import { configs, plugins, rules } from 'eslint-config-airbnb-extended';
 const gitignorePath = path.resolve('.', '.gitignore');
 
 const jsConfig = defineConfig([
-  // ESLint recommended rules
+  // ESLint recommended config
   {
     name: 'js/config',
     ...js.configs.recommended,
@@ -26,7 +26,7 @@ const jsConfig = defineConfig([
   plugins.importX,
   // Airbnb base recommended config
   ...configs.base.recommended,
-  // Strict import config
+  // Strict import rules
   rules.base.importsStrict,
 ]);
 
@@ -41,7 +41,7 @@ const nextConfig = defineConfig([
   plugins.next,
   // Airbnb Next.js recommended config
   ...configs.next.recommended,
-  // Strict React config
+  // Strict React rules
   rules.react.strict,
 ]);
 
@@ -50,7 +50,7 @@ const typescriptConfig = defineConfig([
   plugins.typescriptEslint,
   // Airbnb base TypeScript config
   ...configs.base.typescript,
-  // Strict TypeScript config
+  // Strict TypeScript rules
   rules.typescript.typescriptEslintStrict,
   // Airbnb Next.js TypeScript config
   ...configs.next.typescript,
