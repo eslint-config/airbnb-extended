@@ -130,12 +130,12 @@ export default defineConfig({
         text: 'Migration',
         items: [
           {
-            text: 'Upgrade to Extended',
-            link: '/migration/upgrade-to-extended',
-          },
-          {
             text: 'Upgrade to v3',
             link: '/migration/upgrade-to-v3',
+          },
+          {
+            text: 'Upgrade to Extended',
+            link: '/migration/upgrade-to-extended',
           },
         ],
       },

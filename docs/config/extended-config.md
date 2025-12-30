@@ -113,7 +113,7 @@ Now, every **Extended config** is built as `rules + extension = config`. This ma
 They give you a complete setup out of the box for different environments like **Base**, **React**, **Next.js**, and **Node**.
 Each config has variants like **recommended**, **typescript**, and **all**, so you can pick exactly what fits your project.
 
-### Available Configs #{available-configs}
+### Available Configs {#available-configs}
 
 - **Base**
   - **Recommended** → Includes Base rules (without **Imports Strict**) + the Base Recommended extension.
@@ -132,3 +132,5 @@ Each config has variants like **recommended**, **typescript**, and **all**, so y
 
 - **Node**
   - **Recommended** → Includes Node.js rules + the Node Recommended extension.
+
+## Helpers {#helpers}
