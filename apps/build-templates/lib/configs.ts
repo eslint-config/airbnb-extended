@@ -74,14 +74,14 @@ export const jsConfig: Config = ({ type, language, strictConfig }) => {
       'plugins.importX,',
       '// Airbnb base recommended config',
       '...configs.base.recommended,',
-      ...(hasStrictImportConfig ? ['// Strict import config', 'rules.base.importsStrict,'] : []),
+      ...(hasStrictImportConfig ? ['// Strict import rules', 'rules.base.importsStrict,'] : []),
     ];
   })();
 
   return [
     'const jsConfig = defineConfig([',
     [
-      '// ESLint recommended rules',
+      '// ESLint recommended config',
       '{',
       ["name: 'js/config',", '...js.configs.recommended,'],
       '},',
@@ -125,7 +125,7 @@ export const reactConfig: Config = ({ type, language, strictConfig }) => {
       ...(isNextJs ? nextArray : []),
       `// Airbnb ${isNextJs ? 'Next.js' : 'React'} recommended config`,
       `...configs.${language}.recommended,`,
-      ...(hasStrictReactConfig ? ['// Strict React config', 'rules.react.strict,'] : []),
+      ...(hasStrictReactConfig ? ['// Strict React rules', 'rules.react.strict,'] : []),
     ],
     ']);',
   ];
@@ -170,7 +170,7 @@ export const typescriptConfig: Config = ({ type, language, strictConfig }) => {
       '// Airbnb base TypeScript config',
       '...configs.base.typescript,',
       ...(hasStrictTypescriptConfig
-        ? ['// Strict TypeScript config', 'rules.typescript.typescriptEslintStrict,']
+        ? ['// Strict TypeScript rules', 'rules.typescript.typescriptEslintStrict,']
         : []),
       ...(language === runtimes.REACT ? reactArray : []),
       ...(language === runtimes.NEXT ? nextArray : []),

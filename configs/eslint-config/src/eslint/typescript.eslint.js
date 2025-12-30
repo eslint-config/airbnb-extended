@@ -7,6 +7,6 @@ export const tsConfig = defineConfig([
   plugins.typescriptEslint,
   // Airbnb base TypeScript config
   ...configs.base.typescript,
-  // Airbnb TypeScript ESLint strict rules
+  // Strict TypeScript rules
   rules.typescript.typescriptEslintStrict,
 ]);
