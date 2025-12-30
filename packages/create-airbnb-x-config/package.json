@@ -51,6 +51,7 @@
   "dependencies": {
     "commander": "^14.0.2",
     "cross-spawn": "^7.0.6",
+    "node-fetch": "^3.3.2",
     "package-manager-detector": "^1.6.0",
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2"
@@ -66,6 +67,6 @@
     "tsx": "catalog:"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   }
 }
