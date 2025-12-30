@@ -8,10 +8,12 @@ export const nodeConfig = defineConfig([
   // Airbnb Node recommended config
   ...configs.node.recommended,
   // Node rules
-  // {
-  //   name: 'x/n/rules',
-  //   rules: {
-  //     'n/no-process-exit': 'off',
-  //   },
-  // },
+  {
+    name: 'x/n/rules',
+    rules: {
+      'n/no-process-exit': 'off',
+      'n/no-sync': 'off',
+      'n/hashbang': 'off',
+    },
+  },
 ]);

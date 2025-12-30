@@ -34,6 +34,7 @@ const unicornConfig = defineConfig([
       'unicorn/consistent-function-scoping': 'off',
       // NOTE: REMOVE WHEN WE SHIFT TO NODE 20
       'unicorn/no-array-sort': 'off',
+      'unicorn/no-process-exit': 'off',
     },
   },
   // Disable for Prettier and Lint Staged config files
