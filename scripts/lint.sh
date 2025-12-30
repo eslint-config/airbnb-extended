@@ -22,7 +22,7 @@ done
 echo "Started (mode: $mode)"
 
 if [[ "$mode" == "ci" ]]; then
-  pnpm "${filters[@]}" --silent format:check --log-level silent >/dev/null 2>&1
+  pnpm "${filters[@]}" --silent format --log-level silent >/dev/null 2>&1
   echo "Prettier Verified"
 
   pnpm "${filters[@]}" --silent lint >/dev/null 2>&1
@@ -32,7 +32,7 @@ if [[ "$mode" == "ci" ]]; then
   echo "TypeScript Verified"
 
 elif [[ "$mode" == "check" ]]; then
-  pnpm "${filters[@]}" --silent format:check --log-level silent
+  pnpm "${filters[@]}" --silent format --log-level silent
   echo "Prettier Checked"
 
   pnpm "${filters[@]}" --silent lint

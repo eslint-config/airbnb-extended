@@ -57,7 +57,7 @@ Run checks and fixes before committing:
 
 ```sh [Check]
 $ pnpm lint
-$ pnpm format:check
+$ pnpm format
 ```
 
 ```sh [Fix]
