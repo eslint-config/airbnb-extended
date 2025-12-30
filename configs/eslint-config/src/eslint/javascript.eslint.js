@@ -1,9 +1,8 @@
 import js from '@eslint/js';
+import { defineConfig } from '../eslint-utils.js';
+import { configs, plugins } from 'eslint-config-airbnb-extended';
 import promisePlugin from 'eslint-plugin-promise';
 import unicornPlugin from 'eslint-plugin-unicorn';
-
-import { configs, plugins } from 'eslint-config-airbnb-extended';
-import { defineConfig } from 'eslint/config';
 
 const promiseConfig = defineConfig([
   // Promise config

@@ -19,6 +19,7 @@
     "./base": "./src/eslint-base.config.js",
     "./internal": "./src/eslint-internal.config.js",
     "./root": "./src/eslint-root.config.js",
+    "./utils": "./src/eslint-utils.js",
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@eslint/compat": "^2.0.0",
     "@eslint/js": "^9.39.2",
+    "eslint": "catalog:",
     "eslint-config-airbnb-extended": "workspace:*",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
