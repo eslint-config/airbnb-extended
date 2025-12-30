@@ -83,6 +83,29 @@ export default defineConfig({
           {
             text: 'Extended Config',
             link: '/config/extended-config',
+            collapsed: true,
+            items: [
+              {
+                text: 'Rules',
+                link: '/config/extended-config/rules',
+              },
+              {
+                text: 'Plugins',
+                link: '/config/extended-config/plugins',
+              },
+              {
+                text: 'Extensions',
+                link: '/config/extended-config/extensions',
+              },
+              {
+                text: 'Configs',
+                link: '/config/extended-config/configs',
+              },
+              {
+                text: 'Helpers',
+                link: '/config/extended-config/helpers',
+              },
+            ],
           },
           {
             text: 'Legacy Config',

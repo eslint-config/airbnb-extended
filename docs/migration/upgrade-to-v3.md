@@ -29,7 +29,7 @@ This change ensures better long-term maintenance and community collaboration.
 
 - **Node.js v16 support dropped** - v3 requires **Node 18.18 or higher**.
 
-- **Introduced helper utilities** - For more details, see the [docs](../config/extended-config#helpers)
+- **Introduced helper utilities** - For more details, see the [docs](../config/extended-config/helpers)
 
 - **Batteries included** - All required ESLint plugins and resolvers are bundled internally, so no additional plugins are needed. You only need to install:
   - `eslint`
