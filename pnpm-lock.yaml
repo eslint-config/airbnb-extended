@@ -41,9 +41,6 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.39.2
-      eslint-config-airbnb-extended:
-        specifier: workspace:*
-        version: link:packages/eslint-config-airbnb-extended
       husky:
         specifier: ^9.1.7
         version: 9.1.7
