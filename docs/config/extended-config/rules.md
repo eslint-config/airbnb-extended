@@ -4,17 +4,17 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 
 ## Base Rules {#base-rules}
 
-| Rule Group         | Description                                                                  |
-| ------------------ | ---------------------------------------------------------------------------- |
-| **Best Practices** | Enforces common best practices to improve code quality and maintainability.  |
-| **Errors**         | Helps catch runtime errors and unsafe patterns early.                        |
-| **ES6**            | Provides rules specific to ES6+ syntax and features.                         |
-| **Imports**        | Ensures proper import/export usage with `eslint-plugin-import`.              |
-| **Imports Strict** | See [Strict Imports](../customization/strict-rules.md#strict-imports-rules). |
-| **Strict**         | Enables strict mode rules.                                                   |
-| **Style**          | Covers general code style rules such as spacing, quotes, and semicolons.     |
-| **Stylistic**      | Uses `@stylistic/eslint-plugin` for consistent formatting.                   |
-| **Variables**      | Validates variable declarations, usage, and scoping rules.                   |
+| Rule Group         | Description                                                                     |
+| ------------------ | ------------------------------------------------------------------------------- |
+| **Best Practices** | Enforces common best practices to improve code quality and maintainability.     |
+| **Errors**         | Helps catch runtime errors and unsafe patterns early.                           |
+| **ES6**            | Provides rules specific to ES6+ syntax and features.                            |
+| **Imports**        | Ensures proper import/export usage with `eslint-plugin-import`.                 |
+| **Imports Strict** | See [Strict Imports](../../customization/strict-rules.md#strict-imports-rules). |
+| **Strict**         | Enables strict mode rules.                                                      |
+| **Style**          | Covers general code style rules such as spacing, quotes, and semicolons.        |
+| **Stylistic**      | Uses `@stylistic/eslint-plugin` for consistent formatting.                      |
+| **Variables**      | Validates variable declarations, usage, and scoping rules.                      |
 
 ### Example {#base-rules-example}
 
@@ -51,13 +51,13 @@ export default [
 
 ## React Rules {#react-rules}
 
-| Rule Group            | Description                                                              |
-| --------------------- | ------------------------------------------------------------------------ |
-| **Base**              | Core React rules for JSX and component structure.                        |
-| **JSX Accessibility** | Accessibility rules via `eslint-plugin-jsx-a11y` for inclusive UIs.      |
-| **Hooks**             | Rules from `eslint-plugin-react-hooks` ensuring proper hook usage.       |
-| **Stylistic**         | Ensures consistent styling inside JSX and React code.                    |
-| **React Strict**      | See [Strict React](../customization/strict-rules.md#strict-react-rules). |
+| Rule Group            | Description                                                                 |
+| --------------------- | --------------------------------------------------------------------------- |
+| **Base**              | Core React rules for JSX and component structure.                           |
+| **JSX Accessibility** | Accessibility rules via `eslint-plugin-jsx-a11y` for inclusive UIs.         |
+| **Hooks**             | Rules from `eslint-plugin-react-hooks` ensuring proper hook usage.          |
+| **Stylistic**         | Ensures consistent styling inside JSX and React code.                       |
+| **React Strict**      | See [Strict React](../../customization/strict-rules.md#strict-react-rules). |
 
 ### Example {#react-rules-example}
 
@@ -98,7 +98,7 @@ export default [
 | **Stylistic**                | Uses `@stylistic/eslint-plugin` to enforce consistent TypeScript code formatting.                                                       |
 | **TypeScript ESLint**        | Rules powered by `typescript-eslint`.                                                                                                   |
 | **Imports**                  | Activates `eslint-plugin-import-x` rules needed for TypeScript while disabling rules already covered by TypeScript to avoid redundancy. |
-| **TypeScript ESLint Strict** | See [Strict TypeScript ESLint](../customization/strict-rules.md#strict-typescript-rules).                                               |
+| **TypeScript ESLint Strict** | See [Strict TypeScript ESLint](../../customization/strict-rules.md#strict-typescript-rules).                                            |
 
 ### Example {#typescript-rules-example}
 
