@@ -60,10 +60,9 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^16.5.0",
-    "typescript-eslint": "^8.50.1"
+    "typescript-eslint": "^8.51.0"
   },
   "devDependencies": {
-    "@airbnb-extended/eslint-config": "workspace:*",
     "@airbnb-extended/lint-staged-config": "workspace:*",
     "@airbnb-extended/prettier-config": "workspace:*",
     "@airbnb-extended/typescript-config": "workspace:*",

@@ -11,4 +11,12 @@ export default defineConfig([
       'import-x/extensions': 'off',
     },
   },
+  // Disable relative packages for ESLint, Prettier and Lint Staged
+  {
+    name: 'x/import-x/disable-relative-packages-for-configs',
+    files: ['**/eslint.config.js', '**/prettier.config.js', '**/lint-staged.config.js'],
+    rules: {
+      'import-x/no-relative-packages': 'off',
+    },
+  },
 ]);
