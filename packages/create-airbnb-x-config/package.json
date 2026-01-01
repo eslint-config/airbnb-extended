@@ -5,13 +5,11 @@
   "keywords": [
     "eslint",
     "airbnb",
-    "eslint config cli",
-    "eslint config cli x",
-    "eslint config cli extended",
+    "eslint cli",
     "airbnb cli",
-    "airbnb config",
+    "eslint config cli",
+    "eslint config cli extended",
     "airbnb config cli",
-    "airbnb config cli x",
     "airbnb config cli extended"
   ],
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
