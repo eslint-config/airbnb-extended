@@ -1,7 +1,7 @@
 import globals from 'globals';
 
 import getDevDepsList from '@/helpers/getDevDepsList';
-import { allFiles, defineConfigObject, jsExtensions, jsExtensionsRule } from '@/utils';
+import { allFiles, defineConfigObject, jsExtensionsRule } from '@/utils';
 
 const importsRules = defineConfigObject({
   name: 'airbnb/config/import-x',
@@ -111,7 +111,7 @@ const importsRules = defineConfigObject({
     'import-x/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: getDevDepsList(jsExtensions.map((ext) => ext.slice(1)).join(',')),
+        devDependencies: getDevDepsList('javascript'),
         optionalDependencies: false,
         peerDependencies: true,
         bundledDependencies: true,

@@ -3,6 +3,7 @@ import { inject } from '@vercel/analytics';
 import 'virtual:group-icons.css';
 import Theme from 'vitepress/theme';
 
+// eslint-disable-next-line no-restricted-imports
 import './style.css';
 
 export default {

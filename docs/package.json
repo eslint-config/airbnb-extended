@@ -1,6 +1,6 @@
 {
-  "name": "eslint-airbnb-extended-docs",
-  "version": "3.0.0-beta-5",
+  "name": "@airbnb-extended/docs",
+  "version": "3.0.0",
   "private": true,
   "description": "Eslint Airbnb Extended Documentation",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
@@ -18,6 +18,10 @@
   "scripts": {
     "build": "vitepress build",
     "dev": "vitepress dev",
+    "format": "prettier . --check --log-level silent --ignore-path ../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../.gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vitepress preview",
     "typecheck": "tsc --noEmit"
   },
@@ -25,10 +29,14 @@
     "@vercel/analytics": "^1.6.1"
   },
   "devDependencies": {
+    "@airbnb-extended/eslint-config": "workspace:*",
+    "@airbnb-extended/lint-staged-config": "workspace:*",
+    "@airbnb-extended/prettier-config": "workspace:*",
+    "@airbnb-extended/typescript-config": "workspace:*",
     "vitepress": "^1.6.4",
     "vitepress-plugin-group-icons": "^1.6.5"
   },
   "engines": {
-    "node": ">=24.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   }
 }

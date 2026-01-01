@@ -1,20 +1,11 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "@airbnb-extended/typescript-config/base",
   "compilerOptions": {
-    "composite": true,
-    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.mjs",
-    "**/*.mts",
-    ".vitepress/**/*.ts",
-    ".vitepress/**/*.mts"
-  ],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**/*.ts", ".vitepress/**/*.ts"],
+  "exclude": ["node_modules"]
 }

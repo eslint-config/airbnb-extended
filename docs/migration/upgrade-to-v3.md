@@ -4,11 +4,12 @@ Version **v3** is the biggest upgrade so far, introducing several long-awaited i
 
 ### What’s new in v3
 
-- **Significantly smaller package** — the new version reduces the unpacked size by ~72% compared to the previous release.
+- **Significantly smaller package** - the new version reduces the unpacked size by ~72% compared to the previous release
+- **Node.js v16 support dropped** - v3 requires **Node 18.18 or higher**
 - **ESM-only architecture** - the entire package now uses native ES modules
+- **All batteries included** - everything you need ships out of the box
 - **Redesigned CLI options** - aligned with clearer, more explicit configurations
 - **Updated dependencies** - all packages are upgraded to their latest stable versions
-- **All batteries included** - everything you need ships out of the box
 
 …and much much more
 
@@ -25,6 +26,10 @@ This change ensures better long-term maintenance and community collaboration.
 ## Config {#config}
 
 - **The config is now ESM-only** - You must use an environment that supports **native ES modules** to run the config.
+
+- **Node.js v16 support dropped** - v3 requires **Node 18.18 or higher**.
+
+- **Introduced helper utilities** - For more details, see the [docs](../config/extended-config/helpers)
 
 - **Batteries included** - All required ESLint plugins and resolvers are bundled internally, so no additional plugins are needed. You only need to install:
   - `eslint`
@@ -62,7 +67,7 @@ This change ensures better long-term maintenance and community collaboration.
 
 - **CLI is now ESM-only** - You must run the CLI in an environment that supports **native ES modules**.
 
-- **Node.js v16 support dropped** - v3 requires **Node 18 or higher**.
+- **Node.js v16 support dropped** - v3 requires **Node 18.18 or higher**.
 
 - **Redesigned CLI options** - Many flags have been renamed or restructured for better consistency.
 

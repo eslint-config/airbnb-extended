@@ -65,6 +65,5 @@ export const eslintConfigName = 'eslint.config.mjs';
 export const baseGithubUrl =
   'https://github.com/NishargShah/eslint-config-airbnb-extended/tree/master/apps/build-templates/templates';
 
-// FIXME FROM CANARY
 export const baseGithubRawUrl =
-  'https://raw.githubusercontent.com/NishargShah/eslint-config-airbnb-extended/refs/heads/canary/apps/build-templates/templates';
+  'https://raw.githubusercontent.com/NishargShah/eslint-config-airbnb-extended/refs/heads/master/apps/build-templates/templates';

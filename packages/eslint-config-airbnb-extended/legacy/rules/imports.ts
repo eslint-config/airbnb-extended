@@ -54,7 +54,7 @@ export const legacyImportsInternalRules = {
   'import/no-extraneous-dependencies': [
     'error',
     {
-      devDependencies: getDevDepsList(jsExtensions.map((ext) => ext.slice(1)).join(',')),
+      devDependencies: getDevDepsList('javascript'),
       optionalDependencies: false,
     },
   ],

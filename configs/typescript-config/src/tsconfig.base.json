@@ -1,9 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Base",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
     "strict": true,
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,20 +16,5 @@
     "noEmitOnError": true,
     "isolatedModules": true,
     "declaration": true
-  },
-  "files": [],
-  "references": [
-    {
-      "path": "apps/build-templates"
-    },
-    {
-      "path": "docs"
-    },
-    {
-      "path": "packages/create-airbnb-x-config"
-    },
-    {
-      "path": "packages/eslint-config-airbnb-extended"
-    }
-  ]
+  }
 }

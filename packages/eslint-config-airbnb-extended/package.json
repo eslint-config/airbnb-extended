@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-airbnb-extended",
-  "version": "3.0.0-beta-5",
+  "version": "3.0.0",
   "description": "Eslint Airbnb Config Extended",
   "keywords": [
     "eslint",
@@ -42,6 +42,10 @@
     "build": "tsdown",
     "build:dev": "tsdown --watch",
     "check:updates": "tsx script/checkUpdates.ts",
+    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -56,9 +60,12 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^16.5.0",
-    "typescript-eslint": "^8.50.1"
+    "typescript-eslint": "^8.51.0"
   },
   "devDependencies": {
+    "@airbnb-extended/lint-staged-config": "workspace:*",
+    "@airbnb-extended/prettier-config": "workspace:*",
+    "@airbnb-extended/typescript-config": "workspace:*",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "tsdown": "catalog:",
@@ -73,6 +80,6 @@
     }
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   }
 }

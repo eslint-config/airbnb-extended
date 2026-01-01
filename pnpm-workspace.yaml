@@ -1,9 +1,11 @@
 packages:
   - apps/*
+  - configs/*
   - docs
   - packages/*
 
 catalog:
+  eslint: ^9.39.2
   tsdown: ^0.16.8
   tsx: ^4.21.0
   typescript: ^5.9.3

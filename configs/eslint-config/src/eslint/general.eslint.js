@@ -1,4 +1,7 @@
-const customGeneralESLintConfig = [
+import { defineConfig } from '../eslint-utils.js';
+
+export const generalConfig = defineConfig([
+  // General ESLint rules
   {
     name: 'x/general/rules',
     rules: {
@@ -22,10 +25,10 @@ const customGeneralESLintConfig = [
       ],
     },
   },
+  // Restrict user to use absolute paths
   {
     name: 'x/general/ts-only',
     files: ['**/*.{ts,cts,mts,tsx}'],
-    ignores: ['docs/**/*.{ts,cts,mts,tsx}'],
     rules: {
       'no-restricted-imports': [
         'error',
@@ -40,6 +43,4 @@ const customGeneralESLintConfig = [
       ],
     },
   },
-];
-
-export default customGeneralESLintConfig;
+]);

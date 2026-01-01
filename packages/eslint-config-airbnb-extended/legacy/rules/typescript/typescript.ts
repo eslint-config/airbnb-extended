@@ -7,7 +7,7 @@ import { legacyEs6InternalRules } from '@/legacy/rules/es6';
 import { legacyImportsInternalRules } from '@/legacy/rules/imports';
 import { legacyStyleInternalRules } from '@/legacy/rules/style';
 import { legacyVariablesInternalRules } from '@/legacy/rules/variables';
-import { defineConfigObject, jsExtensions, tsExtensions, tsFiles } from '@/utils';
+import { defineConfigObject, tsFiles } from '@/utils';
 
 const legacyTypescriptBaseRules = defineConfigObject({
   name: 'airbnb/config/typescript/legacy',
@@ -256,9 +256,7 @@ const legacyTypescriptBaseRules = defineConfigObject({
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: getDevDepsList(
-          [...jsExtensions, ...tsExtensions].map((ext) => ext.slice(1)).join(','),
-        ),
+        devDependencies: getDevDepsList('typescript'),
         optionalDependencies: false,
       },
     ],
