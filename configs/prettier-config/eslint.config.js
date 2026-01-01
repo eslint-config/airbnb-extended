@@ -1,4 +1,4 @@
-import config from '../eslint-config/src/eslint-internal.config.js';
-import { defineConfig } from '../eslint-config/src/eslint-utils.js';
+import config from '@airbnb-extended/eslint-config/internal';
+import { defineConfig } from '@airbnb-extended/eslint-config/utils';
 
 export default defineConfig(config);

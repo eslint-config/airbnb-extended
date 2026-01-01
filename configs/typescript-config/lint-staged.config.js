@@ -1,3 +1,3 @@
-import config from '../lint-staged-config/src/lint-staged-base.config.js';
+import config from '@airbnb-extended/lint-staged-config/base';
 
 export default config;
