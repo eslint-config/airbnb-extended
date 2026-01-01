@@ -1,7 +1,7 @@
 import { rules } from 'eslint-config-airbnb-extended';
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 
-import { defineConfig } from '../eslint-utils.js';
+import { defineConfig, getNoExtraneousDependenciesRule } from '../eslint-utils.js';
 
 const unusedImportConfig = defineConfig([
   // Unused Imports config
@@ -26,6 +26,7 @@ export const importConfig = defineConfig([
     name: 'x/import-x/rules',
     rules: {
       'import-x/prefer-default-export': 'off',
+      'import-x/no-extraneous-dependencies': getNoExtraneousDependenciesRule(),
     },
   },
 ]);
