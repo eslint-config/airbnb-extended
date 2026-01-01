@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nextRecommendedExtensionsConfig = [
+const nextRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/next-import-x',
     files: ['**/app/**/route.ts', '**/middleware.ts'],
@@ -18,6 +16,6 @@ const nextRecommendedExtensionsConfig = [
       'react/react-in-jsx-scope': 'off',
     },
   },
-] satisfies Linter.Config[];
+]);
 
 export default nextRecommendedExtensionsConfig;

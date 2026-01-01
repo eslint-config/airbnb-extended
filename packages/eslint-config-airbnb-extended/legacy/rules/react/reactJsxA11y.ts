@@ -1,10 +1,8 @@
 import plugin from 'eslint-plugin-jsx-a11y';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyReactJsxA11yRules = {
+const legacyReactJsxA11yRules = defineConfigObject({
   name: 'airbnb/config/react-jsx-a11y/legacy',
   files: allFiles,
   plugins: {
@@ -310,6 +308,6 @@ const legacyReactJsxA11yRules = {
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/93f78856655696a55309440593e0948c6fb96134/docs/rules/prefer-tag-over-role.md
     'jsx-a11y/prefer-tag-over-role': 'off',
   },
-} as Linter.Config;
+});
 
 export default legacyReactJsxA11yRules;

@@ -1,79 +1,81 @@
 import confusingBrowserGlobals from 'confusing-browser-globals';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
+import type { ConfigRules } from '@/types/common.types';
 
-const variablesRules = {
+export const variablesInternalRules = {
+  // enforce or disallow variable initializations at definition
+  'init-declarations': 'off',
+
+  // disallow deletion of variables
+  'no-delete-var': 'error',
+
+  // disallow labels that share a name with a variable
+  // https://eslint.org/docs/rules/no-label-var
+  'no-label-var': 'error',
+
+  // disallow specific globals
+  'no-restricted-globals': [
+    'error',
+    {
+      name: 'isFinite',
+      message:
+        'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+    },
+    {
+      name: 'isNaN',
+      message:
+        'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+    },
+    ...confusingBrowserGlobals.map((g) => ({
+      name: g,
+      message: `Use window.${g} instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md`,
+    })),
+  ],
+
+  // disallow declaration of variables already declared in the outer scope
+  'no-shadow': 'error',
+
+  // disallow shadowing of names such as arguments
+  'no-shadow-restricted-names': 'error',
+
+  // disallow use of undeclared variables unless mentioned in a /*global */ block
+  'no-undef': 'error',
+
+  // disallow use of undefined when initializing variables
+  'no-undef-init': 'error',
+
+  // disallow use of undefined variable
+  // https://eslint.org/docs/rules/no-undefined
+  'no-undefined': 'off',
+
+  // disallow declaration of variables that are not used in the code
+  'no-unused-vars': [
+    'warn',
+    {
+      vars: 'all',
+      args: 'after-used',
+      ignoreRestSiblings: true,
+      argsIgnorePattern: '^_',
+    },
+  ],
+
+  // disallow use of variables before they are defined
+  'no-use-before-define': [
+    'error',
+    {
+      functions: true,
+      classes: true,
+      variables: true,
+    },
+  ],
+} satisfies ConfigRules;
+
+const variablesRules = defineConfigObject({
   name: 'airbnb/config/variables',
   files: allFiles,
-  rules: {
-    // enforce or disallow variable initializations at definition
-    'init-declarations': 'off',
-
-    // disallow deletion of variables
-    'no-delete-var': 'error',
-
-    // disallow labels that share a name with a variable
-    // https://eslint.org/docs/rules/no-label-var
-    'no-label-var': 'error',
-
-    // disallow specific globals
-    'no-restricted-globals': [
-      'error',
-      {
-        name: 'isFinite',
-        message:
-          'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
-      },
-      {
-        name: 'isNaN',
-        message:
-          'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
-      },
-      ...confusingBrowserGlobals.map((g) => ({
-        name: g,
-        message: `Use window.${g} instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md`,
-      })),
-    ],
-
-    // disallow declaration of variables already declared in the outer scope
-    'no-shadow': 'error',
-
-    // disallow shadowing of names such as arguments
-    'no-shadow-restricted-names': 'error',
-
-    // disallow use of undeclared variables unless mentioned in a /*global */ block
-    'no-undef': 'error',
-
-    // disallow use of undefined when initializing variables
-    'no-undef-init': 'error',
-
-    // disallow use of undefined variable
-    // https://eslint.org/docs/rules/no-undefined
-    'no-undefined': 'off',
-
-    // disallow declaration of variables that are not used in the code
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        args: 'after-used',
-        ignoreRestSiblings: true,
-        argsIgnorePattern: '^_',
-      },
-    ],
-
-    // disallow use of variables before they are defined
-    'no-use-before-define': [
-      'error',
-      {
-        functions: true,
-        classes: true,
-        variables: true,
-      },
-    ],
-  },
-} satisfies Linter.Config;
+  rules: variablesInternalRules,
+});
 
 export default variablesRules;

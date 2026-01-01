@@ -1,15 +1,15 @@
 import plugin from 'eslint-plugin-import-x';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigPlugin } from '@/utils';
 
-import type { Linter } from 'eslint';
+import type { ConfigPluginObject } from '@/types/common.types';
 
-const importXPluginConfig = {
+const importXPluginConfig = defineConfigPlugin({
   name: 'airbnb/config/plugin/import-x',
   files: allFiles,
   plugins: {
     'import-x': plugin,
-  },
-} as unknown as Linter.Config;
+  } as unknown as ConfigPluginObject,
+});
 
 export default importXPluginConfig;

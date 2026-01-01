@@ -1,7 +1,6 @@
 import legacyBaseLegacyConfig from '@/legacy/configs/base/legacy';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyReactLegacyConfig = legacyBaseLegacyConfig satisfies Linter.Config[];
+const legacyReactLegacyConfig = defineConfigArray(legacyBaseLegacyConfig);
 
 export default legacyReactLegacyConfig;

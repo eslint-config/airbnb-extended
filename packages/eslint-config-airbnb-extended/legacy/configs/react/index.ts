@@ -1,26 +1,15 @@
-/* eslint-disable @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-return */
+import legacyReactBaseConfig from '@/legacy/configs/react/base';
+import legacyReactHooksConfig from '@/legacy/configs/react/hooks';
+import legacyReactLegacyConfig from '@/legacy/configs/react/legacy';
+import legacyReactRecommendedConfig from '@/legacy/configs/react/recommended';
+import legacyReactTypescriptConfig from '@/legacy/configs/react/typescript';
 
-import type { Linter } from 'eslint';
+const legacyReact = {
+  legacy: legacyReactLegacyConfig,
+  base: legacyReactBaseConfig,
+  recommended: legacyReactRecommendedConfig,
+  hooks: legacyReactHooksConfig,
+  typescript: legacyReactTypescriptConfig,
+} as const;
 
-/**
- * as is given due to less size of index.d.ts
- */
-const react = {
-  get legacy(): Linter.Config[] {
-    return require('@/legacy/configs/react/legacy').default;
-  },
-  get base(): Linter.Config[] {
-    return require('@/legacy/configs/react/base').default;
-  },
-  get recommended(): Linter.Config[] {
-    return require('@/legacy/configs/react/recommended').default;
-  },
-  get hooks(): Linter.Config[] {
-    return require('@/legacy/configs/react/hooks').default;
-  },
-  get typescript(): Linter.Config[] {
-    return require('@/legacy/configs/react/typescript').default;
-  },
-};
-
-export default react;
+export default legacyReact;

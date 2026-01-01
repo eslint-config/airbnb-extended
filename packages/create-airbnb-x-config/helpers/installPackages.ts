@@ -2,9 +2,7 @@ import spawn from 'cross-spawn';
 
 import getCommands from '@/helpers/getCommands';
 
-import type { GetCommands } from '@/helpers/getCommands';
-
-type InstallPackages = (args: Parameters<GetCommands>[0]) => Promise<void>;
+import type { InstallPackages } from '@/helpers/@types/installPackages.types';
 
 /**
  * @see https://github.com/vercel/next.js/blob/canary/packages/create-next-app/helpers/install.ts

@@ -9,7 +9,7 @@ The legacy `.eslintrc` format is now **deprecated** and will not receive further
 
 If your project still depends on `.eslintrc`, we recommend continuing with the older Airbnb packages, see [Note](../guide/getting-started#note).
 
-If you’d like to migrate to the Flat Config format instead, follow our [Migration Guide](../guide/migration).
+If you’d like to migrate to the Flat Config format instead, follow our [Migration Guide](../migration/upgrade-to-extended).
 
 ## 2. Difference between Extended vs Legacy Config {#extended-vs-legacy}
 

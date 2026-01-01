@@ -56,7 +56,7 @@ Choose the style of configuration you want:
 
 ### Extended Config Prompts {#extended-prompts}
 
-If you selected **Extended**, The CLI will **automatically include** `@stylistic/eslint-plugin@^3.1.0` and `eslint-plugin-import-x`. The following questions apply only to **Extended** configs.
+If you selected **Extended**, The CLI will **automatically include** `@stylistic/eslint-plugin` and `eslint-plugin-import-x`. The following questions apply only to **Extended** configs.
 
 #### 4. Are you using? {#are-you-using-extended}
 
@@ -116,15 +116,15 @@ Example installation command:
 ::: code-group
 
 ```sh [npm]
-npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended eslint-import-resolver-typescript typescript-eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 ```sh [yarn]
-yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended eslint-import-resolver-typescript typescript-eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 ```sh [pnpm]
-pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended eslint-import-resolver-typescript typescript-eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 :::
@@ -132,7 +132,7 @@ pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended e
 Example config file:
 
 ```txt
-https://github.com/NishargShah/eslint-config-airbnb-extended/tree/master/packages/create-airbnb-x-config/templates/legacy/base/prettier/ts/default/eslint.config.mjs
+https://github.com/NishargShah/eslint-config-airbnb-extended/tree/master/apps/build-templates/templates/legacy/base/prettier/ts/default/eslint.config.mjs
 ```
 
 ## Optional Steps {#optional-steps}

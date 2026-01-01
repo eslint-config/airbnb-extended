@@ -1,12 +1,11 @@
-import bestPracticesRules from '@/rules/best-practices';
-import es6Rules from '@/rules/es6';
-import styleRules from '@/rules/style';
-import variablesRules from '@/rules/variables';
-import { tsFiles } from '@/utils';
+import { bestPracticesInternalRules } from '@/rules/best-practices';
+import { errorsInternalRules } from '@/rules/errors';
+import { es6InternalRules } from '@/rules/es6';
+import { styleInternalRules } from '@/rules/style';
+import { variablesInternalRules } from '@/rules/variables';
+import { defineConfigObject, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const typescriptEslintRules = {
+const typescriptEslintRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-eslint',
   files: tsFiles,
   languageOptions: {
@@ -17,7 +16,6 @@ const typescriptEslintRules = {
   rules: {
     // Require that function overload signatures be consecutive.
     // https://typescript-eslint.io/rules/adjacent-overload-signatures
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/adjacent-overload-signatures': 'off',
 
     // Require consistently using either T[] or Array<T> for arrays.
@@ -53,7 +51,6 @@ const typescriptEslintRules = {
 
     // Enforce specifying generic type arguments on type annotation or constructor name of a constructor call.
     // https://typescript-eslint.io/rules/consistent-generic-constructors
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/consistent-generic-constructors': 'off',
 
     // Require or disallow the Record type.
@@ -67,7 +64,6 @@ const typescriptEslintRules = {
 
     // Enforce consistent usage of type assertions.
     // https://typescript-eslint.io/rules/consistent-type-assertions
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/consistent-type-assertions': 'off',
 
     // Enforce type definitions to consistently use either interface or type.
@@ -85,15 +81,15 @@ const typescriptEslintRules = {
     // Enforce default parameters to be last.
     // https://typescript-eslint.io/rules/default-param-last
     'default-param-last': 'off',
-    '@typescript-eslint/default-param-last': bestPracticesRules.rules['default-param-last'],
+    '@typescript-eslint/default-param-last': bestPracticesInternalRules['default-param-last'],
 
     // Enforce dot notation whenever possible.
     // https://typescript-eslint.io/rules/dot-notation
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': [
-      bestPracticesRules.rules['dot-notation'][0],
+      bestPracticesInternalRules['dot-notation'][0],
       {
-        ...bestPracticesRules.rules['dot-notation'][1],
+        ...bestPracticesInternalRules['dot-notation'][1],
         allowPrivateClassPropertyAccess: false,
         allowProtectedClassPropertyAccess: false,
         allowIndexSignaturePropertyAccess: false,
@@ -151,7 +147,7 @@ const typescriptEslintRules = {
     // Disallow generic Array constructors.
     // https://typescript-eslint.io/rules/no-array-constructor
     'no-array-constructor': 'off',
-    '@typescript-eslint/no-array-constructor': styleRules.rules['no-array-constructor'],
+    '@typescript-eslint/no-array-constructor': styleInternalRules['no-array-constructor'],
 
     // Disallow using the delete operator on array values.
     // https://typescript-eslint.io/rules/no-array-delete
@@ -193,7 +189,7 @@ const typescriptEslintRules = {
     // Disallow empty functions.
     // https://typescript-eslint.io/rules/no-empty-function
     'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': bestPracticesRules.rules['no-empty-function'],
+    '@typescript-eslint/no-empty-function': bestPracticesInternalRules['no-empty-function'],
 
     // Disallow accidentally using the "empty object" type.
     // https://typescript-eslint.io/rules/no-empty-object-type
@@ -230,7 +226,7 @@ const typescriptEslintRules = {
     // https://typescript-eslint.io/rules/no-implied-eval
     'no-implied-eval': 'off',
     'no-new-func': 'off',
-    '@typescript-eslint/no-implied-eval': bestPracticesRules.rules['no-implied-eval'],
+    '@typescript-eslint/no-implied-eval': bestPracticesInternalRules['no-implied-eval'],
 
     // Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers.
     // https://typescript-eslint.io/rules/no-import-type-side-effects
@@ -257,7 +253,7 @@ const typescriptEslintRules = {
     // Disallow function declarations that contain unsafe references inside loop statements.
     // https://typescript-eslint.io/rules/no-loop-func
     'no-loop-func': 'off',
-    '@typescript-eslint/no-loop-func': bestPracticesRules.rules['no-loop-func'],
+    '@typescript-eslint/no-loop-func': bestPracticesInternalRules['no-loop-func'],
 
     // Disallow magic numbers.
     // https://typescript-eslint.io/rules/no-magic-numbers
@@ -335,7 +331,7 @@ const typescriptEslintRules = {
     // Disallow variable declarations from shadowing variables declared in the outer scope.
     // https://typescript-eslint.io/rules/no-shadow
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': variablesRules.rules['no-shadow'],
+    '@typescript-eslint/no-shadow': variablesInternalRules['no-shadow'],
 
     // Disallow aliasing this.
     // https://typescript-eslint.io/rules/no-this-alias
@@ -430,22 +426,30 @@ const typescriptEslintRules = {
     // Disallow unused expressions.
     // https://typescript-eslint.io/rules/no-unused-expressions
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': bestPracticesRules.rules['no-unused-expressions'],
+    '@typescript-eslint/no-unused-expressions': bestPracticesInternalRules['no-unused-expressions'],
+
+    'no-unused-private-class-members': 'off',
+    '@typescript-eslint/no-unused-private-class-members':
+      errorsInternalRules['no-unused-private-class-members'],
 
     // Disallow unused variables.
     // https://typescript-eslint.io/rules/no-unused-vars
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': variablesRules.rules['no-unused-vars'],
+    '@typescript-eslint/no-unused-vars': variablesInternalRules['no-unused-vars'],
 
     // Disallow the use of variables before they are defined.
     // https://typescript-eslint.io/rules/no-use-before-define
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': variablesRules.rules['no-use-before-define'],
+    '@typescript-eslint/no-use-before-define': variablesInternalRules['no-use-before-define'],
 
     // Disallow unnecessary constructors.
     // https://typescript-eslint.io/rules/no-useless-constructor
     'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': es6Rules.rules['no-useless-constructor'],
+    '@typescript-eslint/no-useless-constructor': es6InternalRules['no-useless-constructor'],
+
+    // Disallow default values that will never be used.
+    // https://typescript-eslint.io/rules/no-useless-default-assignment
+    '@typescript-eslint/no-useless-default-assignment': 'off',
 
     // Disallow empty exports that don't change anything in a module file.
     // https://typescript-eslint.io/rules/no-useless-empty-export
@@ -462,7 +466,7 @@ const typescriptEslintRules = {
     // Disallow throwing non-Error values as exceptions.
     // https://typescript-eslint.io/rules/only-throw-error
     'no-throw-literal': 'off',
-    '@typescript-eslint/only-throw-error': bestPracticesRules.rules['no-throw-literal'],
+    '@typescript-eslint/only-throw-error': bestPracticesInternalRules['no-throw-literal'],
 
     // Require or disallow parameter properties in class constructors.
     // https://typescript-eslint.io/rules/parameter-properties
@@ -475,7 +479,7 @@ const typescriptEslintRules = {
     // Require destructuring from arrays and/or objects.
     // https://typescript-eslint.io/rules/prefer-destructuring
     'prefer-destructuring': 'off',
-    '@typescript-eslint/prefer-destructuring': es6Rules.rules['prefer-destructuring'],
+    '@typescript-eslint/prefer-destructuring': es6InternalRules['prefer-destructuring'],
 
     // Require each enum member value to be explicitly initialized.
     // https://typescript-eslint.io/rules/prefer-enum-initializers
@@ -487,7 +491,6 @@ const typescriptEslintRules = {
 
     // Enforce the use of for-of loop over the standard for loop where possible.
     // https://typescript-eslint.io/rules/prefer-for-of
-    // Recommended in stylistic by the TypeScript Eslint team
     '@typescript-eslint/prefer-for-of': 'off',
 
     // Enforce using function types instead of interfaces with call signatures.
@@ -605,9 +608,9 @@ const typescriptEslintRules = {
     // https://typescript-eslint.io/rules/use-unknown-in-catch-callback-variable
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
   },
-} satisfies Linter.Config;
+});
 
-export const deprecatedTypescriptEslintRules = {
+export const deprecatedTypescriptEslintRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-eslint/deprecated',
   files: tsFiles,
   rules: {
@@ -635,6 +638,6 @@ export const deprecatedTypescriptEslintRules = {
     // https://typescript-eslint.io/rules/sort-type-constituents
     '@typescript-eslint/sort-type-constituents': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default typescriptEslintRules;

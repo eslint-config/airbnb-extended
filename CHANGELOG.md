@@ -1,3 +1,30 @@
+## 3.0.0 (2026-01-01)
+
+### 🚨 Breaking Change
+
+- **Significantly smaller package** - the new version reduces the unpacked size by ~72% compared to the previous release
+- **Node.js v16 support dropped** - v3 requires **Node 18.18 or higher**
+- **ESM-only architecture** - the entire package now uses native ES modules
+- **All batteries included** - everything you need ships out of the box
+- **Redesigned CLI options** - aligned with clearer, more explicit configurations
+- **Updated dependencies** - all packages are upgraded to their latest stable versions
+
+For more details, see the [docs](https://eslint-airbnb-extended.nishargshah.dev/migration/upgrade-to-v3)
+
+### 🚀 Repository migration
+
+As part of this release, the project has moved from a **personal repository** to a dedicated **organization repository**:
+
+- From: [https://github.com/NishargShah/eslint-config-airbnb-extended](https://github.com/NishargShah/eslint-config-airbnb-extended)
+- To: [https://github.com/eslint-config/airbnb-extended](https://github.com/eslint-config/airbnb-extended)
+
+### ❤️ Thank You
+
+- Gualtiero @maiolica
+- Alexey Immoreev @luixo
+- Vida Xie @9romise
+- Sam Garfinkel @sgarfinkel
+
 ## 2.3.3 (2025-11-29)
 
 ### 🩹 Fixes
@@ -17,6 +44,10 @@
 - **eslint-config-airbnb-extended:** Upgraded deps
 - **eslint-config-airbnb-extended:** Added support for `eslint-plugin-react-hooks` versions 6 and 7
 - **eslint-config-airbnb-extended:** Updated `security.md`
+
+### ❤️ Thank You
+
+- Steven Sacks @stevensacks
 
 ## 2.3.1 (2025-09-10)
 

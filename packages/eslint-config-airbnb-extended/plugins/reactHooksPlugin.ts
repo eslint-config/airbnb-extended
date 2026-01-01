@@ -1,15 +1,15 @@
 import plugin from 'eslint-plugin-react-hooks';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigPlugin } from '@/utils';
 
-import type { Linter } from 'eslint';
+import type { ConfigPluginObject } from '@/types/common.types';
 
-const reactHooksPlugin = {
+const reactHooksPlugin = defineConfigPlugin({
   name: 'airbnb/config/plugin/react-hooks',
   files: allFiles,
   plugins: {
     'react-hooks': plugin,
-  },
-} as Linter.Config;
+  } as ConfigPluginObject,
+});
 
 export default reactHooksPlugin;

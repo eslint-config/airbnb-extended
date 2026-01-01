@@ -118,9 +118,9 @@ The `rules` are the building blocks of `configs`. Each config combines these rul
 
 ## Why Legacy Config Exists {#why-legacy-config-exists}
 
-- ✅ **1:1 replacements** → drop-in equivalents of Airbnb configs.
-- ✅ **Flat Config ready** → works with ESLint 9 and beyond.
-- ✅ **Migration path** → lets you start simple, then move to `extended` or `strict` configs later.
-- ✅ **Less churn** → developers see fewer rule changes when upgrading.
+- **1:1 replacements** → drop-in equivalents of Airbnb configs.
+- **Flat Config ready** → works with ESLint 9 and beyond.
+- **Migration path** → lets you start simple, then move to `extended` or `strict` configs later.
+- **Less churn** → developers see fewer rule changes when upgrading.
 
 If you’re upgrading a project that **already relies on Airbnb configs**, start with **Legacy Config** to make the transition safe and low-friction. Once you’re stable, you can move on to **Extended** (modernized rules) or even **Strict Mode** for maximum consistency.

@@ -1,10 +1,8 @@
 import getImportSettings from '@/helpers/getImportSettings';
 import getStylisticLegacyConfig from '@/helpers/getStylisticLegacyConfig';
-import { allFiles, jsFileWithoutReact } from '@/utils';
+import { allFiles, defineConfigArray, jsFileWithoutReact } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const baseRecommendedExtensionsConfig = [
+const baseRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/base-configurations',
     files: allFiles,
@@ -29,6 +27,6 @@ const baseRecommendedExtensionsConfig = [
     files: allFiles,
     ...getStylisticLegacyConfig('javascript'),
   },
-] satisfies Linter.Config[];
+]);
 
 export default baseRecommendedExtensionsConfig;

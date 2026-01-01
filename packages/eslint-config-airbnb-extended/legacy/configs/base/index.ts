@@ -1,20 +1,11 @@
-/* eslint-disable @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-return */
+import legacyBaseLegacyConfig from '@/legacy/configs/base/legacy';
+import legacyBaseRecommendedConfig from '@/legacy/configs/base/recommended';
+import legacyBaseTypescriptConfig from '@/legacy/configs/base/typescript';
 
-import type { Linter } from 'eslint';
+const legacyBase = {
+  legacy: legacyBaseLegacyConfig,
+  recommended: legacyBaseRecommendedConfig,
+  typescript: legacyBaseTypescriptConfig,
+} as const;
 
-/**
- * as is given due to less size of index.d.ts
- */
-const base = {
-  get legacy(): Linter.Config[] {
-    return require('@/legacy/configs/base/legacy').default;
-  },
-  get recommended(): Linter.Config[] {
-    return require('@/legacy/configs/base/recommended').default;
-  },
-  get typescript(): Linter.Config[] {
-    return require('@/legacy/configs/base/typescript').default;
-  },
-};
-
-export default base;
+export default legacyBase;

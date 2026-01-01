@@ -4,7 +4,7 @@
 
 ::: tip NOTE
 
-This package doesn’t support `.eslintrc*`. If you’re still on legacy config files, migrate to `eslint.config.mjs` first. See [migration guide](../guide/migration) for detailed information.
+This package doesn’t support `.eslintrc*`. If you’re still on legacy config files, migrate to `eslint.config.mjs` first. See [migration guide](../migration/upgrade-to-extended) for detailed information.
 
 :::
 

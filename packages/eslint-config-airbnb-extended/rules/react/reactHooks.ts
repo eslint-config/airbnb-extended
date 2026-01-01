@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactHooksRules = {
+const reactHooksRules = defineConfigObject({
   name: 'airbnb/config/react-hooks',
   files: allFiles,
   languageOptions: {
@@ -13,14 +11,14 @@ const reactHooksRules = {
     },
   },
   rules: {
-    // Verify the list of the dependencies for Hooks like useEffect and similar
-    // https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/src/rules/ExhaustiveDeps.ts
+    // Validates that dependency arrays for React hooks contain all necessary dependencies.
+    // https://react.dev/reference/eslint-plugin-react-hooks/lints/exhaustive-deps
     'react-hooks/exhaustive-deps': 'error',
 
-    // Enforce Rules of Hooks
-    // https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/src/rules/RulesOfHooks.ts
+    // Validates that components and hooks follow the Rules of Hooks.
+    // https://react.dev/reference/eslint-plugin-react-hooks/lints/rules-of-hooks
     'react-hooks/rules-of-hooks': 'error',
   },
-} satisfies Linter.Config;
+});
 
 export default reactHooksRules;

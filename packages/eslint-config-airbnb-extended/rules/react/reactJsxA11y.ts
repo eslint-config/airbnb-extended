@@ -1,8 +1,6 @@
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigObject } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactJsxA11yRules = {
+const reactJsxA11yRules = defineConfigObject({
   name: 'airbnb/config/react-jsx-a11y',
   files: allFiles,
   languageOptions: {
@@ -278,9 +276,9 @@ const reactJsxA11yRules = {
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/tabindex-no-positive.md
     'jsx-a11y/tabindex-no-positive': 'error',
   },
-} satisfies Linter.Config;
+});
 
-export const deprecatedReactJsxA11yRules = {
+export const deprecatedReactJsxA11yRules = defineConfigObject({
   name: 'airbnb/config/react-jsx-a11y/deprecated',
   files: allFiles,
   rules: {
@@ -296,6 +294,6 @@ export const deprecatedReactJsxA11yRules = {
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/no-onchange.md
     'jsx-a11y/no-onchange': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default reactJsxA11yRules;

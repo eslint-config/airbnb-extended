@@ -1,0 +1,40 @@
+{
+  "name": "@airbnb-extended/build-templates",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Build Templates",
+  "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
+  "bugs": {
+    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "directory": "apps/build-templates"
+  },
+  "license": "MIT",
+  "author": "Nisharg Shah <nishargshah3101@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "build": "tsx lib/index.ts",
+    "dev": "tsx lib/index.ts",
+    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "create-airbnb-x-config": "workspace:*"
+  },
+  "devDependencies": {
+    "@airbnb-extended/eslint-config": "workspace:*",
+    "@airbnb-extended/lint-staged-config": "workspace:*",
+    "@airbnb-extended/prettier-config": "workspace:*",
+    "@airbnb-extended/typescript-config": "workspace:*",
+    "tsx": "catalog:"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  }
+}

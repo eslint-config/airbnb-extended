@@ -1,15 +1,13 @@
 import nodePlugin from 'eslint-plugin-n';
 
-import nodeNoUnsupportedFeaturesRules from '@/rules/node/nodeNoUnsupportedFeatures';
-import { allFiles } from '@/utils';
-
-import type { Linter } from 'eslint';
+import { nodeNoUnsupportedFeaturesInternalRules } from '@/rules/node/nodeNoUnsupportedFeatures';
+import { allFiles, defineConfigArray } from '@/utils';
 
 const flatNodeConfig = nodePlugin.configs['flat/recommended'];
 const flatModuleConfig = nodePlugin.configs['flat/recommended-module'];
 const flatScriptConfig = nodePlugin.configs['flat/recommended-script'];
 
-const nodeRecommendedExtensionsConfig = [
+const nodeRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/node-configurations',
     files: allFiles,
@@ -19,7 +17,7 @@ const nodeRecommendedExtensionsConfig = [
           rules: {
             'n/no-unsupported-features/es-syntax':
               flatNodeConfig.rules?.['n/no-unsupported-features/es-syntax'] ??
-              nodeNoUnsupportedFeaturesRules.rules['n/no-unsupported-features/es-syntax'],
+              nodeNoUnsupportedFeaturesInternalRules['n/no-unsupported-features/es-syntax'],
           },
         }
       : null),
@@ -33,7 +31,7 @@ const nodeRecommendedExtensionsConfig = [
           rules: {
             'n/no-unsupported-features/es-syntax':
               flatModuleConfig.rules?.['n/no-unsupported-features/es-syntax'] ??
-              nodeNoUnsupportedFeaturesRules.rules['n/no-unsupported-features/es-syntax'],
+              nodeNoUnsupportedFeaturesInternalRules['n/no-unsupported-features/es-syntax'],
           },
         }
       : null),
@@ -47,11 +45,11 @@ const nodeRecommendedExtensionsConfig = [
           rules: {
             'n/no-unsupported-features/es-syntax':
               flatScriptConfig.rules?.['n/no-unsupported-features/es-syntax'] ??
-              nodeNoUnsupportedFeaturesRules.rules['n/no-unsupported-features/es-syntax'],
+              nodeNoUnsupportedFeaturesInternalRules['n/no-unsupported-features/es-syntax'],
           },
         }
       : null),
   },
-] satisfies Linter.Config[];
+]);
 
 export default nodeRecommendedExtensionsConfig;

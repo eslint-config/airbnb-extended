@@ -1,16 +1,13 @@
-import { allFiles } from '@/utils';
+import plugin from '@next/eslint-plugin-next';
 
-import type { Linter } from 'eslint';
+import { allFiles, defineConfigPlugin } from '@/utils';
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const plugin = require('@next/eslint-plugin-next');
-
-const nextPlugin = {
+const nextPlugin = defineConfigPlugin({
   name: 'airbnb/config/plugin/next',
   files: allFiles,
   plugins: {
     '@next/next': plugin,
   },
-} satisfies Linter.Config;
+});
 
 export default nextPlugin;

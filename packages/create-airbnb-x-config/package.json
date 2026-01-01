@@ -1,6 +1,6 @@
 {
   "name": "create-airbnb-x-config",
-  "version": "2.3.3",
+  "version": "3.0.0",
   "description": "Airbnb Extended Config CLI",
   "keywords": [
     "eslint",
@@ -25,38 +25,48 @@
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
-  "type": "commonjs",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "bin": {
-    "create-airbnb-extended-config": "./dist/index.js",
-    "create-airbnb-x-config": "./dist/index.js"
+    "create-airbnb-extended-config": "./dist/index.mjs",
+    "create-airbnb-x-config": "./dist/index.mjs"
   },
   "scripts": {
-    "prebuild": "rimraf ./dist",
-    "build": "tsc -b",
-    "postbuild": "tsc-alias",
-    "build:templates": "tsx lib/templates/index.ts",
+    "build": "tsdown",
+    "build:dev": "tsdown --watch",
     "dev": "tsx index.ts",
-    "start": "node ./dist/index.js",
+    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "node ./dist/index.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "commander": "^14.0.2",
     "cross-spawn": "^7.0.6",
-    "package-manager-detector": "^0.2.11",
+    "node-fetch": "^3.3.2",
+    "package-manager-detector": "^1.6.0",
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
+    "@airbnb-extended/eslint-config": "workspace:*",
+    "@airbnb-extended/lint-staged-config": "workspace:*",
+    "@airbnb-extended/prettier-config": "workspace:*",
+    "@airbnb-extended/typescript-config": "workspace:*",
     "@types/cross-spawn": "^6.0.6",
     "@types/prompts": "^2.4.9",
-    "rimraf": "catalog:",
-    "tsc-alias": "catalog:",
-    "tsx": "catalog:",
-    "typescript": "catalog:"
+    "tsdown": "catalog:",
+    "tsx": "catalog:"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   }
 }

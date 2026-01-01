@@ -1,41 +1,23 @@
 import pc from 'picocolors';
 
-import { configTypes, legacyLanguages } from '@/constants';
-import { subFolders } from '@/lib/templates/constants';
+import {
+  baseGithubUrl,
+  configs,
+  eslintConfigName,
+  formatters,
+  languages,
+  subFolders,
+} from '@/constants';
 
-import type { NonNullableArgsOutput } from '@/utils/types';
-
-export const eslintConfigName = 'eslint.config.mjs';
-export const baseGithubUrl =
-  'https://github.com/NishargShah/eslint-config-airbnb-extended/tree/master/packages/create-airbnb-x-config/templates';
-
-interface GetConfigUrlOutput {
-  path: string;
-  url: string;
-}
-
-export type GetConfigUrl = (
-  args: Pick<
-    NonNullableArgsOutput,
-    'configType' | 'typescript' | 'prettier' | 'strictConfig' | 'language' | 'legacyConfig'
-  >,
-) => GetConfigUrlOutput | null;
+import type { GetConfigUrl } from '@/helpers/@types/getConfigUrl.types';
 
 const getConfigUrl: GetConfigUrl = (args) => {
-  const { configType, typescript, prettier, strictConfig, language, legacyConfig } = args;
-  const isLegacy = configType === configTypes.LEGACY;
+  const { config, language, formatter, strictConfig, runtime, legacyConfig } = args;
+  const isLegacy = config === configs.LEGACY;
 
-  const prettierText = prettier ? 'prettier' : null;
-  const tsOrJsText = typescript ? 'ts' : 'js';
-  const legacyLanguage = (() => {
-    if (configType === configTypes.EXTENDED) return null;
-
-    if (legacyConfig.base) return legacyLanguages.BASE;
-    // NOTE: React Hooks should come first in the condition, because if someone selects "Yes", it must appear in the config otherwise, it won’t be reached.
-    if (legacyConfig.reactHooks) return legacyLanguages.REACT_HOOKS;
-    if (legacyConfig.react) return legacyLanguages.REACT;
-    return null;
-  })();
+  const prettierText = formatter === formatters.PRETTIER ? 'prettier' : null;
+  const tsOrJsText = language === languages.TYPESCRIPT ? 'ts' : 'js';
+  const legacyLanguage = config === configs.EXTENDED ? null : legacyConfig;
 
   const strictOrDefaultText = (() => {
     if (!strictConfig || strictConfig.length === 0) return [subFolders.DEFAULT];
@@ -45,7 +27,7 @@ const getConfigUrl: GetConfigUrl = (args) => {
   })();
 
   const path = [
-    ...(isLegacy ? [configTypes.LEGACY, legacyLanguage] : [language]),
+    ...(isLegacy ? [configs.LEGACY, legacyLanguage] : [runtime]),
     prettierText,
     tsOrJsText,
     ...strictOrDefaultText,
@@ -55,7 +37,7 @@ const getConfigUrl: GetConfigUrl = (args) => {
     .join('/');
 
   return {
-    path: `templates/${path}`,
+    path,
     url: pc.blue(`${baseGithubUrl}/${path}`),
   };
 };

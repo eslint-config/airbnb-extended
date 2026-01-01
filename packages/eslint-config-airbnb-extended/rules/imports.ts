@@ -1,11 +1,9 @@
 import globals from 'globals';
 
 import getDevDepsList from '@/helpers/getDevDepsList';
-import { allFiles, jsExtensions, jsExtensionsRule } from '@/utils';
+import { allFiles, defineConfigObject, jsExtensionsRule } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const importsRules = {
+const importsRules = defineConfigObject({
   name: 'airbnb/config/import-x',
   files: allFiles,
   languageOptions: {
@@ -113,7 +111,7 @@ const importsRules = {
     'import-x/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: getDevDepsList(jsExtensions.map((ext) => ext.slice(1)).join(',')),
+        devDependencies: getDevDepsList('javascript'),
         optionalDependencies: false,
         peerDependencies: true,
         bundledDependencies: true,
@@ -234,9 +232,9 @@ const importsRules = {
     // At the moment, it's not a thing.
     'import-x/unambiguous': 'off',
   },
-} satisfies Linter.Config;
+});
 
-export const deprecatedImportsRules = {
+export const deprecatedImportsRules = defineConfigObject({
   name: 'airbnb/config/import-x/deprecated',
   files: allFiles,
   rules: {
@@ -244,6 +242,6 @@ export const deprecatedImportsRules = {
     // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/imports-first.md
     'import-x/imports-first': 'off',
   },
-} satisfies Linter.Config;
+});
 
 export default importsRules;

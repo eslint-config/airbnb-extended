@@ -1,9 +1,7 @@
 import getImportSettings from '@/helpers/getImportSettings';
-import { tsFiles } from '@/utils';
+import { defineConfigArray, tsFiles } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const reactTypescriptExtensionsConfig = [
+const reactTypescriptExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/react-typescript-react',
     files: tsFiles,
@@ -23,6 +21,6 @@ const reactTypescriptExtensionsConfig = [
     files: tsFiles,
     settings: getImportSettings({ javascript: false, typescript: true, jsx: true }),
   },
-] as Linter.Config[];
+]);
 
 export default reactTypescriptExtensionsConfig;

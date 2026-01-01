@@ -1,10 +1,8 @@
 import { parser, plugin } from 'typescript-eslint';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigPlugin } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const typescriptEslintPlugin = {
+const typescriptEslintPlugin = defineConfigPlugin({
   name: 'airbnb/config/plugin/typescript-eslint',
   files: allFiles,
   plugins: {
@@ -13,6 +11,6 @@ const typescriptEslintPlugin = {
   languageOptions: {
     parser,
   },
-} as Linter.Config;
+});
 
 export default typescriptEslintPlugin;

@@ -1,149 +1,136 @@
-import { configTypes, languages, packageManagers, strictConfigs } from '@/constants';
-import { getPackageManager } from '@/helpers/getPackageManager';
-import program from '@/helpers/program';
+import {
+  configs,
+  formatters,
+  languages,
+  legacyConfigs,
+  packageManagers,
+  runtimes,
+  stringBooleans,
+} from '@/constants';
+import getPackageManager from '@/helpers/getPackageManager';
+import getProgramOptions from '@/helpers/getProgramOptions';
 
-import type { ValueOf } from '@/utils/types';
+import type {
+  GetArgs,
+  GetConfig,
+  GetCreateEslintFile,
+  GetFormatter,
+  GetLanguage,
+  GetLegacyConfig,
+  GetPackageManagerFromOpts,
+  GetRuntime,
+  GetSkipInstall,
+  GetStrictConfig,
+} from '@/helpers/@types/getArgs.types';
 
-// Get Config Type
+// Get Config
 
-type GetConfigType = (opts: Partial<ProgramOpts>) => GetArgsOutput['configType'];
+const getConfig: GetConfig = (opts) => {
+  const { config } = opts;
 
-const getConfigType: GetConfigType = (opts) => {
-  const { extended, legacy } = opts;
-
-  if (extended) return configTypes.EXTENDED;
-  if (legacy) return configTypes.LEGACY;
+  if (config === configs.EXTENDED) return configs.EXTENDED;
+  if (config === configs.LEGACY) return configs.LEGACY;
   return null;
 };
 
-// Get Typescript Value
+// Get Language
 
-type GetTypescript = (opts: Partial<ProgramOpts>) => GetArgsOutput['typescript'];
+const getLanguage: GetLanguage = (opts) => {
+  const { language } = opts;
 
-const getTypescript: GetTypescript = (opts) => {
-  const { typescript, javascript } = opts;
+  if (language === languages.JAVASCRIPT) return languages.JAVASCRIPT;
+  if (language === languages.TYPESCRIPT) return languages.TYPESCRIPT;
+  return null;
+};
 
-  if (typescript) return true;
-  if (javascript) return false;
+// Get Formatter
+
+const getFormatter: GetFormatter = (opts) => {
+  const { formatter } = opts;
+
+  if (formatter === formatters.PRETTIER) return formatters.PRETTIER;
+  return null;
+};
+
+// Get Runtime
+
+const getRuntime: GetRuntime = (opts) => {
+  const { runtime } = opts;
+
+  if (
+    runtime &&
+    ([runtimes.REACT, runtimes.REACT_ROUTER, runtimes.REMIX] as string[]).includes(runtime)
+  ) {
+    return runtimes.REACT;
+  }
+
+  if (runtime === runtimes.NEXT) return runtimes.NEXT;
+  if (runtime === runtimes.NODE) return runtimes.NODE;
   return null;
 };
 
 // Get Strict Config
 
-type GetStrictConfig = (opts: Partial<ProgramOpts>) => GetArgsOutput['strictConfig'];
-
 const getStrictConfig: GetStrictConfig = (opts) => {
-  const { strictImportConfig, strictReactConfig, strictTypescriptConfig } = opts;
+  const { strictConfig } = opts;
 
-  const strictConfig = [] as NonNullable<ReturnType<GetStrictConfig>>;
-
-  if (strictImportConfig) strictConfig.push(strictConfigs.IMPORT);
-  if (strictReactConfig) strictConfig.push(strictConfigs.REACT);
-  if (strictTypescriptConfig) strictConfig.push(strictConfigs.TYPESCRIPT);
-
-  return strictConfig.length > 0 ? strictConfig : null;
-};
-
-// Get Language
-
-type GetLanguage = (opts: Partial<ProgramOpts>) => GetArgsOutput['language'];
-
-const getLanguage: GetLanguage = (opts) => {
-  const { react, reactRouter, next, node } = opts;
-
-  if (react || reactRouter) return languages.REACT;
-  if (next) return languages.NEXT;
-  if (node) return languages.NODE;
-  return null;
+  return strictConfig?.length ? strictConfig : null;
 };
 
 // Get Legacy Config
 
-type GetLegacyConfig = (opts: Partial<ProgramOpts>) => NonNullable<GetArgsOutput['legacyConfig']>;
-
 const getLegacyConfig: GetLegacyConfig = (opts) => {
-  const { legacyBaseConfig, legacyReactConfig, legacyReactHooksConfig } = opts;
+  const { legacyConfig } = opts;
 
-  return {
-    base: legacyBaseConfig ?? (legacyReactConfig ? false : null),
-    react: legacyReactConfig ?? (legacyBaseConfig ? false : null),
-    reactHooks: legacyReactHooksConfig ?? null,
-  } satisfies GetArgsLegacyConfig;
+  if (legacyConfig === legacyConfigs.BASE) return legacyConfigs.BASE;
+  if (legacyConfig === legacyConfigs.REACT) return legacyConfigs.REACT;
+  if (legacyConfig === legacyConfigs.REACT_HOOKS) return legacyConfigs.REACT_HOOKS;
+  return null;
 };
 
 // Get Package Manger from Opts
 
-type GetPackageManagerFromOpts = (opts: Partial<ProgramOpts>) => GetArgsOutput['packageManager'];
+const getPackageManagerFromOpts: GetPackageManagerFromOpts = async (opts) => {
+  const { packageManager } = opts;
 
-const getPackageManagerFromOpts: GetPackageManagerFromOpts = (opts) => {
-  const { useNpm, useYarn, usePnpm, useBun } = opts;
+  if (packageManager === packageManagers.NPM) return packageManagers.NPM;
+  if (packageManager === packageManagers.YARN) return packageManagers.YARN;
+  if (packageManager === packageManagers.PNPM) return packageManagers.PNPM;
+  if (packageManager === packageManagers.BUN) return packageManagers.BUN;
+  return getPackageManager();
+};
 
-  if (useNpm) return packageManagers.NPM;
-  if (useYarn) return packageManagers.YARN;
-  if (usePnpm) return packageManagers.PNPM;
-  if (useBun) return packageManagers.BUN;
-  return null;
+// Get Eslint File
+
+const getCreateEslintFile: GetCreateEslintFile = (opts) => {
+  const { createEslintFile } = opts;
+
+  return createEslintFile ? createEslintFile === stringBooleans.TRUE : null;
+};
+
+// Get Skip Install
+
+const getSkipInstall: GetSkipInstall = (opts) => {
+  const { skipInstall } = opts;
+
+  return skipInstall ? skipInstall === stringBooleans.TRUE : null;
 };
 
 // Get Args
 
-export interface ProgramOpts {
-  extended: true;
-  legacy: true;
-  typescript: true;
-  javascript: true;
-  prettier: true;
-  react: true;
-  reactRouter: true;
-  next: true;
-  node: true;
-  strictImportConfig: true;
-  strictReactConfig: true;
-  strictTypescriptConfig: true;
-  legacyBaseConfig: true;
-  legacyReactConfig: true;
-  legacyReactHooksConfig: true;
-  useNpm: true;
-  useYarn: true;
-  usePnpm: true;
-  useBun: true;
-  createEslintFile: true;
-  skipInstall: true;
-}
-
-interface GetArgsLegacyConfig {
-  base?: boolean | null;
-  react?: boolean | null;
-  reactHooks?: boolean | null;
-}
-
-export interface GetArgsOutput {
-  configType: ValueOf<typeof configTypes> | null;
-  typescript: boolean | null;
-  prettier: true | null;
-  strictConfig: ValueOf<typeof strictConfigs>[] | null;
-  language: ValueOf<typeof languages> | null;
-  legacyConfig: GetArgsLegacyConfig | null;
-  packageManager: ValueOf<typeof packageManagers> | null;
-  createESLintFile: true | null;
-  skipInstall: true | null;
-}
-
-type GetArgs = () => Promise<GetArgsOutput>;
-
 const getArgs: GetArgs = async () => {
-  const opts: Partial<ProgramOpts> = program.opts();
+  const opts = getProgramOptions();
 
   return {
-    configType: getConfigType(opts),
-    typescript: getTypescript(opts),
-    prettier: opts.prettier ? true : null,
-    strictConfig: getStrictConfig(opts),
+    config: getConfig(opts),
     language: getLanguage(opts),
+    formatter: getFormatter(opts),
+    runtime: getRuntime(opts),
+    strictConfig: getStrictConfig(opts),
     legacyConfig: getLegacyConfig(opts),
-    packageManager: getPackageManagerFromOpts(opts) ?? (await getPackageManager()),
-    createESLintFile: opts.createEslintFile ? true : null,
-    skipInstall: opts.skipInstall ? true : null,
+    packageManager: await getPackageManagerFromOpts(opts),
+    createEslintFile: getCreateEslintFile(opts),
+    skipInstall: getSkipInstall(opts),
   };
 };
 

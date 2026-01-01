@@ -1,13 +1,12 @@
 import nextConfig from '@/configs/next/config';
 import reactRecommendedConfig from '@/configs/react/recommended';
 import nextRecommendedExtensionsConfig from '@/extensions/next/recommended';
+import { defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nextRecommendedConfig = [
+const nextRecommendedConfig = defineConfigArray([
   ...reactRecommendedConfig,
   ...Object.values(nextConfig),
   ...nextRecommendedExtensionsConfig,
-] satisfies Linter.Config[];
+]);
 
 export default nextRecommendedConfig;

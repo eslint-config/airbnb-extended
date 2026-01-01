@@ -7,8 +7,6 @@ import legacyStrictRules from '@/legacy/rules/strict';
 import legacyStyleRules from '@/legacy/rules/style';
 import legacyVariablesRules from '@/legacy/rules/variables';
 
-import type { Linter } from 'eslint';
-
 const legacyBaseConfig = {
   bestPractices: legacyBestPracticesRules,
   errors: legacyErrorsRules,
@@ -18,6 +16,6 @@ const legacyBaseConfig = {
   strict: legacyStrictRules,
   style: legacyStyleRules,
   variables: legacyVariablesRules,
-} satisfies Record<string, Linter.Config>;
+} as const;
 
 export default legacyBaseConfig;

@@ -1,15 +1,13 @@
 import plugin from 'eslint-plugin-n';
 
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigPlugin } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const nodePlugin = {
+const nodePlugin = defineConfigPlugin({
   name: 'airbnb/config/plugin/node',
   files: allFiles,
   plugins: {
     n: plugin,
   },
-} satisfies Linter.Config;
+});
 
 export default nodePlugin;

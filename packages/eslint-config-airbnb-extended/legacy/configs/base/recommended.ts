@@ -1,9 +1,7 @@
 import legacyBaseConfig from '@/legacy/configs/base/config';
-import { allFiles } from '@/utils';
+import { allFiles, defineConfigArray } from '@/utils';
 
-import type { Linter } from 'eslint';
-
-const legacyBaseRecommendedConfig = [
+const legacyBaseRecommendedConfig = defineConfigArray([
   ...Object.values(legacyBaseConfig),
   {
     name: 'airbnb/config/base-configurations/legacy',
@@ -15,6 +13,6 @@ const legacyBaseRecommendedConfig = [
       },
     },
   },
-] satisfies Linter.Config[];
+]);
 
 export default legacyBaseRecommendedConfig;

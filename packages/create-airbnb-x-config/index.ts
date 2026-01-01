@@ -3,15 +3,24 @@
 import pc from 'picocolors';
 import prompts from 'prompts';
 
-import { configTypes, defaults, languages, legacyConfigs, strictConfigs } from '@/constants';
+import {
+  configs,
+  defaults,
+  eslintConfigName,
+  formatters,
+  languages,
+  legacyConfigs,
+  runtimes,
+  strictConfigs,
+} from '@/constants';
 import createESLintConfigFile from '@/helpers/createEslintConfigFile';
 import getArgs from '@/helpers/getArgs';
 import getCommands from '@/helpers/getCommands';
-import getConfigUrl, { eslintConfigName } from '@/helpers/getConfigUrl';
+import getConfigUrl from '@/helpers/getConfigUrl';
 import installPackages from '@/helpers/installPackages';
-import { exit, handleSigTerm, onCancel, onPromptState, success } from '@/utils';
+import { exit, handleSigTerm, onCancel, onPromptState } from '@/utils';
 
-import type { NonNullableArgsOutput } from '@/utils/types';
+import type { ArgsOutput } from '@/helpers/@types/getArgs.types';
 
 process.on('SIGINT', handleSigTerm);
 process.on('SIGTERM', handleSigTerm);
@@ -19,13 +28,13 @@ process.on('SIGTERM', handleSigTerm);
 const run = async () => {
   let args = await getArgs();
 
-  if (args.configType === null) {
-    const { configTypeBoolean } = await prompts(
+  if (args.config === null) {
+    const { configBoolean } = await prompts(
       {
         type: 'toggle',
-        name: 'configTypeBoolean',
-        message: 'Config type?',
-        initial: defaults.configType === configTypes.EXTENDED,
+        name: 'configBoolean',
+        message: 'Config?',
+        initial: defaults.config === configs.EXTENDED,
         active: 'Extended',
         inactive: 'Legacy',
         onState: onPromptState,
@@ -35,27 +44,27 @@ const run = async () => {
       },
     );
 
-    const configType = configTypeBoolean ? configTypes.EXTENDED : configTypes.LEGACY;
+    const config = configBoolean ? configs.EXTENDED : configs.LEGACY;
     args = {
       ...args,
-      configType,
-      ...(configType === configTypes.EXTENDED
+      config,
+      ...(config === configs.EXTENDED
         ? {
             legacyConfig: null,
           }
         : {
-            language: null,
+            runtime: null,
           }),
     };
   }
 
-  if (args.typescript === null) {
-    const { typescript } = await prompts(
+  if (args.language === null) {
+    const { languageBoolean } = await prompts(
       {
         type: 'toggle',
-        name: 'typescript',
+        name: 'languageBoolean',
         message: `Are you using ${pc.blue('typescript')}?`,
-        initial: defaults.typescript,
+        initial: defaults.language === languages.TYPESCRIPT,
         active: 'Yes',
         inactive: 'No',
         onState: onPromptState,
@@ -65,16 +74,17 @@ const run = async () => {
       },
     );
 
-    args = { ...args, typescript };
+    const language = languageBoolean ? languages.TYPESCRIPT : languages.JAVASCRIPT;
+    args = { ...args, language };
   }
 
-  if (args.prettier === null) {
-    const { prettier } = await prompts(
+  if (args.formatter === null) {
+    const { formatterBoolean } = await prompts(
       {
         type: 'toggle',
-        name: 'prettier',
+        name: 'formatterBoolean',
         message: `Are you using ${pc.cyan('prettier')}?`,
-        initial: defaults.prettier,
+        initial: defaults.formatter === formatters.PRETTIER,
         active: 'Yes',
         inactive: 'No',
         onState: onPromptState,
@@ -84,33 +94,34 @@ const run = async () => {
       },
     );
 
-    args = { ...args, prettier };
+    const formatter = formatterBoolean ? formatters.PRETTIER : null;
+    args = { ...args, formatter };
   }
 
-  if (args.configType === configTypes.EXTENDED) {
-    if (!args.language) {
-      const { language } = await prompts(
+  if (args.config === configs.EXTENDED) {
+    if (!args.runtime) {
+      const { runtime } = await prompts(
         {
           type: 'select',
-          name: 'language',
+          name: 'runtime',
           message: 'Are you using?',
           choices: [
             {
-              title: 'React/React Router',
+              title: 'React/React Router/Remix',
               description: pc.cyanBright(
                 'You are using React.js library or Remix ( React Router 7 ) framework',
               ),
-              value: languages.REACT,
+              value: runtimes.REACT,
             },
             {
               title: 'Next',
               description: pc.blackBright('You are using Next.js framework'),
-              value: languages.NEXT,
+              value: runtimes.NEXT,
             },
             {
               title: 'Node',
               description: pc.greenBright('You are using Node or any other frameworks of it'),
-              value: languages.NODE,
+              value: runtimes.NODE,
             },
           ],
           onState: onPromptState,
@@ -120,7 +131,7 @@ const run = async () => {
         },
       );
 
-      args = { ...args, language };
+      args = { ...args, runtime };
     }
 
     if (!args.strictConfig) {
@@ -152,8 +163,8 @@ const run = async () => {
                 description: pc.yellowBright('Strict Import config'),
                 value: strictConfigs.IMPORT,
               },
-              ...(args.language &&
-              ([languages.REACT, languages.NEXT] as string[]).includes(args.language)
+              ...(args.runtime &&
+              ([runtimes.REACT, runtimes.NEXT] as string[]).includes(args.runtime)
                 ? [
                     {
                       title: 'React',
@@ -162,7 +173,7 @@ const run = async () => {
                     },
                   ]
                 : []),
-              ...(args.typescript
+              ...(args.language === languages.TYPESCRIPT
                 ? [
                     {
                       title: 'TypeScript',
@@ -181,17 +192,17 @@ const run = async () => {
 
         args = { ...args, strictConfig };
       } else {
-        args = { ...args, strictConfig: [] };
+        args = { ...args, strictConfig: null };
       }
     }
   }
 
-  if (args.configType === configTypes.LEGACY) {
-    if (!args.legacyConfig || args.legacyConfig.base === null || args.legacyConfig.react === null) {
-      const { legacyConfigType } = await prompts(
+  if (args.config === configs.LEGACY) {
+    if (!args.legacyConfig) {
+      const { legacyConfig } = await prompts(
         {
           type: 'select',
-          name: 'legacyConfigType',
+          name: 'legacyConfig',
           message: 'Are you using?',
           choices: [
             {
@@ -212,17 +223,10 @@ const run = async () => {
         },
       );
 
-      args = {
-        ...args,
-        legacyConfig: {
-          ...args.legacyConfig,
-          base: legacyConfigType === legacyConfigs.BASE,
-          react: legacyConfigType === legacyConfigs.REACT,
-        },
-      };
+      args = { ...args, legacyConfig };
     }
 
-    if (args.legacyConfig?.react && args.legacyConfig.reactHooks === null) {
+    if (args.legacyConfig === legacyConfigs.REACT) {
       const { reactHooks } = await prompts(
         {
           type: 'toggle',
@@ -238,23 +242,18 @@ const run = async () => {
         },
       );
 
-      args = {
-        ...args,
-        legacyConfig: {
-          ...args.legacyConfig,
-          reactHooks,
-        },
-      };
+      const legacyConfig = reactHooks ? legacyConfigs.REACT_HOOKS : args.legacyConfig;
+      args = { ...args, legacyConfig };
     }
   }
 
-  if (args.createESLintFile === null) {
-    const { createESLintFile } = await prompts(
+  if (args.createEslintFile === null) {
+    const { createEslintFile } = await prompts(
       {
         type: 'toggle',
-        name: 'createESLintFile',
+        name: 'createEslintFile',
         message: `Should I create an ${pc.blue(eslintConfigName)} file for you?`,
-        initial: defaults.createESLintFile,
+        initial: defaults.createEslintFile,
         active: 'Yes',
         inactive: 'No',
         onState: onPromptState,
@@ -264,7 +263,7 @@ const run = async () => {
       },
     );
 
-    args = { ...args, createESLintFile };
+    args = { ...args, createEslintFile };
   }
 
   if (args.skipInstall === null) {
@@ -286,12 +285,12 @@ const run = async () => {
     args = { ...args, skipInstall };
   }
 
-  const newArgs = args as NonNullableArgsOutput;
+  const newArgs = args as ArgsOutput;
   const commands = getCommands(newArgs);
   const command = commands.join(' ');
   console.log();
 
-  if (args.createESLintFile) await createESLintConfigFile(newArgs);
+  if (args.createEslintFile) await createESLintConfigFile(newArgs);
 
   if (args.skipInstall) {
     console.log(
@@ -314,11 +313,18 @@ const run = async () => {
   }
 
   console.log();
-  console.log(pc.cyan(args.createESLintFile ? 'Created Config:' : 'Config:'));
+  console.log(pc.cyan(args.createEslintFile ? 'Created Config:' : 'Config:'));
   console.log(getConfigUrl(newArgs)?.url);
 
   console.log();
 };
 
-// eslint-disable-next-line unicorn/prefer-top-level-await
-run().then(success).catch(exit);
+try {
+  await run();
+} catch (error) {
+  if (error instanceof Error) {
+    exit(error);
+  } else {
+    console.error(error);
+  }
+}
