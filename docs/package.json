@@ -18,8 +18,8 @@
   "scripts": {
     "build": "vitepress build",
     "dev": "vitepress dev",
-    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
-    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "format": "prettier . --check --log-level silent --ignore-path ../.gitignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../.gitignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vitepress preview",
