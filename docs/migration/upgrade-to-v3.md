@@ -18,7 +18,7 @@ Version **v3** is the biggest upgrade so far, introducing several long-awaited i
 As part of this release, the project has moved from a **personal repository**
 to a dedicated **organization repository**:
 
-- From: [https://github.com/NishargShah/eslint-config-airbnb-extended](https://github.com/NishargShah/eslint-config-airbnb-extended)
+- From: [https://github.com/eslint-config/airbnb-extended](https://github.com/eslint-config/airbnb-extended)
 - To: [https://github.com/eslint-config/airbnb-extended](https://github.com/eslint-config/airbnb-extended)
 
 This change ensures better long-term maintenance and community collaboration.

@@ -5,11 +5,11 @@
   "description": "Eslint Config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+    "url": "https://github.com/eslint-config/airbnb-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "url": "https://github.com/eslint-config/airbnb-extended.git",
     "directory": "configs/eslint-config"
   },
   "license": "MIT",

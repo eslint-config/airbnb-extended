@@ -8,7 +8,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 const projectRoot = fileURLToPath(new URL('../..', import.meta.url));
 const { version } = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'));
 
-const githubUrl = 'https://github.com/NishargShah/eslint-config-airbnb-extended';
+const githubUrl = 'https://github.com/eslint-config/airbnb-extended';
 const npmUrl = 'https://www.npmjs.com/package/eslint-config-airbnb-extended';
 const siteUrl = 'https://eslint-airbnb-extended.nishargshah.dev';
 

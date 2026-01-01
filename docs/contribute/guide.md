@@ -9,12 +9,12 @@ Thank you for considering contributing to `eslint-config-airbnb-extended`. We we
 ::: code-group
 
 ```sh [SSH]
-$ git clone git@github.com:NishargShah/eslint-config-airbnb-extended.git
+$ git clone git@github.com:eslint-config/airbnb-extended.git
 $ cd eslint-config-airbnb-extended
 ```
 
 ```sh [HTTPS]
-$ git clone https://github.com/NishargShah/eslint-config-airbnb-extended.git
+$ git clone https://github.com/eslint-config/airbnb-extended.git
 $ cd eslint-config-airbnb-extended
 ```
 
@@ -91,9 +91,9 @@ $ pnpm script:lint
 
 ## Code of Conduct {#code-of-conduct}
 
-This project follows a [**Code of Conduct**](https://github.com/NishargShah/eslint-config-airbnb-extended/blob/master/CODE_OF_CONDUCT.md). Please be respectful, collaborative, and inclusive.
+This project follows a [**Code of Conduct**](https://github.com/eslint-config/airbnb-extended/blob/master/CODE_OF_CONDUCT.md). Please be respectful, collaborative, and inclusive.
 
 ## Suggestions & Issues {#suggestions-issues}
 
-- Found a bug? → [Open an Issue](https://github.com/NishargShah/eslint-config-airbnb-extended/issues/new/choose)
+- Found a bug? → [Open an Issue](https://github.com/eslint-config/airbnb-extended/issues/new/choose)
 - Want a new feature or rule? → Use the same link to create an issue, or start a discussion before opening a PR.

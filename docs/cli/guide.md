@@ -132,7 +132,7 @@ pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 Example config file:
 
 ```txt
-https://github.com/NishargShah/eslint-config-airbnb-extended/tree/master/apps/build-templates/templates/legacy/base/prettier/ts/default/eslint.config.mjs
+https://github.com/eslint-config/airbnb-extended/tree/master/apps/build-templates/templates/legacy/base/prettier/ts/default/eslint.config.mjs
 ```
 
 ## Optional Steps {#optional-steps}
