@@ -12,6 +12,7 @@ export default defineConfig([
       'import-x/no-extraneous-dependencies': getNoExtraneousDependenciesRule([
         'vitepress',
         'vitepress-plugin-group-icons',
+        'vitepress-plugin-llms',
       ]),
     },
   },

@@ -31,7 +31,8 @@
   "devDependencies": {
     "@airbnb-extended/typescript-config": "workspace:*",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-group-icons": "^1.6.5"
+    "vitepress-plugin-group-icons": "^1.6.5",
+    "vitepress-plugin-llms": "^1.10.0"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
