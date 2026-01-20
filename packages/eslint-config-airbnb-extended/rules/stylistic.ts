@@ -170,7 +170,6 @@ export const stylisticInternalRules = {
       ImportDeclaration: 1,
       flatTernaryExpressions: false,
       offsetTernaryExpressions: false,
-      offsetTernaryExpressionsOffsetCallExpressions: true,
       ignoreComments: false,
       tabLength: 2,
     },
