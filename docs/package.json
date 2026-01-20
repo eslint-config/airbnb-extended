@@ -23,6 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vitepress preview",
+    "script:lint": "bash -e ../scripts/lint.sh --filter=@airbnb-extended/docs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

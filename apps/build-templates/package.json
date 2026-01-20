@@ -22,6 +22,7 @@
     "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "script:lint": "bash -e ../../scripts/lint.sh --filter=@airbnb-extended/build-templates",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

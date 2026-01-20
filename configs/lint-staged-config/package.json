@@ -24,7 +24,8 @@
     "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
     "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "script:lint": "bash -e ../../scripts/lint.sh --filter=@airbnb-extended/lint-staged-config --no-typecheck"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"

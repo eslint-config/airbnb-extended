@@ -41,6 +41,7 @@
     "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "script:lint": "bash -e ../../scripts/lint.sh --filter=create-airbnb-x-config",
     "start": "node ./dist/index.mjs",
     "typecheck": "tsc --noEmit"
   },
