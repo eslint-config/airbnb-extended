@@ -1,3 +1,19 @@
+## 3.0.1 (2026-01-22)
+
+### 🚀 Features
+
+- Added renovate
+- **docs:** Added `llms.txt`
+
+### 🩹 Fixes
+
+- Upgraded deps
+- **eslint-config-airbnb-extended:** Fixed #57
+
+### ❤️ Thank You
+
+- Anton Khitrenovich @khitrenovich
+
 ## 3.0.0 (2026-01-01)
 
 ### 🚨 Breaking Change
