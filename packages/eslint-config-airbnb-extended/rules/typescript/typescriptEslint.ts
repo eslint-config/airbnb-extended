@@ -577,6 +577,10 @@ const typescriptEslintRules = defineConfigObject({
     // https://typescript-eslint.io/rules/strict-boolean-expressions
     '@typescript-eslint/strict-boolean-expressions': 'off',
 
+    // Disallow passing a value-returning function in a position accepting a void function.
+    // https://typescript-eslint.io/rules/strict-void-return
+    '@typescript-eslint/strict-void-return': 'off',
+
     // Require switch-case statements to be exhaustive.
     // https://typescript-eslint.io/rules/switch-exhaustiveness-check
     '@typescript-eslint/switch-exhaustiveness-check': 'off',
