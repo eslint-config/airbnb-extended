@@ -1,6 +1,6 @@
 {
   "name": "create-airbnb-x-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Airbnb Extended Config CLI",
   "keywords": [
     "eslint",
@@ -28,8 +28,6 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "bin": {
     "create-airbnb-extended-config": "./dist/index.mjs",

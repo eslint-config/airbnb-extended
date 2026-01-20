@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-airbnb-extended",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Eslint Airbnb Config Extended",
   "keywords": [
     "eslint",
@@ -35,8 +35,6 @@
     "./legacy": "./dist/legacy.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
     "prebuild": "pnpm check:updates",
