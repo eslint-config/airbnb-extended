@@ -1,3 +1,19 @@
+## 3.0.1 (2026-01-21)
+
+### 🚀 Features
+
+- Added renovate
+- **docs:** Added `llms.txt`
+
+### 🩹 Fixes
+
+- Upgraded deps
+- **eslint-config-airbnb-extended:** Fixed #57
+
+### ❤️ Thank You
+
+- Anton Khitrenovich @khitrenovich
+
 ## 3.0.0 (2026-01-01)
 
 ### 🚨 Breaking Change
@@ -75,7 +91,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 - **create-airbnb-x-config:** Fixed hook config issue
 - **create-airbnb-x-config:** The `Own Customization` option has been removed, since we now provide complete documentation to reference.
-- **eslint-config-airbnb-extended:** Fixed files issue ([#32](https://github.com/NishargShah/eslint-config-airbnb-extended/issues/32)).
+- **eslint-config-airbnb-extended:** Fixed files issue ([#32](https://github.com/eslint-config/airbnb-extended/issues/32)).
 - **docs:** Added changes of `CLI` in documentation.
 
 ### ❤️ Thank You
@@ -196,7 +212,7 @@ As part of this release, the project has moved from a **personal repository** to
 ### 🩹 Fixes
 
 - **eslint-config-airbnb-extended:** Updated README.md for `strictRules`
-- **eslint-config-airbnb-extended:** Fixed: Javascript requires `typescript-eslint` for functioning ([#4](https://github.com/NishargShah/eslint-config-airbnb-extended/issues/4))
+- **eslint-config-airbnb-extended:** Fixed: Javascript requires `typescript-eslint` for functioning ([#4](https://github.com/eslint-config/airbnb-extended/issues/4))
 
 ## 1.0.3 (2025-04-25)
 

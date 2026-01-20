@@ -1,8 +1,8 @@
 #!/bin/bash
 
 mode="fix"
-
 filters=()
+run_typecheck=true
 
 for arg in "$@"; do
   case $arg in
@@ -16,6 +16,9 @@ for arg in "$@"; do
       filters+=(--filter "$monorepo")
     done
     ;;
+  --no-typecheck)
+    run_typecheck=false
+    ;;
   esac
 done
 
@@ -28,8 +31,12 @@ if [[ "$mode" == "ci" ]]; then
   pnpm "${filters[@]}" --silent lint >/dev/null 2>&1
   echo "ESLint Verified"
 
-  pnpm "${filters[@]}" --silent typecheck >/dev/null 2>&1
-  echo "TypeScript Verified"
+  if [[ "$run_typecheck" == true ]]; then
+    pnpm "${filters[@]}" --silent typecheck >/dev/null 2>&1
+    echo "TypeScript Verified"
+  else
+    echo "TypeScript Skipped"
+  fi
 
 elif [[ "$mode" == "check" ]]; then
   pnpm "${filters[@]}" --silent format --log-level silent
@@ -38,8 +45,12 @@ elif [[ "$mode" == "check" ]]; then
   pnpm "${filters[@]}" --silent lint
   echo "ESLint Checked"
 
-  pnpm "${filters[@]}" --silent typecheck
-  echo "TypeScript Checked"
+  if [[ "$run_typecheck" == true ]]; then
+    pnpm "${filters[@]}" --silent typecheck
+    echo "TypeScript Checked"
+  else
+    echo "TypeScript Skipped"
+  fi
 
 else
   pnpm "${filters[@]}" --silent format:fix --log-level silent
@@ -48,8 +59,12 @@ else
   pnpm "${filters[@]}" --silent lint:fix
   echo "ESLint Completed"
 
-  pnpm "${filters[@]}" --silent typecheck
-  echo "TypeScript Completed"
+  if [[ "$run_typecheck" == true ]]; then
+    pnpm "${filters[@]}" --silent typecheck
+    echo "TypeScript Completed"
+  else
+    echo "TypeScript Skipped"
+  fi
 fi
 
 echo "Done"

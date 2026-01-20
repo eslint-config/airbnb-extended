@@ -1,3 +1,3 @@
-import config from '../prettier-config/src/prettier-base.config.js';
+import config from '@airbnb-extended/prettier-config/base';
 
 export default config;

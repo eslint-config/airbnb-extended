@@ -5,11 +5,11 @@
   "description": "Eslint Airbnb Extended Documentation",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+    "url": "https://github.com/eslint-config/airbnb-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "url": "https://github.com/eslint-config/airbnb-extended.git",
     "directory": "docs"
   },
   "license": "MIT",
@@ -23,18 +23,17 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vitepress preview",
+    "script:lint": "bash -e ../scripts/lint.sh --filter=@airbnb-extended/docs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1"
   },
   "devDependencies": {
-    "@airbnb-extended/eslint-config": "workspace:*",
-    "@airbnb-extended/lint-staged-config": "workspace:*",
-    "@airbnb-extended/prettier-config": "workspace:*",
     "@airbnb-extended/typescript-config": "workspace:*",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-group-icons": "^1.6.5"
+    "vitepress-plugin-group-icons": "^1.7.1",
+    "vitepress-plugin-llms": "^1.10.0"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"

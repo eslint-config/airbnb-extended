@@ -5,11 +5,11 @@
   "description": "Eslint Config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+    "url": "https://github.com/eslint-config/airbnb-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "url": "https://github.com/eslint-config/airbnb-extended.git",
     "directory": "configs/eslint-config"
   },
   "license": "MIT",
@@ -26,15 +26,16 @@
     "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
     "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "script:lint": "bash -e ../../scripts/lint.sh --filter=@airbnb-extended/eslint-config --no-typecheck"
   },
   "dependencies": {
-    "@eslint/compat": "^2.0.0",
+    "@eslint/compat": "^2.0.1",
     "@eslint/js": "^9.39.2",
     "eslint": "catalog:",
     "eslint-config-airbnb-extended": "workspace:*",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-unicorn": "^62.0.0",
     "eslint-plugin-unused-imports": "^4.3.0"

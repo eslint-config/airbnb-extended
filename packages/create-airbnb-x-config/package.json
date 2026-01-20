@@ -1,26 +1,24 @@
 {
   "name": "create-airbnb-x-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Airbnb Extended Config CLI",
   "keywords": [
     "eslint",
     "airbnb",
-    "eslint config cli",
-    "eslint config cli x",
-    "eslint config cli extended",
+    "eslint cli",
     "airbnb cli",
-    "airbnb config",
+    "eslint config cli",
+    "eslint config cli extended",
     "airbnb config cli",
-    "airbnb config cli x",
     "airbnb config cli extended"
   ],
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+    "url": "https://github.com/eslint-config/airbnb-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "url": "https://github.com/eslint-config/airbnb-extended.git",
     "directory": "packages/create-airbnb-x-config"
   },
   "license": "MIT",
@@ -30,8 +28,6 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "bin": {
     "create-airbnb-extended-config": "./dist/index.mjs",
@@ -45,6 +41,7 @@
     "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "script:lint": "bash -e ../../scripts/lint.sh --filter=create-airbnb-x-config",
     "start": "node ./dist/index.mjs",
     "typecheck": "tsc --noEmit"
   },
@@ -57,9 +54,6 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "@airbnb-extended/eslint-config": "workspace:*",
-    "@airbnb-extended/lint-staged-config": "workspace:*",
-    "@airbnb-extended/prettier-config": "workspace:*",
     "@airbnb-extended/typescript-config": "workspace:*",
     "@types/cross-spawn": "^6.0.6",
     "@types/prompts": "^2.4.9",

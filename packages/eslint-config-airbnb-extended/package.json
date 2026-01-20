@@ -1,29 +1,30 @@
 {
   "name": "eslint-config-airbnb-extended",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Eslint Airbnb Config Extended",
   "keywords": [
     "eslint",
     "airbnb",
     "airbnb config",
+    "eslint config",
     "eslint config airbnb",
-    "eslint config airbnb x",
     "eslint config airbnb base",
+    "eslint config airbnb react",
     "eslint config airbnb typescript",
     "eslint config airbnb extended",
     "eslint airbnb",
-    "eslint airbnb x",
     "eslint airbnb base",
+    "eslint airbnb react",
     "eslint airbnb typescript",
     "eslint airbnb extended"
   ],
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+    "url": "https://github.com/eslint-config/airbnb-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git",
+    "url": "https://github.com/eslint-config/airbnb-extended.git",
     "directory": "packages/eslint-config-airbnb-extended"
   },
   "license": "MIT",
@@ -34,8 +35,6 @@
     "./legacy": "./dist/legacy.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
     "prebuild": "pnpm check:updates",
@@ -46,25 +45,24 @@
     "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "script:lint": "bash -e ../../scripts/lint.sh --filter=eslint-config-airbnb-extended",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^16.1.1",
-    "@stylistic/eslint-plugin": "^5.6.1",
+    "@next/eslint-plugin-next": "^16.1.4",
+    "@stylistic/eslint-plugin": "^5.7.0",
     "confusing-browser-globals": "^1.0.11",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-n": "^17.23.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^16.5.0",
-    "typescript-eslint": "^8.51.0"
+    "globals": "^17.0.0",
+    "typescript-eslint": "^8.53.1"
   },
   "devDependencies": {
-    "@airbnb-extended/lint-staged-config": "workspace:*",
-    "@airbnb-extended/prettier-config": "workspace:*",
     "@airbnb-extended/typescript-config": "workspace:*",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",

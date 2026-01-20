@@ -4,11 +4,12 @@ import { fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
+import llmstxt from 'vitepress-plugin-llms';
 
 const projectRoot = fileURLToPath(new URL('../..', import.meta.url));
 const { version } = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'));
 
-const githubUrl = 'https://github.com/NishargShah/eslint-config-airbnb-extended';
+const githubUrl = 'https://github.com/eslint-config/airbnb-extended';
 const npmUrl = 'https://www.npmjs.com/package/eslint-config-airbnb-extended';
 const siteUrl = 'https://eslint-airbnb-extended.nishargshah.dev';
 
@@ -28,7 +29,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [groupIconVitePlugin()],
+    plugins: [groupIconVitePlugin(), llmstxt({ title, description, details: '' })],
   },
   sitemap: {
     hostname: siteUrl,

@@ -4,11 +4,11 @@
   "description": "Eslint Airbnb Config Extended Project",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended/issues"
+    "url": "https://github.com/eslint-config/airbnb-extended/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NishargShah/eslint-config-airbnb-extended.git"
+    "url": "https://github.com/eslint-config/airbnb-extended.git"
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
@@ -50,16 +50,16 @@
     "@airbnb-extended/lint-staged-config": "workspace:*",
     "@airbnb-extended/prettier-config": "workspace:*",
     "@changesets/cli": "^2.29.8",
-    "@types/node": "^24.10.4",
+    "@types/node": "^24.10.9",
     "eslint": "catalog:",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.7.4",
-    "prettier-plugin-packagejson": "^2.5.20",
+    "prettier": "^3.8.0",
+    "prettier-plugin-packagejson": "^3.0.0",
     "tsc-files": "^1.1.4",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.28.1",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0",
     "npm": "please-use-pnpm",
