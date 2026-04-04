@@ -7,8 +7,8 @@ import {
   runtimes,
   stringBooleans,
 } from '@/constants';
-import getPackageManager from '@/helpers/getPackageManager';
-import getProgramOptions from '@/helpers/getProgramOptions';
+import { getPackageManager } from '@/helpers/getPackageManager';
+import { getProgramOptions } from '@/helpers/getProgramOptions';
 
 import type {
   GetArgs,
@@ -21,7 +21,7 @@ import type {
   GetRuntime,
   GetSkipInstall,
   GetStrictConfig,
-} from '@/helpers/@types/getArgs.types';
+} from '@/helpers/getArgs/getArgs.types';
 
 // Get Config
 
@@ -119,7 +119,7 @@ const getSkipInstall: GetSkipInstall = (opts) => {
 
 // Get Args
 
-const getArgs: GetArgs = async () => {
+export const getArgs: GetArgs = async () => {
   const opts = getProgramOptions();
 
   return {
@@ -134,5 +134,3 @@ const getArgs: GetArgs = async () => {
     skipInstall: getSkipInstall(opts),
   };
 };
-
-export default getArgs;

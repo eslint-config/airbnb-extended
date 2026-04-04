@@ -9,9 +9,9 @@ import {
   subFolders,
 } from '@/constants';
 
-import type { GetConfigUrl } from '@/helpers/@types/getConfigUrl.types';
+import type { GetConfigUrl } from '@/helpers/getConfigUrl/getConfigUrl.types';
 
-const getConfigUrl: GetConfigUrl = (args) => {
+export const getConfigUrl: GetConfigUrl = (args) => {
   const { config, language, formatter, strictConfig, runtime, legacyConfig } = args;
   const isLegacy = config === configs.LEGACY;
 
@@ -41,5 +41,3 @@ const getConfigUrl: GetConfigUrl = (args) => {
     url: pc.blue(`${baseGithubUrl}/${path}`),
   };
 };
-
-export default getConfigUrl;

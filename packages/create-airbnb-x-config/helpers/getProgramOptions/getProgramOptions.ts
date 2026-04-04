@@ -18,9 +18,9 @@ import type {
   GetProgramOptions,
   GetProgramOptionsOutput,
   PartialProgramOptions,
-} from '@/helpers/@types/getProgramOptions.types';
+} from '@/helpers/getProgramOptions/getProgramOptions.types';
 
-const getProgramOptions: GetProgramOptions = () => {
+export const getProgramOptions: GetProgramOptions = () => {
   /**
    * Program Command
    * @example: pnpm cli:start --config extended --lang javascript --formatter prettier --runtime react --strict import react --pm pnpm --create-eslint-file --skip-install
@@ -149,5 +149,3 @@ const getProgramOptions: GetProgramOptions = () => {
 
   return programOptions;
 };
-
-export default getProgramOptions;

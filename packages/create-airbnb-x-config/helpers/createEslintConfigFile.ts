@@ -3,12 +3,12 @@ import fsPromise from 'node:fs/promises';
 import fetch from 'node-fetch';
 
 import { baseGithubRawUrl, eslintConfigName } from '@/constants';
-import getConfigUrl from '@/helpers/getConfigUrl';
+import { getConfigUrl } from '@/helpers/getConfigUrl';
 import { rootPath } from '@/utils';
 
-import type { CreateESLintConfigFile } from '@/helpers/@types/createEslintConfigFile.types';
+import { GetConfigUrlParams } from '@/helpers/getConfigUrl/getConfigUrl.types';
 
-const createESLintConfigFile: CreateESLintConfigFile = async (args) => {
+export const createESLintConfigFile = async (args: GetConfigUrlParams): Promise<void> => {
   try {
     const config = getConfigUrl(args);
     if (!config) return;
@@ -26,5 +26,3 @@ const createESLintConfigFile: CreateESLintConfigFile = async (args) => {
     console.error(error);
   }
 };
-
-export default createESLintConfigFile;
