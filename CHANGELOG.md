@@ -1,3 +1,23 @@
+## 3.1.0 (2026-04-04)
+
+### 🚀 Features
+
+- Added bun in docs
+- **create-airbnb-x-config:** Added "none" option in formatter
+- **create-airbnb-x-config:** Added "none" option in strict config
+
+### 🩹 Fixes
+
+- Upgraded deps
+- Upgraded configs
+- **create-airbnb-x-config:** Fixed #67
+- **create-airbnb-x-config:** Implemented #68
+
+### ❤️ Thank You
+
+- Charlie Laabs @claabs
+- Artem Sinelnikov @ovionlogis
+
 ## 3.0.1 (2026-01-21)
 
 ### 🚀 Features
