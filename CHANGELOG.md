@@ -5,6 +5,7 @@
 - Added bun in docs
 - **create-airbnb-x-config:** Added "none" option in formatter
 - **create-airbnb-x-config:** Added "none" option in strict config
+- **eslint-config-airbnb-extended:** Added "n/prefer-global/crypto" and "n/prefer-global/timers" rules with "error" severity
 
 ### 🩹 Fixes
 
