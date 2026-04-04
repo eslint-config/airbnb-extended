@@ -1,2 +1,2 @@
 export * from '@/helpers/getCommands/getCommands';
-export * from '@/helpers/getCommands/getCommands.types';
+export type * from '@/helpers/getCommands/getCommands.types';

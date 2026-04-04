@@ -1,5 +1,6 @@
-import { InitialReturnValue } from 'prompts';
 import pc from 'picocolors';
+
+import type { InitialReturnValue } from 'prompts';
 
 // Handle Sigterm function
 

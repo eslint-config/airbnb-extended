@@ -2,7 +2,7 @@ import spawn from 'cross-spawn';
 
 import { getCommands } from '@/helpers/getCommands';
 
-import { GetCommandsParams } from '@/helpers/getCommands/getCommands.types';
+import type { GetCommandsParams } from '@/helpers/getCommands/getCommands.types';
 
 /**
  * @see https://github.com/vercel/next.js/blob/canary/packages/create-next-app/helpers/install.ts

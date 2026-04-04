@@ -1,2 +1,2 @@
 export * from '@/helpers/getProgramOptions/getProgramOptions';
-export * from '@/helpers/getProgramOptions/getProgramOptions.types';
+export type * from '@/helpers/getProgramOptions/getProgramOptions.types';

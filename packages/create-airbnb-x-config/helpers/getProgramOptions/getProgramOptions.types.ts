@@ -1,10 +1,10 @@
-import type { runtimes } from '@/constants/common';
 import type {
   ConfigType,
   FormatterType,
   LanguageType,
   LegacyConfigType,
   PackageManagerType,
+  runtimes,
   RuntimeType,
   StrictConfigType,
   StringBooleanType,

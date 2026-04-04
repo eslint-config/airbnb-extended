@@ -1,2 +1,2 @@
 export * from '@/helpers/getArgs/getArgs';
-export * from '@/helpers/getArgs/getArgs.types';
+export type * from '@/helpers/getArgs/getArgs.types';

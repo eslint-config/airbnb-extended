@@ -3,12 +3,13 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
+      "@cli/constants": ["./../../packages/create-airbnb-x-config/constants/common/common.ts"],
       "@cli/*": ["./../../packages/create-airbnb-x-config/*"]
     }
   },
   "include": [
     "**/*.ts",
-    "../../packages/create-airbnb-x-config/constants/index.ts",
+    "../../packages/create-airbnb-x-config/constants/common/index.ts",
     "../../packages/create-airbnb-x-config/types/lib.types.ts"
   ],
   "exclude": ["node_modules"]

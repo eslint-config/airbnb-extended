@@ -1,2 +1,2 @@
 export * from '@/helpers/getConfigUrl/getConfigUrl';
-export * from '@/helpers/getConfigUrl/getConfigUrl.types';
+export type * from '@/helpers/getConfigUrl/getConfigUrl.types';

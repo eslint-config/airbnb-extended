@@ -6,7 +6,7 @@ import { baseGithubRawUrl, eslintConfigName } from '@/constants/common';
 import { getConfigUrl } from '@/helpers/getConfigUrl';
 import { rootPath } from '@/utils';
 
-import { GetConfigUrlParams } from '@/helpers/getConfigUrl/getConfigUrl.types';
+import type { GetConfigUrlParams } from '@/helpers/getConfigUrl/getConfigUrl.types';
 
 export const createESLintConfigFile = async (args: GetConfigUrlParams): Promise<void> => {
   try {
