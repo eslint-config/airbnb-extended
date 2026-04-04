@@ -9,6 +9,7 @@ export const languages = {
 } as const;
 
 export const formatters = {
+  NONE: 'none',
   PRETTIER: 'prettier',
 } as const;
 

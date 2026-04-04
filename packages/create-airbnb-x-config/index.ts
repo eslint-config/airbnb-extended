@@ -78,7 +78,9 @@ const run = async () => {
     args = { ...args, language };
   }
 
-  if (args.formatter === null) {
+  if (args.formatter === formatters.NONE) {
+    args = { ...args, formatter: null };
+  } else if (args.formatter === null) {
     const { formatterBoolean } = await prompts(
       {
         type: 'toggle',
