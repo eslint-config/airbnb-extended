@@ -468,10 +468,8 @@ export const bestPracticesInternalRules = {
   yoda: 'error',
 } satisfies ConfigRules;
 
-const bestPracticesRules = defineConfigObject({
+export const bestPracticesRules = defineConfigObject({
   name: 'airbnb/config/best-practices',
   files: allFiles,
   rules: bestPracticesInternalRules,
 });
-
-export default bestPracticesRules;

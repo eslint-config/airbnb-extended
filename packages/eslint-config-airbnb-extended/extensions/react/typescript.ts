@@ -1,7 +1,7 @@
-import getImportSettings from '@/helpers/getImportSettings';
+import { getImportSettings } from '@/helpers/getImportSettings';
 import { defineConfigArray, tsFiles } from '@/utils';
 
-const reactTypescriptExtensionsConfig = defineConfigArray([
+export const reactTypescriptExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/react-typescript-react',
     files: tsFiles,
@@ -22,5 +22,3 @@ const reactTypescriptExtensionsConfig = defineConfigArray([
     settings: getImportSettings({ javascript: false, typescript: true, jsx: true }),
   },
 ]);
-
-export default reactTypescriptExtensionsConfig;

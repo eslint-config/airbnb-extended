@@ -240,10 +240,8 @@ export const styleInternalRules = {
   'unicode-bom': ['error', 'never'],
 } satisfies ConfigRules;
 
-const styleRules = defineConfigObject({
+export const styleRules = defineConfigObject({
   name: 'airbnb/config/style',
   files: allFiles,
   rules: styleInternalRules,
 });
-
-export default styleRules;

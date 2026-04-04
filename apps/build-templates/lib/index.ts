@@ -1,5 +1,5 @@
-import createDirectories from '@/lib/createDirectories';
-import writeFiles from '@/lib/writeFiles';
+import { createDirectories } from '@/lib/createDirectories';
+import { writeFiles } from '@/lib/writeFiles';
 
 const run = async () => {
   await createDirectories();

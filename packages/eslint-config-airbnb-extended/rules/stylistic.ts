@@ -583,7 +583,7 @@ export const stylisticInternalRules = {
   '@stylistic/yield-star-spacing': ['error', 'after'],
 } satisfies ConfigRules;
 
-const stylisticRules = defineConfigObject({
+export const stylisticRules = defineConfigObject({
   name: 'airbnb/config/stylistic',
   files: allFiles,
   rules: stylisticInternalRules,
@@ -598,5 +598,3 @@ export const experimentalStylisticRules = defineConfigObject({
     '@stylistic/exp-list-style': 'off',
   },
 });
-
-export default stylisticRules;

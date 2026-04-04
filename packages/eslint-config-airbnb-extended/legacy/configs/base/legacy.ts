@@ -1,9 +1,9 @@
 import globals from 'globals';
 
-import legacyBaseConfig from '@/legacy/configs/base/config';
+import { legacyBaseConfig } from '@/legacy/configs/base/config';
 import { allFiles, defineConfigArray } from '@/utils';
 
-const legacyBaseLegacyConfig = defineConfigArray([
+export const legacyBaseLegacyConfig = defineConfigArray([
   legacyBaseConfig.bestPractices,
   legacyBaseConfig.errors,
   legacyBaseConfig.node,
@@ -43,5 +43,3 @@ const legacyBaseLegacyConfig = defineConfigArray([
     },
   },
 ]);
-
-export default legacyBaseLegacyConfig;

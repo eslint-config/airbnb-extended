@@ -6,7 +6,7 @@ import { allFiles, defineConfigObject, jsExtensionsWithReact } from '@/utils';
 
 const dangleRules = legacyStyleInternalRules['no-underscore-dangle'];
 
-const legacyReactBaseRules = defineConfigObject({
+export const legacyReactBaseRules = defineConfigObject({
   name: 'airbnb/config/react/legacy',
   files: allFiles,
   plugins: {
@@ -769,5 +769,3 @@ const legacyReactBaseRules = defineConfigObject({
     'react/jsx-props-no-spread-multi': 'off',
   },
 });
-
-export default legacyReactBaseRules;

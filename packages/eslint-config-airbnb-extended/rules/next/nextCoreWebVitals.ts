@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const nextCoreWebVitalsRules = defineConfigObject({
+export const nextCoreWebVitalsRules = defineConfigObject({
   name: 'airbnb/config/next/core-web-vitals',
   files: allFiles,
   rules: {
@@ -13,5 +13,3 @@ const nextCoreWebVitalsRules = defineConfigObject({
     '@next/next/no-sync-scripts': 'error',
   },
 });
-
-export default nextCoreWebVitalsRules;

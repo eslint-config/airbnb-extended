@@ -12,10 +12,10 @@ import {
   typescriptConfig,
 } from '@/lib/configs';
 import { languagePreferences } from '@/lib/constants';
-import contentFormatter from '@/lib/contentFormatter';
+import { contentFormatter } from '@/lib/contentFormatter';
 
 import type { strictConfigs } from '@cli/constants';
-import type { ValueOf } from '@cli/types/lib.types';
+import type { ValueOf } from '@cli/types';
 
 interface GetContentConfigurations {
   prettier: boolean;
@@ -31,7 +31,7 @@ export interface GetContentParams {
 
 type GetContent = (params: GetContentParams) => string;
 
-const getContent: GetContent = (params) => {
+export const getContent: GetContent = (params) => {
   const { type, language, languagePreference, configurations } = params;
   const isLegacy = type === configs.LEGACY;
 
@@ -69,5 +69,3 @@ const getContent: GetContent = (params) => {
 
   return content.join('\n');
 };
-
-export default getContent;

@@ -1,7 +1,5 @@
-import nodeRecommendedExtensionsConfig from '@/extensions/node/recommended';
+import { nodeRecommendedExtensionsConfig } from '@/extensions/node/recommended';
 
-const nodeExtensions = {
+export const nodeExtensions = {
   recommended: nodeRecommendedExtensionsConfig,
 } as const;
-
-export default nodeExtensions;

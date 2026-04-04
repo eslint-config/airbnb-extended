@@ -12,15 +12,15 @@ import {
   legacyConfigs,
   runtimes,
   strictConfigs,
-} from '@/constants';
-import createESLintConfigFile from '@/helpers/createEslintConfigFile';
-import getArgs from '@/helpers/getArgs';
-import getCommands from '@/helpers/getCommands';
-import getConfigUrl from '@/helpers/getConfigUrl';
-import installPackages from '@/helpers/installPackages';
+} from '@/constants/common';
+import { createESLintConfigFile } from '@/helpers/createEslintConfigFile';
+import { getArgs } from '@/helpers/getArgs';
+import { getCommands } from '@/helpers/getCommands';
+import { getConfigUrl } from '@/helpers/getConfigUrl';
+import { installPackages } from '@/helpers/installPackages';
 import { exit, handleSigTerm, onCancel, onPromptState } from '@/utils';
 
-import type { ArgsOutput } from '@/helpers/@types/getArgs.types';
+import type { ArgsOutput } from '@/helpers/getArgs/getArgs.types';
 
 process.on('SIGINT', handleSigTerm);
 process.on('SIGTERM', handleSigTerm);

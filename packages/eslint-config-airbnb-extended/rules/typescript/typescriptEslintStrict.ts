@@ -1,6 +1,6 @@
 import { defineConfigObject, tsFiles } from '@/utils';
 
-const typescriptEslintStrictRules = defineConfigObject({
+export const typescriptEslintStrictRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-eslint/strict',
   files: tsFiles,
   rules: {
@@ -222,5 +222,3 @@ const typescriptEslintStrictRules = defineConfigObject({
     ],
   },
 });
-
-export default typescriptEslintStrictRules;

@@ -1,10 +1,10 @@
 import { configs } from 'typescript-eslint';
 
-import getImportSettings from '@/helpers/getImportSettings';
-import getStylisticLegacyConfig from '@/helpers/getStylisticLegacyConfig';
+import { getImportSettings } from '@/helpers/getImportSettings';
+import { getStylisticLegacyConfig } from '@/helpers/getStylisticLegacyConfig';
 import { defineConfigArray, jsFiles, tsFiles, tsFileWithoutReact } from '@/utils';
 
-const baseTypescriptExtensionsConfig = defineConfigArray([
+export const baseTypescriptExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/base-typescript-settings-extensions-configurations',
     files: tsFileWithoutReact,
@@ -21,5 +21,3 @@ const baseTypescriptExtensionsConfig = defineConfigArray([
     files: jsFiles,
   },
 ]);
-
-export default baseTypescriptExtensionsConfig;

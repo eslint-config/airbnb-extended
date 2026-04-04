@@ -752,10 +752,8 @@ export const legacyStyleInternalRules = {
   'wrap-regex': 'off',
 } satisfies ConfigRules;
 
-const legacyStyleRules = defineConfigObject({
+export const legacyStyleRules = defineConfigObject({
   name: 'airbnb/config/style/legacy',
   files: allFiles,
   rules: legacyStyleInternalRules,
 });
-
-export default legacyStyleRules;

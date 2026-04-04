@@ -7,25 +7,27 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import { plugin as typescriptEslintPlugin } from 'typescript-eslint';
 
-import importsRules, { deprecatedImportsRules } from '@/rules/imports';
-import nextBaseRules from '@/rules/next/nextBase';
-import nextCoreWebVitalsRules from '@/rules/next/nextCoreWebVitals';
-import nodeBaseRules, { deprecatedNodeBaseRules } from '@/rules/node/nodeBase';
-import nodeGlobalsRules from '@/rules/node/nodeGlobals';
-import nodeNoUnsupportedFeaturesRules from '@/rules/node/nodeNoUnsupportedFeatures';
-import nodePromisesRules from '@/rules/node/nodePromises';
-import reactBaseRules, { deprecatedReactBaseRules } from '@/rules/react/react';
-import reactHooksRules from '@/rules/react/reactHooks';
-import reactJsxA11yRules, { deprecatedReactJsxA11yRules } from '@/rules/react/reactJsxA11y';
-import reactStylisticRules, {
+import { deprecatedImportsRules, importsRules } from '@/rules/imports';
+import { nextBaseRules } from '@/rules/next/nextBase';
+import { nextCoreWebVitalsRules } from '@/rules/next/nextCoreWebVitals';
+import { deprecatedNodeBaseRules, nodeBaseRules } from '@/rules/node/nodeBase';
+import { nodeGlobalsRules } from '@/rules/node/nodeGlobals';
+import { nodeNoUnsupportedFeaturesRules } from '@/rules/node/nodeNoUnsupportedFeatures';
+import { nodePromisesRules } from '@/rules/node/nodePromises';
+import { deprecatedReactBaseRules, reactBaseRules } from '@/rules/react/react';
+import { reactHooksRules } from '@/rules/react/reactHooks';
+import { deprecatedReactJsxA11yRules, reactJsxA11yRules } from '@/rules/react/reactJsxA11y';
+import {
   deprecatedReactStylisticRules,
   experimentalReactStylisticRules,
+  reactStylisticRules,
 } from '@/rules/react/reactStylistic';
-import stylisticRules, { experimentalStylisticRules } from '@/rules/stylistic';
-import typescriptEslintRules, {
+import { experimentalStylisticRules, stylisticRules } from '@/rules/stylistic';
+import {
   deprecatedTypescriptEslintRules,
+  typescriptEslintRules,
 } from '@/rules/typescript/typescriptEslint';
-import typescriptStylisticRules from '@/rules/typescript/typescriptStylistic';
+import { typescriptStylisticRules } from '@/rules/typescript/typescriptStylistic';
 
 const getRulesArray = (prefix: string, arr: string[]) =>
   arr.filter((rule) => rule.startsWith(prefix));

@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject, tsExtensionsResolver } from '@/utils';
 
-const legacyTypescriptSettingsRules = defineConfigObject({
+export const legacyTypescriptSettingsRules = defineConfigObject({
   name: 'airbnb/config/typescript/settings/legacy',
   files: allFiles,
   settings: {
@@ -24,5 +24,3 @@ const legacyTypescriptSettingsRules = defineConfigObject({
   },
   rules: {},
 });
-
-export default legacyTypescriptSettingsRules;

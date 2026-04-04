@@ -2,7 +2,7 @@ import { jsExtensions, tsExtensions } from '@/utils';
 
 type GetDevDepsList = (language: 'javascript' | 'typescript') => string[];
 
-const getDevDepsList: GetDevDepsList = (language) => {
+export const getDevDepsList: GetDevDepsList = (language) => {
   const extensions = (() => {
     if (language === 'javascript') {
       return [...jsExtensions, ...tsExtensions].map((ext) => ext.slice(1)).join(',');
@@ -49,5 +49,3 @@ const getDevDepsList: GetDevDepsList = (language) => {
     `**/tsup.config.{${extensions}}`,
   ];
 };
-
-export default getDevDepsList;

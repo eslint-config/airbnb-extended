@@ -1,14 +1,14 @@
-import type { runtimes } from '@/constants';
 import type {
   ConfigType,
   FormatterType,
   LanguageType,
   LegacyConfigType,
   PackageManagerType,
+  runtimes,
   RuntimeType,
   StrictConfigType,
   StringBooleanType,
-} from '@/constants/@types/index.types';
+} from '@/constants/common';
 
 interface ProgramOptions {
   config: ConfigType;

@@ -210,10 +210,8 @@ export const legacyErrorsInternalRules = {
   ],
 } satisfies ConfigRules;
 
-const legacyErrorsRules = defineConfigObject({
+export const legacyErrorsRules = defineConfigObject({
   name: 'airbnb/config/errors/legacy',
   files: allFiles,
   rules: legacyErrorsInternalRules,
 });
-
-export default legacyErrorsRules;

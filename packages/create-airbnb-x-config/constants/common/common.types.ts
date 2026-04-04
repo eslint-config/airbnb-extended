@@ -7,7 +7,7 @@ import type {
   runtimes,
   strictConfigs,
   stringBooleans,
-} from '@/constants';
+} from '@/constants/common';
 import type { ValueOf } from '@/types/lib.types';
 
 export type ConfigType = ValueOf<typeof configs>;

@@ -511,10 +511,8 @@ export const legacyBestPracticesInternalRules = {
   yoda: 'error',
 } satisfies ConfigRules;
 
-const legacyBestPracticesRules = defineConfigObject({
+export const legacyBestPracticesRules = defineConfigObject({
   name: 'airbnb/config/best-practices/legacy',
   files: allFiles,
   rules: legacyBestPracticesInternalRules,
 });
-
-export default legacyBestPracticesRules;

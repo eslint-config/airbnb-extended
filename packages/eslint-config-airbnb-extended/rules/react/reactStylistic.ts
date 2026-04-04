@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const reactStylisticRules = defineConfigObject({
+export const reactStylisticRules = defineConfigObject({
   name: 'airbnb/config/react/stylistic',
   files: allFiles,
   rules: {
@@ -125,5 +125,3 @@ export const experimentalReactStylisticRules = defineConfigObject({
     '@stylistic/exp-jsx-props-style': 'off',
   },
 });
-
-export default reactStylisticRules;

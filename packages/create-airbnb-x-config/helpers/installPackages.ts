@@ -1,13 +1,13 @@
 import spawn from 'cross-spawn';
 
-import getCommands from '@/helpers/getCommands';
+import { getCommands } from '@/helpers/getCommands';
 
-import type { InstallPackages } from '@/helpers/@types/installPackages.types';
+import type { GetCommandsParams } from '@/helpers/getCommands/getCommands.types';
 
 /**
  * @see https://github.com/vercel/next.js/blob/canary/packages/create-next-app/helpers/install.ts
  */
-const installPackages: InstallPackages = async (args) => {
+export const installPackages = async (args: GetCommandsParams): Promise<void> => {
   const [packageManager, ...commands] = getCommands(args);
 
   return new Promise((resolve, reject) => {
@@ -33,5 +33,3 @@ const installPackages: InstallPackages = async (args) => {
     });
   });
 };
-
-export default installPackages;

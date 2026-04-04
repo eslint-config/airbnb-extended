@@ -1,10 +1,10 @@
-import getImportSettings from '@/helpers/getImportSettings';
+import { getImportSettings } from '@/helpers/getImportSettings';
 import { styleInternalRules } from '@/rules/style';
 import { allFiles, defineConfigArray, jsFiles } from '@/utils';
 
 const dangleRules = styleInternalRules['no-underscore-dangle'];
 
-const reactRecommendedExtensionsConfig = defineConfigArray([
+export const reactRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/react-settings-extensions-configurations',
     files: jsFiles,
@@ -70,5 +70,3 @@ const reactRecommendedExtensionsConfig = defineConfigArray([
   //   ...getStylisticLegacyConfig('react'),
   // },
 ]);
-
-export default reactRecommendedExtensionsConfig;

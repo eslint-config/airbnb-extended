@@ -7,7 +7,7 @@ const flatNodeConfig = nodePlugin.configs['flat/recommended'];
 const flatModuleConfig = nodePlugin.configs['flat/recommended-module'];
 const flatScriptConfig = nodePlugin.configs['flat/recommended-script'];
 
-const nodeRecommendedExtensionsConfig = defineConfigArray([
+export const nodeRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/node-configurations',
     files: allFiles,
@@ -51,5 +51,3 @@ const nodeRecommendedExtensionsConfig = defineConfigArray([
       : null),
   },
 ]);
-
-export default nodeRecommendedExtensionsConfig;

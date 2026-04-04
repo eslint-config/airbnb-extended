@@ -1,6 +1,6 @@
 import { defineConfigObject, tsFiles } from '@/utils';
 
-const legacyTypescriptOverridesRules = defineConfigObject({
+export const legacyTypescriptOverridesRules = defineConfigObject({
   name: 'airbnb/config/typescript/overrides/legacy',
   files: tsFiles,
   rules: {
@@ -32,5 +32,3 @@ const legacyTypescriptOverridesRules = defineConfigObject({
     'import/no-unresolved': 'off',
   },
 });
-
-export default legacyTypescriptOverridesRules;

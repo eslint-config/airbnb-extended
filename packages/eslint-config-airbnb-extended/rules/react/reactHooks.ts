@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const reactHooksRules = defineConfigObject({
+export const reactHooksRules = defineConfigObject({
   name: 'airbnb/config/react-hooks',
   files: allFiles,
   languageOptions: {
@@ -20,5 +20,3 @@ const reactHooksRules = defineConfigObject({
     'react-hooks/rules-of-hooks': 'error',
   },
 });
-
-export default reactHooksRules;

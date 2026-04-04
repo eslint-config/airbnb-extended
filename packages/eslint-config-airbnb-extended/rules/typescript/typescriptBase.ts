@@ -1,6 +1,6 @@
 import { defineConfigObject, tsFiles } from '@/utils';
 
-const typescriptBaseRules = defineConfigObject({
+export const typescriptBaseRules = defineConfigObject({
   name: 'airbnb/config/typescript/base',
   files: tsFiles,
   rules: {
@@ -28,5 +28,3 @@ const typescriptBaseRules = defineConfigObject({
     'valid-typeof': 'off',
   },
 });
-
-export default typescriptBaseRules;

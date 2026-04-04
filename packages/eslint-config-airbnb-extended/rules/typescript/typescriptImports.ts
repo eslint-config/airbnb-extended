@@ -1,10 +1,10 @@
-import getDevDepsList from '@/helpers/getDevDepsList';
+import { getDevDepsList } from '@/helpers/getDevDepsList';
 import { defineConfigObject, jsExtensionsRule, tsExtensionsRule, tsFiles } from '@/utils';
 
 /**
  * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/src/config/typescript.ts
  */
-const typescriptImportsRules = defineConfigObject({
+export const typescriptImportsRules = defineConfigObject({
   name: 'airbnb/config/typescript/import-x',
   files: tsFiles,
   rules: {
@@ -36,5 +36,3 @@ const typescriptImportsRules = defineConfigObject({
     'import-x/no-named-as-default-member': 'off',
   },
 });
-
-export default typescriptImportsRules;

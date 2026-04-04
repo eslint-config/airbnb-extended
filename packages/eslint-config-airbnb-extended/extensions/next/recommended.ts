@@ -1,6 +1,6 @@
 import { allFiles, defineConfigArray } from '@/utils';
 
-const nextRecommendedExtensionsConfig = defineConfigArray([
+export const nextRecommendedExtensionsConfig = defineConfigArray([
   {
     name: 'airbnb/config/next-import-x',
     files: ['**/app/**/route.ts', '**/middleware.ts'],
@@ -17,5 +17,3 @@ const nextRecommendedExtensionsConfig = defineConfigArray([
     },
   },
 ]);
-
-export default nextRecommendedExtensionsConfig;

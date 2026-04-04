@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const nextBaseRules = defineConfigObject({
+export const nextBaseRules = defineConfigObject({
   name: 'airbnb/config/next/base',
   files: allFiles,
   rules: {
@@ -89,5 +89,3 @@ const nextBaseRules = defineConfigObject({
     '@next/next/no-unwanted-polyfillio': 'warn',
   },
 });
-
-export default nextBaseRules;
