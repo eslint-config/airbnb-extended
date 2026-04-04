@@ -59,6 +59,7 @@ The following values are available for `--lang`:
 The following values are available for `--formatter`:
 
 - `prettier` → Add Prettier integration (`eslint-plugin-prettier`, `eslint-config-prettier`).
+- `none` → No formatter integration (keeps ESLint setup without Prettier).
 
 ### Runtime {#runtime}
 
@@ -77,6 +78,7 @@ The following values are available for `--strict`:
 - `import` → Enable **strict Import** rules.
 - `react` → Enable **strict React** rules.
 - `typescript` → Enable **strict TypeScript** rules.
+- `none` → No strict configurations are applied.
 
 ### Legacy Config Variants {#legacy-configs}
 
