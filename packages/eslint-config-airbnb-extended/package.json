@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-airbnb-extended",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Eslint Airbnb Config Extended",
   "keywords": [
     "eslint",
@@ -49,18 +49,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^16.1.4",
-    "@stylistic/eslint-plugin": "^5.7.0",
+    "@next/eslint-plugin-next": "^16.2.2",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "confusing-browser-globals": "^1.0.11",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.23.2",
+    "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^17.0.0",
-    "typescript-eslint": "^8.53.1"
+    "globals": "^17.4.0",
+    "typescript-eslint": "^8.58.0"
   },
   "devDependencies": {
     "@airbnb-extended/typescript-config": "workspace:*",
