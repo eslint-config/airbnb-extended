@@ -17,8 +17,11 @@ import nodePromisesRules from '@/rules/node/nodePromises';
 import reactBaseRules, { deprecatedReactBaseRules } from '@/rules/react/react';
 import reactHooksRules from '@/rules/react/reactHooks';
 import reactJsxA11yRules, { deprecatedReactJsxA11yRules } from '@/rules/react/reactJsxA11y';
-import reactStylisticRules, { deprecatedReactStylisticRules } from '@/rules/react/reactStylistic';
-import stylisticRules, { deprecatedStylisticRules } from '@/rules/stylistic';
+import reactStylisticRules, {
+  deprecatedReactStylisticRules,
+  experimentalReactStylisticRules,
+} from '@/rules/react/reactStylistic';
+import stylisticRules, { experimentalStylisticRules } from '@/rules/stylistic';
 import typescriptEslintRules, {
   deprecatedTypescriptEslintRules,
 } from '@/rules/typescript/typescriptEslint';
@@ -137,10 +140,11 @@ const checkStylisticUpdates = async () => {
   const localRules = getRulesArray(prefix, [
     ...new Set([
       ...getRules(stylisticRules),
-      ...getRules(deprecatedStylisticRules),
+      ...getRules(experimentalStylisticRules),
       ...getRules(typescriptStylisticRules),
       ...getRules(reactStylisticRules),
       ...getRules(deprecatedReactStylisticRules),
+      ...getRules(experimentalReactStylisticRules),
     ]),
   ]);
 
@@ -179,6 +183,7 @@ const checkUpdates = async () => {
   await checkNextUpdates();
   await checkStylisticUpdates();
   await checkTypescriptEslintUpdates();
+
   console.log('Done');
 
   return true;

@@ -589,13 +589,13 @@ const stylisticRules = defineConfigObject({
   rules: stylisticInternalRules,
 });
 
-export const deprecatedStylisticRules = defineConfigObject({
-  name: 'airbnb/config/stylistic/deprecated',
+export const experimentalStylisticRules = defineConfigObject({
+  name: 'airbnb/config/react/stylistic/experimental',
   files: allFiles,
   rules: {
-    // enforce spacing between functions and their invocations
-    // https://eslint.style/rules/function-call-spacing
-    '@stylistic/func-call-spacing': 'off',
+    // Enforce consistent spacing and line break styles inside brackets.
+    // https://eslint.style/rules/list-style
+    '@stylistic/exp-list-style': 'off',
   },
 });
 
