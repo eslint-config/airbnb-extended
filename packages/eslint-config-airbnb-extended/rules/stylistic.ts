@@ -590,7 +590,7 @@ const stylisticRules = defineConfigObject({
 });
 
 export const experimentalStylisticRules = defineConfigObject({
-  name: 'airbnb/config/react/stylistic/experimental',
+  name: 'airbnb/config/stylistic/experimental',
   files: allFiles,
   rules: {
     // Enforce consistent spacing and line break styles inside brackets.
