@@ -21,6 +21,10 @@ $ yarn dlx create-airbnb-x-config
 $ pnpx create-airbnb-x-config
 ```
 
+```sh [bun]
+$ bunx create-airbnb-x-config
+```
+
 :::
 
 ## Guide {#guide}
@@ -116,15 +120,19 @@ Example installation command:
 ::: code-group
 
 ```sh [npm]
-npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 ```sh [yarn]
-yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 ```sh [pnpm]
-pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+```
+
+```sh [bun]
+$ bun add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
 ```
 
 :::

@@ -12,15 +12,19 @@ Each answer updates the final ESLint setup for your project. If you prefer to sk
 ::: code-group
 
 ```sh [npm]
-$ npx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
+$ npx create-airbnb-x-config --lang typescript --runtime react --pm npm
 ```
 
 ```sh [yarn]
-$ yarn dlx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
+$ yarn dlx create-airbnb-x-config --lang typescript --runtime react --pm yarn
 ```
 
 ```sh [pnpm]
 $ pnpx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
+```
+
+```sh [bun]
+$ bunx create-airbnb-x-config --lang typescript --runtime react --pm bun
 ```
 
 :::
