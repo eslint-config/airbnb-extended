@@ -22,6 +22,7 @@ export const runtimes = {
 } as const;
 
 export const strictConfigs = {
+  NONE: 'none',
   IMPORT: 'import',
   REACT: 'react',
   TYPESCRIPT: 'typescript',

@@ -136,7 +136,9 @@ const run = async () => {
       args = { ...args, runtime };
     }
 
-    if (!args.strictConfig) {
+    if (args.strictConfig?.includes(strictConfigs.NONE)) {
+      args = { ...args, strictConfig: null };
+    } else if (!args.strictConfig) {
       const { hasStrictConfig } = await prompts(
         {
           type: 'toggle',
