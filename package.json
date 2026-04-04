@@ -1,6 +1,6 @@
 {
   "name": "@airbnb-extended/project",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Eslint Airbnb Config Extended Project",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
@@ -50,7 +50,7 @@
     "@airbnb-extended/lint-staged-config": "workspace:*",
     "@airbnb-extended/prettier-config": "workspace:*",
     "@changesets/cli": "^2.30.0",
-    "@types/node": "^24.12.0",
+    "@types/node": "^24.12.2",
     "eslint": "catalog:",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
