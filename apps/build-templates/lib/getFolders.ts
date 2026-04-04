@@ -1,14 +1,14 @@
 import { configs, legacyConfigs, runtimes } from '@cli/constants';
 
 import { subFolders, templateConstants } from '@/lib/constants';
-import getAllFolders from '@/lib/getAllFolders';
-import getDefaultSubFolders from '@/lib/getDefaultSubFolders';
+import { getAllFolders } from '@/lib/getAllFolders';
+import { getDefaultSubFolders } from '@/lib/getDefaultSubFolders';
 
 import type { Folders } from '@/lib/getAllFolders';
 
 type GetFolders = () => ReturnType<typeof getAllFolders>;
 
-const getFolders: GetFolders = () => {
+export const getFolders: GetFolders = () => {
   const folders = {
     [configs.LEGACY]: {
       data: {
@@ -60,5 +60,3 @@ const getFolders: GetFolders = () => {
 
   return getAllFolders(folders, [templateConstants.FOLDER_NAME]);
 };
-
-export default getFolders;

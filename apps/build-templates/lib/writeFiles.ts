@@ -2,12 +2,12 @@ import fsPromise from 'node:fs/promises';
 
 import { eslintConfigName } from '@cli/constants';
 
-import getContent from '@/lib/getContent';
-import getFolders from '@/lib/getFolders';
+import { getContent } from '@/lib/getContent';
+import { getFolders } from '@/lib/getFolders';
 
 type WriteFiles = () => Promise<void>;
 
-const writeFiles: WriteFiles = async () => {
+export const writeFiles: WriteFiles = async () => {
   const allFolders = getFolders();
 
   await Promise.all(
@@ -34,5 +34,3 @@ const writeFiles: WriteFiles = async () => {
     }),
   );
 };
-
-export default writeFiles;

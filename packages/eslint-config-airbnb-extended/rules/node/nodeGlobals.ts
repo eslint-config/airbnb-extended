@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const nodeGlobalsRules = defineConfigObject({
+export const nodeGlobalsRules = defineConfigObject({
   name: 'airbnb/config/node/globals',
   files: allFiles,
   rules: {
@@ -41,5 +41,3 @@ const nodeGlobalsRules = defineConfigObject({
     'n/prefer-global/url': ['error', 'always'],
   },
 });
-
-export default nodeGlobalsRules;

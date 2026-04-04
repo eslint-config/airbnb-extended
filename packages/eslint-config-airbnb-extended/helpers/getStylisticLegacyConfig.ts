@@ -6,7 +6,7 @@ type GetStylisticLegacyConfigLanguage = 'javascript' | 'typescript' | 'react';
 
 type GetStylisticLegacyConfig = (language: GetStylisticLegacyConfigLanguage) => ConfigRaw;
 
-const getStylisticLegacyConfig: GetStylisticLegacyConfig = (language) => {
+export const getStylisticLegacyConfig: GetStylisticLegacyConfig = (language) => {
   const legacyConfig = stylistic.configs['disable-legacy'];
   const REACT = 'react/';
   const TYPESCRIPT = '@typescript-eslint/';
@@ -47,5 +47,3 @@ const getStylisticLegacyConfig: GetStylisticLegacyConfig = (language) => {
 
   return rules ? { ...legacyConfig, rules } : legacyConfig;
 };
-
-export default getStylisticLegacyConfig;

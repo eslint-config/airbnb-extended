@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const nodePromisesRules = defineConfigObject({
+export const nodePromisesRules = defineConfigObject({
   name: 'airbnb/config/node/promises',
   files: allFiles,
   rules: {
@@ -13,5 +13,3 @@ const nodePromisesRules = defineConfigObject({
     'n/prefer-promises/fs': 'error',
   },
 });
-
-export default nodePromisesRules;

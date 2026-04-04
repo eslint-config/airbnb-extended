@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const reactStrictRules = defineConfigObject({
+export const reactStrictRules = defineConfigObject({
   name: 'airbnb/config/react/strict',
   files: allFiles,
   rules: {
@@ -86,5 +86,3 @@ const reactStrictRules = defineConfigObject({
     'react/prop-types': 'off',
   },
 });
-
-export default reactStrictRules;

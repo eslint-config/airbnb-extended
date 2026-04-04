@@ -18,7 +18,7 @@ export interface GetImportSettingsParams {
 
 type GetImportSettings = (params: GetImportSettingsParams) => ConfigRaw['settings'];
 
-const getImportSettings: GetImportSettings = (params) => {
+export const getImportSettings: GetImportSettings = (params) => {
   const { javascript, typescript, jsx } = params;
 
   const extensions = (() => {
@@ -57,5 +57,3 @@ const getImportSettings: GetImportSettings = (params) => {
       : null),
   };
 };
-
-export default getImportSettings;

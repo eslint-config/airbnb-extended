@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-import';
 import globals from 'globals';
 
-import getDevDepsList from '@/helpers/getDevDepsList';
+import { getDevDepsList } from '@/helpers/getDevDepsList';
 import { allFiles, defineConfigObject, jsExtensions, jsExtensionsWithReact } from '@/utils';
 
 import type { ConfigRules } from '@/types/common.types';
@@ -278,7 +278,7 @@ export const legacyImportsInternalRules = {
   'import/no-empty-named-blocks': 'off',
 } satisfies ConfigRules;
 
-const legacyImportsRules = defineConfigObject({
+export const legacyImportsRules = defineConfigObject({
   name: 'airbnb/config/import/legacy',
   files: allFiles,
   plugins: {
@@ -305,5 +305,3 @@ const legacyImportsRules = defineConfigObject({
   },
   rules: legacyImportsInternalRules,
 });
-
-export default legacyImportsRules;

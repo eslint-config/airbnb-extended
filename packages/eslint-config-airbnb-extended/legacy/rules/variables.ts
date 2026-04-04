@@ -74,10 +74,8 @@ export const legacyVariablesInternalRules = {
   ],
 } satisfies ConfigRules;
 
-const legacyVariablesRules = defineConfigObject({
+export const legacyVariablesRules = defineConfigObject({
   name: 'airbnb/config/variables/legacy',
   files: allFiles,
   rules: legacyVariablesInternalRules,
 });
-
-export default legacyVariablesRules;

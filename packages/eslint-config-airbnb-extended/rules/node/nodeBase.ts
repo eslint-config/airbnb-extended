@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const nodeBaseRules = defineConfigObject({
+export const nodeBaseRules = defineConfigObject({
   name: 'airbnb/config/node/base',
   files: allFiles,
   rules: {
@@ -150,5 +150,3 @@ export const deprecatedNodeBaseRules = defineConfigObject({
     'n/shebang': 'off',
   },
 });
-
-export default nodeBaseRules;

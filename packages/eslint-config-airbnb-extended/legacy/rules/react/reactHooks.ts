@@ -4,7 +4,7 @@ import { allFiles, defineConfigObject } from '@/utils';
 
 import type { ConfigPluginObject } from '@/types/common.types';
 
-const legacyReactHooksRules = defineConfigObject({
+export const legacyReactHooksRules = defineConfigObject({
   name: 'airbnb/config/react-hooks/legacy',
   files: allFiles,
   plugins: {
@@ -27,5 +27,3 @@ const legacyReactHooksRules = defineConfigObject({
     'react-hooks/rules-of-hooks': 'error',
   },
 });
-
-export default legacyReactHooksRules;

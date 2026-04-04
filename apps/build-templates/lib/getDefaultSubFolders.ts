@@ -89,7 +89,7 @@ interface GetDefaultSubFoldersParams {
 
 type GetDefaultSubFolders = (params: GetDefaultSubFoldersParams) => Folders;
 
-const getDefaultSubFolders: GetDefaultSubFolders = ({ strict }) => {
+export const getDefaultSubFolders: GetDefaultSubFolders = ({ strict }) => {
   const defaultFolders = {
     ...(strict ? strictDefaultSubFolders : null),
     [subFolders.DEFAULT]: {
@@ -122,5 +122,3 @@ const getDefaultSubFolders: GetDefaultSubFolders = ({ strict }) => {
     },
   } satisfies Folders;
 };
-
-export default getDefaultSubFolders;

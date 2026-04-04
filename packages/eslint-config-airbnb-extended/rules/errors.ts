@@ -184,10 +184,8 @@ export const errorsInternalRules = {
   ],
 } satisfies ConfigRules;
 
-const errorsRules = defineConfigObject({
+export const errorsRules = defineConfigObject({
   name: 'airbnb/config/errors',
   files: allFiles,
   rules: errorsInternalRules,
 });
-
-export default errorsRules;

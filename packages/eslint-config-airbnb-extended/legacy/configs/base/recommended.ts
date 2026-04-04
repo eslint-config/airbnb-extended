@@ -1,7 +1,7 @@
-import legacyBaseConfig from '@/legacy/configs/base/config';
+import { legacyBaseConfig } from '@/legacy/configs/base/config';
 import { allFiles, defineConfigArray } from '@/utils';
 
-const legacyBaseRecommendedConfig = defineConfigArray([
+export const legacyBaseRecommendedConfig = defineConfigArray([
   ...Object.values(legacyBaseConfig),
   {
     name: 'airbnb/config/base-configurations/legacy',
@@ -14,5 +14,3 @@ const legacyBaseRecommendedConfig = defineConfigArray([
     },
   },
 ]);
-
-export default legacyBaseRecommendedConfig;

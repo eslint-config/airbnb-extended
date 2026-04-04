@@ -2,7 +2,7 @@ import globals from 'globals';
 
 import { allFiles, defineConfigObject } from '@/utils';
 
-const reactBaseRules = defineConfigObject({
+export const reactBaseRules = defineConfigObject({
   name: 'airbnb/config/react',
   files: allFiles,
   languageOptions: {
@@ -687,5 +687,3 @@ export const deprecatedReactBaseRules = defineConfigObject({
     'react/jsx-space-before-closing': 'off',
   },
 });
-
-export default reactBaseRules;

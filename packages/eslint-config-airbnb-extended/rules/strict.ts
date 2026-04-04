@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const strictRules = defineConfigObject({
+export const strictRules = defineConfigObject({
   name: 'airbnb/config/strict',
   files: allFiles,
   rules: {
@@ -8,5 +8,3 @@ const strictRules = defineConfigObject({
     strict: ['error', 'never'],
   },
 });
-
-export default strictRules;

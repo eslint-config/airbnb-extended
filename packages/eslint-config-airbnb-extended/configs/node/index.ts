@@ -1,7 +1,5 @@
-import nodeRecommendedConfig from '@/configs/node/recommended';
+import { nodeRecommendedConfig } from '@/configs/node/recommended';
 
-const node = {
+export const node = {
   recommended: nodeRecommendedConfig,
 } as const;
-
-export default node;

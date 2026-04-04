@@ -1,7 +1,7 @@
 import { stylisticInternalRules } from '@/rules/stylistic';
 import { defineConfigObject, tsFiles } from '@/utils';
 
-const typescriptStylisticRules = defineConfigObject({
+export const typescriptStylisticRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-stylistic',
   files: tsFiles,
   rules: {
@@ -44,5 +44,3 @@ const typescriptStylisticRules = defineConfigObject({
     '@stylistic/type-named-tuple-spacing': 'off',
   },
 });
-
-export default typescriptStylisticRules;

@@ -5,7 +5,7 @@ import { styleInternalRules } from '@/rules/style';
 import { variablesInternalRules } from '@/rules/variables';
 import { defineConfigObject, tsFiles } from '@/utils';
 
-const typescriptEslintRules = defineConfigObject({
+export const typescriptEslintRules = defineConfigObject({
   name: 'airbnb/config/typescript/typescript-eslint',
   files: tsFiles,
   languageOptions: {
@@ -643,5 +643,3 @@ export const deprecatedTypescriptEslintRules = defineConfigObject({
     '@typescript-eslint/sort-type-constituents': 'off',
   },
 });
-
-export default typescriptEslintRules;

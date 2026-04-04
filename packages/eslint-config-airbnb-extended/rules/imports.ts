@@ -1,9 +1,9 @@
 import globals from 'globals';
 
-import getDevDepsList from '@/helpers/getDevDepsList';
+import { getDevDepsList } from '@/helpers/getDevDepsList';
 import { allFiles, defineConfigObject, jsExtensionsRule } from '@/utils';
 
-const importsRules = defineConfigObject({
+export const importsRules = defineConfigObject({
   name: 'airbnb/config/import-x',
   files: allFiles,
   languageOptions: {
@@ -243,5 +243,3 @@ export const deprecatedImportsRules = defineConfigObject({
     'import-x/imports-first': 'off',
   },
 });
-
-export default importsRules;
