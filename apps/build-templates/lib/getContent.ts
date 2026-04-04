@@ -15,7 +15,7 @@ import { languagePreferences } from '@/lib/constants';
 import contentFormatter from '@/lib/contentFormatter';
 
 import type { strictConfigs } from '@cli/constants';
-import type { ValueOf } from '@cli/types/lib.types';
+import type { ValueOf } from '@cli/types';
 
 interface GetContentConfigurations {
   prettier: boolean;
