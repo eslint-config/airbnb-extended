@@ -1,7 +1,6 @@
 {
   "extends": "@airbnb-extended/typescript-config/base",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@cli/*": ["./../../packages/create-airbnb-x-config/*"]
