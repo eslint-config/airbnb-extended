@@ -50,15 +50,19 @@ This change ensures better long-term maintenance and community collaboration.
   ::: code-group
 
   ```sh [npm]
-  npm uninstall @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
+  $ npm uninstall @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
   ```
 
   ```sh [yarn]
-  yarn remove @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
+  $ yarn remove @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
   ```
 
   ```sh [pnpm]
-  pnpm uninstall @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
+  $ pnpm remove @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
+  ```
+
+  ```sh [bun]
+  $ bun remove @next/eslint-plugin-next @stylistic/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks typescript-eslint eslint-plugin-n eslint-plugin-import
   ```
 
   :::

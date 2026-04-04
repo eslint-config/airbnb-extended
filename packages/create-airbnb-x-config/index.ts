@@ -78,7 +78,9 @@ const run = async () => {
     args = { ...args, language };
   }
 
-  if (args.formatter === null) {
+  if (args.formatter === formatters.NONE) {
+    args = { ...args, formatter: null };
+  } else if (args.formatter === null) {
     const { formatterBoolean } = await prompts(
       {
         type: 'toggle',
@@ -134,7 +136,9 @@ const run = async () => {
       args = { ...args, runtime };
     }
 
-    if (!args.strictConfig) {
+    if (args.strictConfig?.includes(strictConfigs.NONE)) {
+      args = { ...args, strictConfig: null };
+    } else if (!args.strictConfig) {
       const { hasStrictConfig } = await prompts(
         {
           type: 'toggle',

@@ -48,6 +48,7 @@ const getLanguage: GetLanguage = (opts) => {
 const getFormatter: GetFormatter = (opts) => {
   const { formatter } = opts;
 
+  if (formatter === formatters.NONE) return formatters.NONE;
   if (formatter === formatters.PRETTIER) return formatters.PRETTIER;
   return null;
 };

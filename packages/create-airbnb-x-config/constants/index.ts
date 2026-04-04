@@ -9,6 +9,7 @@ export const languages = {
 } as const;
 
 export const formatters = {
+  NONE: 'none',
   PRETTIER: 'prettier',
 } as const;
 
@@ -21,6 +22,7 @@ export const runtimes = {
 } as const;
 
 export const strictConfigs = {
+  NONE: 'none',
   IMPORT: 'import',
   REACT: 'react',
   TYPESCRIPT: 'typescript',

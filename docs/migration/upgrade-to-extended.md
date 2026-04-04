@@ -28,6 +28,10 @@ $ yarn remove eslint-config-airbnb-base eslint-config-airbnb eslint-config-airbn
 $ pnpm remove eslint-config-airbnb-base eslint-config-airbnb eslint-config-airbnb-typescript
 ```
 
+```sh [bun]
+$ bun remove eslint-config-airbnb-base eslint-config-airbnb eslint-config-airbnb-typescript
+```
+
 :::
 
 ## 2. Migrate to Flat Config {#migrate-flat-config}

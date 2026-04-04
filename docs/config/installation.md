@@ -22,6 +22,10 @@ $ yarn dlx create-airbnb-x-config
 $ pnpx create-airbnb-x-config
 ```
 
+```sh [bun]
+$ bunx create-airbnb-x-config
+```
+
 :::
 
 This tool will guide you step by step, helping you configure ESLint quickly with the **Airbnb Extended setup**.
