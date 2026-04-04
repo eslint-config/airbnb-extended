@@ -1,4 +1,4 @@
-import { formatters, packageManagers } from '@/constants';
+import { formatters, packageManagers } from '@/constants/common';
 
 import type { GetCommands } from '@/helpers/getCommands/getCommands.types';
 

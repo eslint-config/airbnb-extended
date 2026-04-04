@@ -2,7 +2,7 @@ import fsPromise from 'node:fs/promises';
 
 import fetch from 'node-fetch';
 
-import { baseGithubRawUrl, eslintConfigName } from '@/constants';
+import { baseGithubRawUrl, eslintConfigName } from '@/constants/common';
 import { getConfigUrl } from '@/helpers/getConfigUrl';
 import { rootPath } from '@/utils';
 

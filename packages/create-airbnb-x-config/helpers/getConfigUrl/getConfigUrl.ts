@@ -7,7 +7,7 @@ import {
   formatters,
   languages,
   subFolders,
-} from '@/constants';
+} from '@/constants/common';
 
 import type { GetConfigUrl } from '@/helpers/getConfigUrl/getConfigUrl.types';
 

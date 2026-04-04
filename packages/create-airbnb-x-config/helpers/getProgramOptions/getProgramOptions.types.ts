@@ -1,4 +1,4 @@
-import type { runtimes } from '@/constants';
+import type { runtimes } from '@/constants/common';
 import type {
   ConfigType,
   FormatterType,
@@ -8,7 +8,7 @@ import type {
   RuntimeType,
   StrictConfigType,
   StringBooleanType,
-} from '@/constants/@types/index.types';
+} from '@/constants/common';
 
 interface ProgramOptions {
   config: ConfigType;

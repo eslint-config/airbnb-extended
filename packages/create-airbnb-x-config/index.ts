@@ -12,7 +12,7 @@ import {
   legacyConfigs,
   runtimes,
   strictConfigs,
-} from '@/constants';
+} from '@/constants/common';
 import { createESLintConfigFile } from '@/helpers/createEslintConfigFile';
 import { getArgs } from '@/helpers/getArgs';
 import { getCommands } from '@/helpers/getCommands';

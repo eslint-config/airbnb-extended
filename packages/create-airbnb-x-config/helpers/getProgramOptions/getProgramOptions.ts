@@ -10,10 +10,10 @@ import {
   runtimes,
   strictConfigs,
   stringBooleans,
-} from '@/constants';
+} from '@/constants/common';
 import { name, version } from '@/package.json';
 
-import type { StrictConfigType } from '@/constants/@types/index.types';
+import type { StrictConfigType } from '@/constants/common';
 import type {
   GetProgramOptions,
   GetProgramOptionsOutput,
