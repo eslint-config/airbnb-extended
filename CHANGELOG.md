@@ -1,16 +1,21 @@
 ## 3.1.0 (2026-04-04)
 
+### 🚨 Breaking Change
+
+- **eslint-config-airbnb-extended:** Added "n/prefer-global/crypto" and "n/prefer-global/timers" rules with "error" severity
+- **eslint-config-airbnb-extended:** Added all `eslint-plugin-react-hooks` recommended rules
+
 ### 🚀 Features
 
 - Added bun in docs
 - **create-airbnb-x-config:** Added "none" option in formatter
 - **create-airbnb-x-config:** Added "none" option in strict config
-- **eslint-config-airbnb-extended:** Added "n/prefer-global/crypto" and "n/prefer-global/timers" rules with "error" severity
 
 ### 🩹 Fixes
 
 - Upgraded deps
 - Upgraded configs
+- **eslint-config-airbnb-extended:** Implemented #56
 - **create-airbnb-x-config:** Fixed #67
 - **create-airbnb-x-config:** Implemented #68
 
