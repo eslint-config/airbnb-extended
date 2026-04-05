@@ -1,23 +1,23 @@
-## 3.1.0 (2026-04-04)
+## 3.1.0 (2026-04-05)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
-- **eslint-config-airbnb-extended:** Added "n/prefer-global/crypto" and "n/prefer-global/timers" rules with "error" severity
-- **eslint-config-airbnb-extended:** Added all `eslint-plugin-react-hooks` recommended rules
+- **eslint-config-airbnb-extended:** Introduced `n/prefer-global/crypto` and `n/prefer-global/timers` rules with `error` severity
+- **eslint-config-airbnb-extended:** Enabled all recommended rules from `eslint-plugin-react-hooks`
 
 ### 🚀 Features
 
-- Added bun in docs
-- **create-airbnb-x-config:** Added "none" option in formatter
-- **create-airbnb-x-config:** Added "none" option in strict config
+- Added support for `bun` in documentation
+- **eslint-config-airbnb-extended:** Implemented #56
+- **create-airbnb-x-config:** Implemented #68
+- **create-airbnb-x-config:** Introduced a `none` option for the `formatter` CLI flag
+- **create-airbnb-x-config:** Introduced a `none` option for the `strictConfig` CLI flag
 
 ### 🩹 Fixes
 
-- Upgraded deps
-- Upgraded configs
-- **eslint-config-airbnb-extended:** Implemented #56
+- Updated deps
+- Updated structure
 - **create-airbnb-x-config:** Fixed #67
-- **create-airbnb-x-config:** Implemented #68
 
 ### ❤️ Thank You
 
@@ -42,7 +42,7 @@
 
 ## 3.0.0 (2026-01-01)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **Significantly smaller package** - the new version reduces the unpacked size by ~72% compared to the previous release
 - **Node.js v16 support dropped** - v3 requires **Node 18.18 or higher**
@@ -109,7 +109,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 - URL: https://eslint-airbnb-extended.nishargshah.dev
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - Requires `Node.js 16` or higher
 
@@ -127,7 +127,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 2.2.0 (2025-08-25)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** Re-enabled the following formatting rules that were accidentally turned off during the `eslint-stylistic` integration:
 
@@ -265,7 +265,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 1.0.0 (2025-04-23)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** Added `files` in all rules and configs
 
@@ -298,7 +298,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.11.0 (2025-04-22)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** Changed `typescript-eslint` rules severity
 
@@ -327,7 +327,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.10.0 (2025-04-20)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** Changed `rules` keys
 
@@ -369,7 +369,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.9.0 (2025-04-14)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** Removed `next` plugin from next config
 
@@ -386,7 +386,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.8.0 (2025-04-14)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** renamed `reactA11y` rule to `reactJsxA11y`
 - **eslint-config-airbnb-extended:** moved `React` eslint rules (not the package rules) to `react/recommanded` config
@@ -407,7 +407,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.7.0 (2025-04-13)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** `node` config no longer extends `base` config
 
@@ -443,7 +443,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.5.0 (2025-04-10)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** `react` config no longer extends `base` config in `all` and `typescript`
 
@@ -458,14 +458,14 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.4.0 (2025-04-09)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** `react` config no longer extends `base` config
 - **eslint-config-airbnb-extended:** Reduce package size from 1.34mb to 200kb around
 
 ### 🚀 Features
 
-- **eslint-config-airbnb-extended:** Did 50% Code rewrite due to size issues but no breaking change
+- **eslint-config-airbnb-extended:** Did 50% Code rewrite due to size issues but no breaking changes
 - **eslint-config-airbnb-extended:** Added `eslint-config-airbnb-extended` config for project linting
 - **eslint-config-airbnb-extended:** Separate plugins from configs, Check FAQ section for why.
 
@@ -482,7 +482,7 @@ As part of this release, the project has moved from a **personal repository** to
 
 ## 0.3.0 (2025-04-08)
 
-### 🚨 Breaking Change
+### 🚨 Breaking Changes
 
 - **eslint-config-airbnb-extended:** Renamed `typescript-only` config to `typescript`
 - **eslint-config-airbnb-extended:** Renamed `typescript` config to `all`
