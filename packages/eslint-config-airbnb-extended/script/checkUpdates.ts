@@ -107,11 +107,26 @@ const checkReactJsxA11yUpdates = async () => {
 const checkReactHooksUpdates = async () => {
   const prefix = 'react-hooks/';
 
-  const localRules = getRulesArray(prefix, getRules(reactHooksRules));
-  const remoteRules = getRules(reactHooksPlugin);
+  // FIXME REGULAR CHECKS TO REACT SITE
+  const ignoredRules = new Set([
+    'hooks',
+    'capitalized-calls',
+    'void-use-memo',
+    'memoized-effect-dependencies',
+    'no-deriving-state-in-effects',
+    'invariant',
+    'todo',
+    'syntax',
+    'rule-suppression',
+    'automatic-effect-dependencies',
+    'fire',
+    'fbt',
+  ]);
 
-  // FIXME: ISSUE
-  if (localRules.length !== remoteRules.length) return true;
+  const localRules = getRulesArray(prefix, getRules(reactHooksRules));
+  const remoteRules = getRules(reactHooksPlugin).filter((item) => !ignoredRules.has(item));
+
+  if (localRules.length === remoteRules.length) return true;
 
   const updatedRules = remoteRules.filter((item) => !localRules.includes(`${prefix}${item}`));
 
