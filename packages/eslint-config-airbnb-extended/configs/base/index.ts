@@ -1,10 +1,8 @@
-import baseRecommendedConfig from '@/configs/base/recommended';
-import baseTypescriptConfig from '@/configs/base/typescript';
+import { baseRecommendedConfig } from '@/configs/base/recommended';
+import { baseTypescriptConfig } from '@/configs/base/typescript';
 
-const base = {
+export const base = {
   recommended: baseRecommendedConfig,
   typescript: baseTypescriptConfig,
   all: [...baseRecommendedConfig, ...baseTypescriptConfig],
 } as const;
-
-export default base;

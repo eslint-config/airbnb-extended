@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const nodeGlobalsRules = defineConfigObject({
+export const nodeGlobalsRules = defineConfigObject({
   name: 'airbnb/config/node/globals',
   files: allFiles,
   rules: {
@@ -11,6 +11,10 @@ const nodeGlobalsRules = defineConfigObject({
     // Enforce either console or require("console")
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/console.md
     'n/prefer-global/console': ['error', 'always'],
+
+    // Enforce either crypto or require("crypto").webcrypto
+    // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/crypto.md
+    'n/prefer-global/crypto': ['error', 'always'],
 
     // Enforce either process or require("process")
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/process.md
@@ -24,6 +28,10 @@ const nodeGlobalsRules = defineConfigObject({
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/text-encoder.md
     'n/prefer-global/text-encoder': ['error', 'always'],
 
+    // Enforce either global timer functions or require("timers")
+    // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/timers.md
+    'n/prefer-global/timers': ['error', 'always'],
+
     // Enforce either URLSearchParams or require("url").URLSearchParams
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/prefer-global/url-search-params.md
     'n/prefer-global/url-search-params': ['error', 'always'],
@@ -33,5 +41,3 @@ const nodeGlobalsRules = defineConfigObject({
     'n/prefer-global/url': ['error', 'always'],
   },
 });
-
-export default nodeGlobalsRules;

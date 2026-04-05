@@ -1,4 +1,4 @@
-import type { GetProgramOptionsOutput } from '@/helpers/@types/getProgramOptions.types';
+import type { GetProgramOptionsOutput } from '@/helpers/getProgramOptions/getProgramOptions.types';
 import type { SetNonNullable } from '@/types/lib.types';
 
 // Get Config

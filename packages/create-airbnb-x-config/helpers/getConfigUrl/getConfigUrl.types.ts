@@ -1,4 +1,4 @@
-import type { ArgsOutput } from '@/helpers/@types/getArgs.types';
+import type { ArgsOutput } from '@/helpers/getArgs/getArgs.types';
 
 export type GetConfigUrlParams = Pick<
   ArgsOutput,

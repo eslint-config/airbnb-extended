@@ -2,7 +2,7 @@ import plugin from 'eslint-plugin-jsx-a11y';
 
 import { allFiles, defineConfigObject } from '@/utils';
 
-const legacyReactJsxA11yRules = defineConfigObject({
+export const legacyReactJsxA11yRules = defineConfigObject({
   name: 'airbnb/config/react-jsx-a11y/legacy',
   files: allFiles,
   plugins: {
@@ -309,5 +309,3 @@ const legacyReactJsxA11yRules = defineConfigObject({
     'jsx-a11y/prefer-tag-over-role': 'off',
   },
 });
-
-export default legacyReactJsxA11yRules;

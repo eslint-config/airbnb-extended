@@ -12,15 +12,19 @@ Each answer updates the final ESLint setup for your project. If you prefer to sk
 ::: code-group
 
 ```sh [npm]
-$ npx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
+$ npx create-airbnb-x-config --lang typescript --runtime react --pm npm
 ```
 
 ```sh [yarn]
-$ yarn dlx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
+$ yarn dlx create-airbnb-x-config --lang typescript --runtime react --pm yarn
 ```
 
 ```sh [pnpm]
 $ pnpx create-airbnb-x-config --lang typescript --runtime react --pm pnpm
+```
+
+```sh [bun]
+$ bunx create-airbnb-x-config --lang typescript --runtime react --pm bun
 ```
 
 :::
@@ -55,6 +59,7 @@ The following values are available for `--lang`:
 The following values are available for `--formatter`:
 
 - `prettier` → Add Prettier integration (`eslint-plugin-prettier`, `eslint-config-prettier`).
+- `none` → No formatter integration (keeps ESLint setup without Prettier).
 
 ### Runtime {#runtime}
 
@@ -73,6 +78,7 @@ The following values are available for `--strict`:
 - `import` → Enable **strict Import** rules.
 - `react` → Enable **strict React** rules.
 - `typescript` → Enable **strict TypeScript** rules.
+- `none` → No strict configurations are applied.
 
 ### Legacy Config Variants {#legacy-configs}
 

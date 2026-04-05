@@ -1,8 +1,8 @@
-import { formatters, packageManagers } from '@/constants';
+import { formatters, packageManagers } from '@/constants/common';
 
-import type { GetCommands } from '@/helpers/@types/getCommands.types';
+import type { GetCommands } from '@/helpers/getCommands/getCommands.types';
 
-const getCommands: GetCommands = (args) => {
+export const getCommands: GetCommands = (args) => {
   const { formatter, packageManager } = args;
 
   const pmInstallationCommand = {
@@ -16,9 +16,9 @@ const getCommands: GetCommands = (args) => {
     packageManager,
     pmInstallationCommand[packageManager],
     '-D',
-    'eslint',
+    'eslint@^9',
     '@eslint/compat',
-    '@eslint/js',
+    '@eslint/js@^9',
     'eslint-config-airbnb-extended',
   ];
 
@@ -28,5 +28,3 @@ const getCommands: GetCommands = (args) => {
 
   return commands;
 };
-
-export default getCommands;

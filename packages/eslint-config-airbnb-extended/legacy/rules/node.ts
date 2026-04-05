@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const legacyNodeRules = defineConfigObject({
+export const legacyNodeRules = defineConfigObject({
   name: 'airbnb/config/node/legacy',
   files: allFiles,
   rules: {
@@ -41,5 +41,3 @@ const legacyNodeRules = defineConfigObject({
     'no-sync': 'off',
   },
 });
-
-export default legacyNodeRules;

@@ -15,6 +15,7 @@
     "useUnknownInCatchVariables": true,
     "noEmitOnError": true,
     "isolatedModules": true,
-    "declaration": true
+    "declaration": true,
+    "types": ["node"]
   }
 }

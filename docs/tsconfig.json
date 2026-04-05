@@ -1,11 +1,10 @@
 {
   "extends": "@airbnb-extended/typescript-config/base",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", ".vitepress/**/*.ts"],
+  "include": ["**/*.ts", ".vitepress/**/*.ts", "**/*.d.ts"],
   "exclude": ["node_modules"]
 }

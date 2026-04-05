@@ -16,10 +16,8 @@ export const nodeNoUnsupportedFeaturesInternalRules = {
   'n/no-unsupported-features/node-builtins': 'error',
 } satisfies ConfigRules;
 
-const nodeNoUnsupportedFeaturesRules = defineConfigObject({
+export const nodeNoUnsupportedFeaturesRules = defineConfigObject({
   name: 'airbnb/config/node/unsupported-features',
   files: allFiles,
   rules: nodeNoUnsupportedFeaturesInternalRules,
 });
-
-export default nodeNoUnsupportedFeaturesRules;

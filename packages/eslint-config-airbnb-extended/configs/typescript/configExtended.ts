@@ -1,9 +1,7 @@
-import typescriptConfig from '@/configs/typescript/config';
-import typescriptEslintStrictRules from '@/rules/typescript/typescriptEslintStrict';
+import { typescriptConfig } from '@/configs/typescript/config';
+import { typescriptEslintStrictRules } from '@/rules/typescript/typescriptEslintStrict';
 
-const typescriptConfigExtended = {
+export const typescriptConfigExtended = {
   ...typescriptConfig,
   typescriptEslintStrict: typescriptEslintStrictRules,
 } as const;
-
-export default typescriptConfigExtended;

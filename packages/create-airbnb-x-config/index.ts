@@ -12,15 +12,15 @@ import {
   legacyConfigs,
   runtimes,
   strictConfigs,
-} from '@/constants';
-import createESLintConfigFile from '@/helpers/createEslintConfigFile';
-import getArgs from '@/helpers/getArgs';
-import getCommands from '@/helpers/getCommands';
-import getConfigUrl from '@/helpers/getConfigUrl';
-import installPackages from '@/helpers/installPackages';
+} from '@/constants/common';
+import { createESLintConfigFile } from '@/helpers/createEslintConfigFile';
+import { getArgs } from '@/helpers/getArgs';
+import { getCommands } from '@/helpers/getCommands';
+import { getConfigUrl } from '@/helpers/getConfigUrl';
+import { installPackages } from '@/helpers/installPackages';
 import { exit, handleSigTerm, onCancel, onPromptState } from '@/utils';
 
-import type { ArgsOutput } from '@/helpers/@types/getArgs.types';
+import type { ArgsOutput } from '@/helpers/getArgs/getArgs.types';
 
 process.on('SIGINT', handleSigTerm);
 process.on('SIGTERM', handleSigTerm);
@@ -78,7 +78,9 @@ const run = async () => {
     args = { ...args, language };
   }
 
-  if (args.formatter === null) {
+  if (args.formatter === formatters.NONE) {
+    args = { ...args, formatter: null };
+  } else if (args.formatter === null) {
     const { formatterBoolean } = await prompts(
       {
         type: 'toggle',
@@ -134,7 +136,9 @@ const run = async () => {
       args = { ...args, runtime };
     }
 
-    if (!args.strictConfig) {
+    if (args.strictConfig?.includes(strictConfigs.NONE)) {
+      args = { ...args, strictConfig: null };
+    } else if (!args.strictConfig) {
       const { hasStrictConfig } = await prompts(
         {
           type: 'toggle',

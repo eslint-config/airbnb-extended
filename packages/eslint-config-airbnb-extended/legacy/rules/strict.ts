@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const legacyStrictRules = defineConfigObject({
+export const legacyStrictRules = defineConfigObject({
   name: 'airbnb/config/strict/legacy',
   files: allFiles,
   rules: {
@@ -8,5 +8,3 @@ const legacyStrictRules = defineConfigObject({
     strict: ['error', 'never'],
   },
 });
-
-export default legacyStrictRules;

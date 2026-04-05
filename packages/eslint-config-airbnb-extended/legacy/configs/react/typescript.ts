@@ -1,7 +1,7 @@
-import legacyBaseTypescriptConfig from '@/legacy/configs/base/typescript';
+import { legacyBaseTypescriptConfig } from '@/legacy/configs/base/typescript';
 import { allFiles, defineConfigArray, tsExtensionsWithReactDTS, tsFiles } from '@/utils';
 
-const legacyReactTypescriptConfig = defineConfigArray([
+export const legacyReactTypescriptConfig = defineConfigArray([
   ...legacyBaseTypescriptConfig,
   {
     name: 'airbnb/config/react-configurations/typescript/legacy',
@@ -40,5 +40,3 @@ const legacyReactTypescriptConfig = defineConfigArray([
     },
   },
 ]);
-
-export default legacyReactTypescriptConfig;

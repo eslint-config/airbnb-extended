@@ -1,15 +1,15 @@
 {
   "extends": "@airbnb-extended/typescript-config/base",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@cli/*": ["./../../packages/create-airbnb-x-config/*"]
+      "@cli/constants": ["./../../packages/create-airbnb-x-config/constants/common/common.ts"],
+      "@cli/types": ["../../packages/create-airbnb-x-config/types/lib.types.ts"]
     }
   },
   "include": [
     "**/*.ts",
-    "../../packages/create-airbnb-x-config/constants/index.ts",
+    "./../../packages/create-airbnb-x-config/constants/common/common.ts",
     "../../packages/create-airbnb-x-config/types/lib.types.ts"
   ],
   "exclude": ["node_modules"]

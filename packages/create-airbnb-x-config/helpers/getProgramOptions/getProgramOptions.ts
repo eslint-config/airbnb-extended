@@ -10,17 +10,17 @@ import {
   runtimes,
   strictConfigs,
   stringBooleans,
-} from '@/constants';
+} from '@/constants/common';
 import { name, version } from '@/package.json';
 
-import type { StrictConfigType } from '@/constants/@types/index.types';
+import type { StrictConfigType } from '@/constants/common';
 import type {
   GetProgramOptions,
   GetProgramOptionsOutput,
   PartialProgramOptions,
-} from '@/helpers/@types/getProgramOptions.types';
+} from '@/helpers/getProgramOptions/getProgramOptions.types';
 
-const getProgramOptions: GetProgramOptions = () => {
+export const getProgramOptions: GetProgramOptions = () => {
   /**
    * Program Command
    * @example: pnpm cli:start --config extended --lang javascript --formatter prettier --runtime react --strict import react --pm pnpm --create-eslint-file --skip-install
@@ -111,22 +111,28 @@ const getProgramOptions: GetProgramOptions = () => {
     ...(opts.strictConfig === undefined
       ? null
       : {
-          strictConfig: opts.strictConfig.reduce<StrictConfigType[]>((acc, val) => {
-            const { language, runtime } = opts;
+          strictConfig: (() => {
+            if (opts.strictConfig.includes(strictConfigs.NONE)) {
+              return [strictConfigs.NONE];
+            }
 
-            const isImportConfig = val === strictConfigs.IMPORT;
-            const isReactConfig =
-              runtime &&
-              ([runtimes.REACT, runtimes.NEXT] as string[]).includes(runtime) &&
-              val === strictConfigs.REACT;
+            return opts.strictConfig.reduce<StrictConfigType[]>((acc, val) => {
+              const { language, runtime } = opts;
 
-            const isTypeScriptConfig =
-              language === languages.TYPESCRIPT && val === strictConfigs.TYPESCRIPT;
+              const isImportConfig = val === strictConfigs.IMPORT;
+              const isReactConfig =
+                runtime &&
+                ([runtimes.REACT, runtimes.NEXT] as string[]).includes(runtime) &&
+                val === strictConfigs.REACT;
 
-            if (isImportConfig || isReactConfig || isTypeScriptConfig) acc.push(val);
+              const isTypeScriptConfig =
+                language === languages.TYPESCRIPT && val === strictConfigs.TYPESCRIPT;
 
-            return acc;
-          }, []),
+              if (isImportConfig || isReactConfig || isTypeScriptConfig) acc.push(val);
+
+              return acc;
+            }, []);
+          })(),
         }),
     ...(opts.createEslintFile === undefined
       ? null
@@ -143,5 +149,3 @@ const getProgramOptions: GetProgramOptions = () => {
 
   return programOptions;
 };
-
-export default getProgramOptions;

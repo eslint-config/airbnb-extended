@@ -1,10 +1,10 @@
 import { detect } from 'package-manager-detector/detect';
 
-import { packageManagers } from '@/constants';
+import { packageManagers } from '@/constants/common';
 
-import type { GetPackageManager } from '@/helpers/@types/getPackageManager.types';
+import type { PackageManagerType } from '@/constants/common';
 
-const getPackageManager: GetPackageManager = async () => {
+export const getPackageManager = async (): Promise<PackageManagerType> => {
   const pm = await detect();
   if (!pm) return packageManagers.NPM;
 
@@ -15,5 +15,3 @@ const getPackageManager: GetPackageManager = async () => {
   if (name === packageManagers.BUN) return packageManagers.BUN;
   return packageManagers.NPM;
 };
-
-export default getPackageManager;

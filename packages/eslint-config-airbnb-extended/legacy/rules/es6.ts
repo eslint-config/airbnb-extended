@@ -220,7 +220,7 @@ export const legacyEs6InternalRules = {
   'yield-star-spacing': ['error', 'after'],
 } satisfies ConfigRules;
 
-const legacyEs6Rules = defineConfigObject({
+export const legacyEs6Rules = defineConfigObject({
   name: 'airbnb/config/es6/legacy',
   files: allFiles,
   languageOptions: {
@@ -238,5 +238,3 @@ const legacyEs6Rules = defineConfigObject({
   },
   rules: legacyEs6InternalRules,
 });
-
-export default legacyEs6Rules;

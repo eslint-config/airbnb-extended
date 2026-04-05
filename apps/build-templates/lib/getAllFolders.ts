@@ -24,7 +24,7 @@ type GetAllFoldersOutput = GetFolder[];
 
 type GetAllFolders = (folders: Folders, prefix: string[], meta?: FolderMeta) => GetAllFoldersOutput;
 
-const getAllFolders: GetAllFolders = (folders, prefix, meta = {}) =>
+export const getAllFolders: GetAllFolders = (folders, prefix, meta = {}) =>
   Object.entries(folders).reduce<GetAllFoldersOutput>((acc, val) => {
     const [key, value] = val;
 
@@ -57,5 +57,3 @@ const getAllFolders: GetAllFolders = (folders, prefix, meta = {}) =>
     acc.push(...values);
     return acc;
   }, []);
-
-export default getAllFolders;

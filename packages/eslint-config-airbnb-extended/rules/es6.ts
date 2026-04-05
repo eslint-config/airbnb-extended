@@ -162,7 +162,7 @@ export const es6InternalRules = {
   'symbol-description': 'error',
 } satisfies ConfigRules;
 
-const es6Rules = defineConfigObject({
+export const es6Rules = defineConfigObject({
   name: 'airbnb/config/es6',
   files: allFiles,
   languageOptions: {
@@ -180,5 +180,3 @@ const es6Rules = defineConfigObject({
   },
   rules: es6InternalRules,
 });
-
-export default es6Rules;

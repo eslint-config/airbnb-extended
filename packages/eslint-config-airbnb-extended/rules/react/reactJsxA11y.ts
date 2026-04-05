@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const reactJsxA11yRules = defineConfigObject({
+export const reactJsxA11yRules = defineConfigObject({
   name: 'airbnb/config/react-jsx-a11y',
   files: allFiles,
   languageOptions: {
@@ -295,5 +295,3 @@ export const deprecatedReactJsxA11yRules = defineConfigObject({
     'jsx-a11y/no-onchange': 'off',
   },
 });
-
-export default reactJsxA11yRules;

@@ -1,6 +1,6 @@
 import { parser, plugin } from 'typescript-eslint';
 
-import getDevDepsList from '@/helpers/getDevDepsList';
+import { getDevDepsList } from '@/helpers/getDevDepsList';
 import { legacyBestPracticesInternalRules } from '@/legacy/rules/best-practices';
 import { legacyErrorsInternalRules } from '@/legacy/rules/errors';
 import { legacyEs6InternalRules } from '@/legacy/rules/es6';
@@ -9,7 +9,7 @@ import { legacyStyleInternalRules } from '@/legacy/rules/style';
 import { legacyVariablesInternalRules } from '@/legacy/rules/variables';
 import { defineConfigObject, tsFiles } from '@/utils';
 
-const legacyTypescriptBaseRules = defineConfigObject({
+export const legacyTypescriptBaseRules = defineConfigObject({
   name: 'airbnb/config/typescript/legacy',
   files: tsFiles,
   plugins: {
@@ -262,5 +262,3 @@ const legacyTypescriptBaseRules = defineConfigObject({
     ],
   },
 });
-
-export default legacyTypescriptBaseRules;

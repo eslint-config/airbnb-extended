@@ -72,10 +72,8 @@ export const variablesInternalRules = {
   ],
 } satisfies ConfigRules;
 
-const variablesRules = defineConfigObject({
+export const variablesRules = defineConfigObject({
   name: 'airbnb/config/variables',
   files: allFiles,
   rules: variablesInternalRules,
 });
-
-export default variablesRules;

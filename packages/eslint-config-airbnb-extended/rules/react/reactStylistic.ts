@@ -1,6 +1,6 @@
 import { allFiles, defineConfigObject } from '@/utils';
 
-const reactStylisticRules = defineConfigObject({
+export const reactStylisticRules = defineConfigObject({
   name: 'airbnb/config/react/stylistic',
   files: allFiles,
   rules: {
@@ -88,11 +88,6 @@ const reactStylisticRules = defineConfigObject({
     // Off due to 'react/self-closing-comp'
     '@stylistic/jsx-self-closing-comp': 'off',
 
-    // Enforce props alphabetical sorting.
-    // https://eslint.style/rules/jsx-sort-props
-    // Off due to 'react/jsx-sort-props'
-    '@stylistic/jsx-sort-props': 'off',
-
     // Enforce whitespace in and around the JSX opening and closing brackets.
     // https://eslint.style/rules/jsx-tag-spacing
     // Off due to 'react/jsx-tag-spacing'
@@ -113,7 +108,20 @@ export const deprecatedReactStylisticRules = defineConfigObject({
     // https://eslint.style/rules/jsx-indent
     // Off due to 'react/jsx-indent'
     '@stylistic/jsx-indent': 'off',
+
+    // Enforce props alphabetical sorting.
+    // https://eslint.style/rules/jsx-sort-props
+    // Off due to 'react/jsx-sort-props'
+    '@stylistic/jsx-sort-props': 'off',
   },
 });
 
-export default reactStylisticRules;
+export const experimentalReactStylisticRules = defineConfigObject({
+  name: 'airbnb/config/react/stylistic/experimental',
+  files: allFiles,
+  rules: {
+    // Enforce consistent line break styles for JSX props.
+    // https://eslint.style/rules/jsx-props-style
+    '@stylistic/exp-jsx-props-style': 'off',
+  },
+});

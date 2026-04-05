@@ -1,7 +1,5 @@
-import nextRecommendedExtensionsConfig from '@/extensions/next/recommended';
+import { nextRecommendedExtensionsConfig } from '@/extensions/next/recommended';
 
-const nextExtensions = {
+export const nextExtensions = {
   recommended: nextRecommendedExtensionsConfig,
 } as const;
-
-export default nextExtensions;
