@@ -1,3 +1,9 @@
+## 3.2.0 (2026-05-10)
+
+### 🩹 Fixes
+
+- Updated deps
+
 ## 3.1.0 (2026-04-05)
 
 ### 🚨 Breaking Changes
