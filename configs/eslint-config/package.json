@@ -30,13 +30,13 @@
     "script:lint": "bash -e ../../scripts/lint.sh --filter=@airbnb-extended/eslint-config --no-typecheck"
   },
   "dependencies": {
-    "@eslint/compat": "^2.0.4",
+    "@eslint/compat": "^2.1.0",
     "@eslint/js": "^9.39.4",
     "eslint": "catalog:",
     "eslint-config-airbnb-extended": "workspace:*",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-unicorn": "^64.0.0",
     "eslint-plugin-unused-imports": "^4.4.1"
   },

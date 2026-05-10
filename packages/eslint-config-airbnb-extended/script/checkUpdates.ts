@@ -121,6 +121,8 @@ const checkReactHooksUpdates = async () => {
     'automatic-effect-dependencies',
     'fire',
     'fbt',
+    'exhaustive-effect-dependencies',
+    'memo-dependencies',
   ]);
 
   const localRules = getRulesArray(prefix, getRules(reactHooksRules));
