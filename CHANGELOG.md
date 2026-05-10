@@ -1,3 +1,14 @@
+## 3.2.0 (2026-05-10)
+
+### 🩹 Fixes
+
+- Updated deps
+- **eslint-config-airbnb-extended:** Fixed #76
+
+### ❤️ Thank You
+
+- Tim Redband @timredband
+
 ## 3.1.0 (2026-04-05)
 
 ### 🚨 Breaking Changes
