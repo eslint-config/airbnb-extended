@@ -3,7 +3,7 @@
 When you run the CLI, it launches an **interactive wizard**.
 You’ll be asked a series of questions, for example:
 
-```bash
+```sh
 ✔ Are you using TypeScript? … No / Yes
 ```
 
