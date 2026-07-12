@@ -30,7 +30,6 @@
   },
   "types": "./dist/index.d.mts",
   "bin": {
-    "create-airbnb-extended-config": "./dist/index.mjs",
     "create-airbnb-x-config": "./dist/index.mjs"
   },
   "scripts": {
