@@ -16,8 +16,8 @@ export const baseTypescriptExtensionsConfig = defineConfigArray([
     ...getStylisticLegacyConfig('typescript'),
   },
   {
+    ...configs.disableTypeChecked,
     name: 'airbnb/config/base-typescript-disable-type-checked',
     files: jsFiles,
-    rules: configs.disableTypeChecked.rules,
   },
 ]);
