@@ -10,7 +10,7 @@ export default defineConfig((options) => {
     outDir: 'dist',
     platform: 'node',
     treeshake: !watch,
-    minify: !watch,
+    minify: false,
     exports: true,
     nodeProtocol: true,
     unbundle: true,
