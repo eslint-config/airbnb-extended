@@ -1,6 +1,6 @@
 {
   "name": "@airbnb-extended/prettier-config",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "private": true,
   "description": "Prettier config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",

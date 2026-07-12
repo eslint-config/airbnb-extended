@@ -4,13 +4,12 @@ packages:
   - docs
   - packages/*
 
-catalog:
-  eslint: ^9.39.4
-  tsdown: ^0.21.7
-  tsx: ^4.21.0
-  typescript: ^6.0.2
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
 
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - unrs-resolver
+catalog:
+  eslint: ^9.39.5
+  tsdown: ^0.22.4
+  tsx: ^4.23.0
+  typescript: ^6.0.3

@@ -17,6 +17,7 @@
   <a href="https://www.npmjs.com/package/eslint-config-airbnb-extended"><img src="https://img.shields.io/npm/v/eslint-config-airbnb-extended?style=flat&labelColor=ffffff&color=5a36e6" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/eslint-config-airbnb-extended"><img src="https://img.shields.io/npm/dm/eslint-config-airbnb-extended?style=flat&labelColor=ffffff&color=5a36e6" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/eslint-config-airbnb-extended"><img src="https://img.shields.io/npm/last-update/eslint-config-airbnb-extended?style=flat&labelColor=ffffff&color=5a36e6" alt="npm last updated"></a>
+  <a href="https://www.npmjs.com/package/eslint-config-airbnb-extended"><img src="https://badge.socket.dev/npm/package/eslint-config-airbnb-extended" alt="socket"></a>
 </p>
 
 A powerful ESLint configuration extending the popular Airbnb style guide, with added support for TypeScript. This monorepo houses two main packages:

@@ -47,5 +47,6 @@ export const getDevDepsList: GetDevDepsList = (language) => {
     `**/tailwind.config.{${extensions}}`,
     `**/tsdown.config.{${extensions}}`,
     `**/tsup.config.{${extensions}}`,
+    `**/drizzle.config.{${extensions}}`,
   ];
 };

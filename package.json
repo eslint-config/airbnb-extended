@@ -1,6 +1,6 @@
 {
   "name": "@airbnb-extended/project",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Eslint Airbnb Config Extended Project",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
   "bugs": {
@@ -50,17 +50,17 @@
     "@airbnb-extended/eslint-config": "workspace:*",
     "@airbnb-extended/lint-staged-config": "workspace:*",
     "@airbnb-extended/prettier-config": "workspace:*",
-    "@changesets/cli": "^2.30.0",
-    "@types/node": "^24.12.2",
+    "@changesets/cli": "^2.31.0",
+    "@types/node": "^24.13.3",
     "eslint": "catalog:",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
-    "prettier": "^3.8.1",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.5",
     "prettier-plugin-packagejson": "^3.0.2",
     "tsc-files": "^1.1.4",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.11.0",
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0",
     "npm": "please-use-pnpm",

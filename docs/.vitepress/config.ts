@@ -38,10 +38,6 @@ export default defineConfig({
     logo: '/logo.png',
     nav: [
       {
-        text: 'Guide',
-        link: '/',
-      },
-      {
         text: `v${version}`,
         items: [
           {
