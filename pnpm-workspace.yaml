@@ -9,7 +9,7 @@ allowBuilds:
   unrs-resolver: true
 
 catalog:
-  eslint: ^9.39.5
+  eslint: ^10.0.0
   tsdown: ^0.22.4
   tsx: ^4.23.0
   typescript: ^6.0.3
