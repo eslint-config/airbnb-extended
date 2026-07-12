@@ -1,6 +1,6 @@
 {
   "name": "@airbnb-extended/lint-staged-config",
-  "version": "3.2.0",
+  "version": "3.1.1",
   "private": true,
   "description": "Lint Staged Config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
