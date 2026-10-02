@@ -18,13 +18,13 @@ Docs: https://eslint-airbnb-extended.nishargshah.dev (source in `docs/`).
 
 pnpm monorepo (`pnpm-workspace.yaml`):
 
-| Path                                     | Package                               | Purpose                                                               |
-| ---------------------------------------- | ------------------------------------- | --------------------------------------------------------------------- |
-| `packages/eslint-config-airbnb-extended` | `eslint-config-airbnb-extended` (npm) | The ESLint config                                                     |
-| `packages/create-airbnb-x-config`        | `create-airbnb-x-config` (npm)        | CLI that writes an `eslint.config.mjs` into a user's project          |
-| `apps/build-templates`                   | private                               | Generates the `eslint.config.mjs` templates the CLI downloads         |
-| `docs`                                   | private                               | VitePress docs site                                                   |
-| `configs/*`                              | private                               | Shared eslint / prettier / lint-staged / tsconfig for every workspace |
+| Path                                     | Package                               | Purpose                                                                        |
+| ---------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------ |
+| `packages/eslint-config-airbnb-extended` | `eslint-config-airbnb-extended` (npm) | The ESLint config                                                              |
+| `packages/create-airbnb-x-config`        | `create-airbnb-x-config` (npm)        | CLI that writes an `eslint.config.mjs` into a user's project                   |
+| `apps/build-templates`                   | private                               | Generates the `eslint.config.mjs` templates the CLI downloads                  |
+| `docs`                                   | private                               | VitePress docs site                                                            |
+| `configs/*`                              | private                               | Shared eslint / prettier / lint-staged / tsconfig / vitest for every workspace |
 
 ## Branches and PRs
 
@@ -47,13 +47,16 @@ pnpm docs:dev               # docs dev server
 pnpm lint / pnpm lint:fix
 pnpm format / pnpm format:fix
 pnpm typecheck
+pnpm test                    # run all tests (Vitest)
+pnpm test:ui                 # Vitest UI
+pnpm --filter <pkg> test:coverage   # coverage report for one package
 pnpm script:lint --for=check                                      # prettier + eslint + tsc (pre-push hook)
 pnpm script:lint --for=ci                                         # what CI runs, after `pnpm build`
 pnpm script:lint --filter=create-airbnb-x-config --no-typecheck   # one workspace only
 pnpm lint:inspector                                               # open @eslint/config-inspector
 ```
 
-There is **no test suite**. A change is valid when build, lint, format and typecheck all pass. CI (`.github/workflows/validate-pr.yml`) runs `pnpm build` then `pnpm script:lint --for=ci`.
+Both npm packages have a Vitest suite in their `tests/` folder (same folder layout as the source, shared config in `configs/vitest-config`). Rule, config and plugin snapshots live in `tests/**/__snapshots__`. If you change a rule or config on purpose, run `pnpm test -u` and commit the updated snapshots. A change is valid when build, test, lint, format and typecheck all pass. CI (`.github/workflows/validate-pr.yml`) runs `pnpm build`, `pnpm script:lint --for=ci` and `pnpm test`.
 
 Git hooks: pre-commit runs `lint-staged`, pre-push runs `script:lint --for=check`.
 
