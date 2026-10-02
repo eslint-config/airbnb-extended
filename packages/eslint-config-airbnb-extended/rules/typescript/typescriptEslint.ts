@@ -222,6 +222,10 @@ export const typescriptEslintRules = defineConfigObject({
     // https://typescript-eslint.io/rules/no-for-in-array
     '@typescript-eslint/no-for-in-array': 'error',
 
+    // Disallow type operations that resolve to the "empty object" type.
+    // https://typescript-eslint.io/rules/no-generated-empty-object-type
+    '@typescript-eslint/no-generated-empty-object-type': 'off',
+
     // Disallow the use of eval()-like functions.
     // https://typescript-eslint.io/rules/no-implied-eval
     'no-implied-eval': 'off',
@@ -398,6 +402,10 @@ export const typescriptEslintRules = defineConfigObject({
     // Disallow unsafe declaration merging.
     // https://typescript-eslint.io/rules/no-unsafe-declaration-merging
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
+
+    // Disallow assigning non-enum values to enum typed locations.
+    // https://typescript-eslint.io/rules/no-unsafe-enum-assignment
+    '@typescript-eslint/no-unsafe-enum-assignment': 'off',
 
     // Disallow comparing an enum value with a non-enum value.
     // https://typescript-eslint.io/rules/no-unsafe-enum-comparison
