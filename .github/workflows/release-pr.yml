@@ -1,0 +1,50 @@
+name: Create Release Pull Request
+
+on:
+  push:
+    branches:
+      - canary
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  release_pr:
+    name: Opening Release Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Create or update Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # The newest section of CHANGELOG.md is "## <version> (<date>)".
+          version=$(grep -m1 '^## ' CHANGELOG.md | sed -E 's/^## ([^ ]+).*/\1/')
+          awk '/^## /{n++} n==1' CHANGELOG.md > release-notes.md
+
+          title="[Release] v$version"
+          existing=$(gh pr list --base master --head canary --state open --json number --jq '.[0].number // empty')
+
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing" --title "$title" --body-file release-notes.md
+            echo "Updated PR #$existing"
+            exit 0
+          fi
+
+          ahead=$(git rev-list --count origin/master..origin/canary)
+
+          if [ "$ahead" = "0" ]; then
+            echo "canary has no new commits compared to master."
+            exit 0
+          fi
+
+          gh pr create --base master --head canary --title "$title" --body-file release-notes.md
