@@ -51,6 +51,26 @@ describe('package.json', () => {
     expect(pkg.version).toBe(cliPkg.version);
   });
 
+  it('has the same version in the root and in every workspace', () => {
+    const repoRoot = path.join(packageRoot, '../..');
+    const folders = ['apps', 'configs', 'packages'].flatMap((folder) =>
+      fs
+        .readdirSync(path.join(repoRoot, folder), { withFileTypes: true })
+        .filter((entry) => entry.isDirectory())
+        .map((entry) => path.join(folder, entry.name)),
+    );
+    const versions = Object.fromEntries(
+      ['.', 'docs', ...folders]
+        .filter((folder) => fs.existsSync(path.join(repoRoot, folder, 'package.json')))
+        .map((folder) => [folder, readJson(path.join(repoRoot, folder, 'package.json')).version]),
+    );
+
+    expect(
+      Object.values(versions).every((version) => version === pkg.version),
+      JSON.stringify(versions),
+    ).toBe(true);
+  });
+
   it('keeps the node range of the cli', () => {
     expect(pkg.engines.node).toBe(cliPkg.engines.node);
   });
