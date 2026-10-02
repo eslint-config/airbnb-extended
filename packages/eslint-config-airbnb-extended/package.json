@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-airbnb-extended",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Eslint Airbnb Config Extended",
   "keywords": [
     "eslint",
@@ -72,11 +72,11 @@
     "@airbnb-extended/vitest-config": "workspace:*",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
-    "@vitest/coverage-v8": "^3.2.4",
-    "@vitest/ui": "^3.2.4",
+    "@vitest/coverage-v8": "catalog:",
+    "@vitest/ui": "catalog:",
     "tsdown": "catalog:",
     "tsx": "catalog:",
-    "vitest": "^3.2.4"
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "eslint": "^9.0.0"

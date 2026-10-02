@@ -1,6 +1,6 @@
 {
   "name": "@airbnb-extended/vitest-config",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "private": true,
   "description": "Vitest config",
   "homepage": "https://eslint-airbnb-extended.nishargshah.dev",
@@ -28,7 +28,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "vitest": "^3.2.4"
+    "vitest": "catalog:"
   },
   "devDependencies": {
     "@airbnb-extended/typescript-config": "workspace:*"
