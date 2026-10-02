@@ -44,6 +44,8 @@
     "script:lint": "bash -e ./scripts/lint.sh",
     "templates:build": "pnpm --filter @airbnb-extended/build-templates build",
     "templates:dev": "pnpm --filter @airbnb-extended/build-templates dev",
+    "test": "pnpm -r test",
+    "test:ui": "pnpm --filter eslint-config-airbnb-extended test:ui",
     "typecheck": "pnpm -r typecheck"
   },
   "devDependencies": {

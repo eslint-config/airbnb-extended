@@ -1,0 +1,286 @@
+{
+  "legacyVariablesRules": {
+    "name": "airbnb/config/variables/legacy",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "init-declarations": "off",
+      "no-catch-shadow": "off",
+      "no-delete-var": "error",
+      "no-label-var": "error",
+      "no-restricted-globals": [
+        "error",
+        {
+          "name": "isFinite",
+          "message": "Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite"
+        },
+        {
+          "name": "isNaN",
+          "message": "Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan"
+        },
+        {
+          "name": "addEventListener",
+          "message": "Use window.addEventListener instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "blur",
+          "message": "Use window.blur instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "close",
+          "message": "Use window.close instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "closed",
+          "message": "Use window.closed instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "confirm",
+          "message": "Use window.confirm instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "defaultStatus",
+          "message": "Use window.defaultStatus instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "defaultstatus",
+          "message": "Use window.defaultstatus instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "event",
+          "message": "Use window.event instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "external",
+          "message": "Use window.external instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "find",
+          "message": "Use window.find instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "focus",
+          "message": "Use window.focus instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "frameElement",
+          "message": "Use window.frameElement instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "frames",
+          "message": "Use window.frames instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "history",
+          "message": "Use window.history instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "innerHeight",
+          "message": "Use window.innerHeight instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "innerWidth",
+          "message": "Use window.innerWidth instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "length",
+          "message": "Use window.length instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "location",
+          "message": "Use window.location instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "locationbar",
+          "message": "Use window.locationbar instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "menubar",
+          "message": "Use window.menubar instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "moveBy",
+          "message": "Use window.moveBy instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "moveTo",
+          "message": "Use window.moveTo instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "name",
+          "message": "Use window.name instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "onblur",
+          "message": "Use window.onblur instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "onerror",
+          "message": "Use window.onerror instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "onfocus",
+          "message": "Use window.onfocus instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "onload",
+          "message": "Use window.onload instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "onresize",
+          "message": "Use window.onresize instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "onunload",
+          "message": "Use window.onunload instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "open",
+          "message": "Use window.open instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "opener",
+          "message": "Use window.opener instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "opera",
+          "message": "Use window.opera instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "outerHeight",
+          "message": "Use window.outerHeight instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "outerWidth",
+          "message": "Use window.outerWidth instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "pageXOffset",
+          "message": "Use window.pageXOffset instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "pageYOffset",
+          "message": "Use window.pageYOffset instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "parent",
+          "message": "Use window.parent instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "print",
+          "message": "Use window.print instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "removeEventListener",
+          "message": "Use window.removeEventListener instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "resizeBy",
+          "message": "Use window.resizeBy instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "resizeTo",
+          "message": "Use window.resizeTo instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "screen",
+          "message": "Use window.screen instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "screenLeft",
+          "message": "Use window.screenLeft instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "screenTop",
+          "message": "Use window.screenTop instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "screenX",
+          "message": "Use window.screenX instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "screenY",
+          "message": "Use window.screenY instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "scroll",
+          "message": "Use window.scroll instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "scrollbars",
+          "message": "Use window.scrollbars instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "scrollBy",
+          "message": "Use window.scrollBy instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "scrollTo",
+          "message": "Use window.scrollTo instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "scrollX",
+          "message": "Use window.scrollX instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "scrollY",
+          "message": "Use window.scrollY instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "self",
+          "message": "Use window.self instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "status",
+          "message": "Use window.status instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "statusbar",
+          "message": "Use window.statusbar instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "stop",
+          "message": "Use window.stop instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "toolbar",
+          "message": "Use window.toolbar instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        },
+        {
+          "name": "top",
+          "message": "Use window.top instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md"
+        }
+      ],
+      "no-shadow": "error",
+      "no-shadow-restricted-names": "error",
+      "no-undef": "error",
+      "no-undef-init": "error",
+      "no-undefined": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "vars": "all",
+          "args": "after-used",
+          "ignoreRestSiblings": true
+        }
+      ],
+      "no-use-before-define": [
+        "error",
+        {
+          "functions": true,
+          "classes": true,
+          "variables": true
+        }
+      ]
+    }
+  }
+}

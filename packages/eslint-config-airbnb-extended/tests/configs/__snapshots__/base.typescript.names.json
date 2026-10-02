@@ -1,0 +1,9 @@
+[
+  "airbnb/config/typescript/base",
+  "airbnb/config/typescript/typescript-stylistic",
+  "airbnb/config/typescript/typescript-eslint",
+  "airbnb/config/typescript/import-x",
+  "airbnb/config/base-typescript-settings-extensions-configurations",
+  "airbnb/config/base-typescript-disable-legacy-stylistic-ts-config",
+  "airbnb/config/base-typescript-disable-type-checked"
+]

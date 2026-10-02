@@ -1,0 +1,274 @@
+{
+  "configs": {
+    "base": {
+      "all": "[array of 18]",
+      "recommended": "[array of 11]",
+      "typescript": "[array of 7]"
+    },
+    "next": {
+      "all": "[array of 13]",
+      "recommended": "[array of 11]",
+      "typescript": "[array of 2]"
+    },
+    "node": {
+      "recommended": "[array of 7]"
+    },
+    "react": {
+      "all": "[array of 9]",
+      "recommended": "[array of 7]",
+      "typescript": "[array of 2]"
+    }
+  },
+  "extensions": {
+    "base": {
+      "recommended": "[array of 3]",
+      "typescript": "[array of 3]"
+    },
+    "next": {
+      "recommended": "[array of 2]"
+    },
+    "node": {
+      "recommended": "[array of 3]"
+    },
+    "react": {
+      "recommended": "[array of 3]",
+      "typescript": "[array of 2]"
+    }
+  },
+  "helpers": {
+    "createAutoTypeScriptImportResolver": null,
+    "extensions": {
+      "allFiles": "[array of 9]",
+      "jsExtensions": "[array of 3]",
+      "jsExtensionsResolver": "[array of 4]",
+      "jsExtensionsRule": {
+        "cjs": null,
+        "js": null,
+        "jsx": null,
+        "mjs": null
+      },
+      "jsExtensionsWithReact": "[array of 4]",
+      "jsFiles": "[array of 4]",
+      "jsFileWithoutReact": "[array of 3]",
+      "tsExtensions": "[array of 3]",
+      "tsExtensionsResolver": "[array of 4]",
+      "tsExtensionsRule": {
+        "cts": null,
+        "mts": null,
+        "ts": null,
+        "tsx": null
+      },
+      "tsExtensionsWithReact": "[array of 4]",
+      "tsExtensionsWithReactDTS": "[array of 5]",
+      "tsFiles": "[array of 5]",
+      "tsFileWithoutReact": "[array of 4]"
+    },
+    "getDevDepsList": null,
+    "getImportSettings": null
+  },
+  "plugins": {
+    "importX": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "import-x": null
+      }
+    },
+    "next": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "@next/next": null
+      }
+    },
+    "node": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "n": null
+      }
+    },
+    "react": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "react": null
+      }
+    },
+    "reactA11y": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "jsx-a11y": null
+      }
+    },
+    "reactHooks": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "react-hooks": null
+      }
+    },
+    "stylistic": {
+      "files": "[array of 9]",
+      "name": null,
+      "plugins": {
+        "@stylistic": null
+      }
+    },
+    "typescriptEslint": {
+      "files": "[array of 9]",
+      "languageOptions": {
+        "parser": null
+      },
+      "name": null,
+      "plugins": {
+        "@typescript-eslint": null
+      }
+    }
+  },
+  "rules": {
+    "base": {
+      "bestPractices": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "errors": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "es6": {
+        "files": "[array of 9]",
+        "languageOptions": null,
+        "name": null,
+        "rules": null
+      },
+      "imports": {
+        "files": "[array of 9]",
+        "languageOptions": null,
+        "name": null,
+        "rules": null
+      },
+      "importsStrict": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "strict": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "style": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "stylistic": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "variables": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      }
+    },
+    "next": {
+      "base": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "coreWebVitals": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      }
+    },
+    "node": {
+      "base": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "globals": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "noUnsupportedFeatures": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "promises": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      }
+    },
+    "react": {
+      "base": {
+        "files": "[array of 9]",
+        "languageOptions": null,
+        "name": null,
+        "rules": null,
+        "settings": null
+      },
+      "hooks": {
+        "files": "[array of 9]",
+        "languageOptions": null,
+        "name": null,
+        "rules": null
+      },
+      "jsxA11y": {
+        "files": "[array of 9]",
+        "languageOptions": null,
+        "name": null,
+        "rules": null
+      },
+      "strict": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      },
+      "stylistic": {
+        "files": "[array of 9]",
+        "name": null,
+        "rules": null
+      }
+    },
+    "typescript": {
+      "base": {
+        "files": "[array of 5]",
+        "name": null,
+        "rules": null
+      },
+      "imports": {
+        "files": "[array of 5]",
+        "name": null,
+        "rules": null
+      },
+      "stylistic": {
+        "files": "[array of 5]",
+        "name": null,
+        "rules": null
+      },
+      "typescriptEslint": {
+        "files": "[array of 5]",
+        "languageOptions": null,
+        "name": null,
+        "rules": null
+      },
+      "typescriptEslintStrict": {
+        "files": "[array of 5]",
+        "name": null,
+        "rules": null
+      }
+    }
+  }
+}

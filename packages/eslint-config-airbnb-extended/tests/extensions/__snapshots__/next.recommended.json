@@ -1,0 +1,30 @@
+[
+  {
+    "name": "airbnb/config/next-import-x",
+    "files": [
+      "**/app/**/route.ts",
+      "**/middleware.ts"
+    ],
+    "rules": {
+      "import-x/prefer-default-export": "off"
+    }
+  },
+  {
+    "name": "airbnb/config/next-react-jsx-runtime",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    }
+  }
+]

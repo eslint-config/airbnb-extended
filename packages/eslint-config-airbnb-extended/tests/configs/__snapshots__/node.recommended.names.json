@@ -1,0 +1,9 @@
+[
+  "airbnb/config/node/base",
+  "airbnb/config/node/globals",
+  "airbnb/config/node/promises",
+  "airbnb/config/node/unsupported-features",
+  "airbnb/config/node-configurations",
+  "airbnb/config/node-configurations-for-module",
+  "airbnb/config/node-configurations-for-script"
+]

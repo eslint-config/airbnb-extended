@@ -46,6 +46,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "script:lint": "bash -e ../../scripts/lint.sh --filter=eslint-config-airbnb-extended",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -65,10 +69,14 @@
   },
   "devDependencies": {
     "@airbnb-extended/typescript-config": "workspace:*",
+    "@airbnb-extended/vitest-config": "workspace:*",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
     "tsdown": "catalog:",
-    "tsx": "catalog:"
+    "tsx": "catalog:",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "eslint": "^9.0.0"

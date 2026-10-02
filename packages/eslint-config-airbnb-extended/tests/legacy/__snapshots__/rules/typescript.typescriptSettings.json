@@ -1,0 +1,49 @@
+{
+  "legacyTypescriptSettingsRules": {
+    "name": "airbnb/config/typescript/settings/legacy",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts",
+          ".cts",
+          ".mts",
+          ".d.ts"
+        ]
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts",
+            ".cts",
+            ".mts",
+            ".d.ts",
+            ".json"
+          ]
+        },
+        "typescript": true
+      },
+      "import/extensions": [
+        ".ts",
+        ".cts",
+        ".mts",
+        ".d.ts"
+      ],
+      "import/external-module-folders": [
+        "node_modules",
+        "node_modules/@types"
+      ]
+    },
+    "rules": {}
+  }
+}

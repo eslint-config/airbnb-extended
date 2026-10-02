@@ -1,0 +1,13 @@
+[
+  "airbnb/config/best-practices",
+  "airbnb/config/errors",
+  "airbnb/config/es6",
+  "airbnb/config/import-x",
+  "airbnb/config/strict",
+  "airbnb/config/style",
+  "airbnb/config/stylistic",
+  "airbnb/config/variables",
+  "airbnb/config/base-configurations",
+  "airbnb/config/base-settings-extensions-configurations",
+  "airbnb/config/base-disable-legacy-stylistic-js-config"
+]

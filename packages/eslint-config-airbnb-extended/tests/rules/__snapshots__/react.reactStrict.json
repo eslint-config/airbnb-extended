@@ -1,0 +1,70 @@
+{
+  "reactStrictRules": {
+    "name": "airbnb/config/react/strict",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "react/checked-requires-onchange-or-readonly": "error",
+      "react/function-component-definition": [
+        "error",
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "react/hook-use-state": [
+        "error",
+        {
+          "allowDestructuredState": true
+        }
+      ],
+      "react/jsx-child-element-spacing": "warn",
+      "react/jsx-fragments": [
+        "error",
+        "element"
+      ],
+      "react/jsx-key": [
+        "error",
+        {
+          "checkFragmentShorthand": true,
+          "checkKeyMustBeforeSpread": false,
+          "warnOnDuplicates": true
+        }
+      ],
+      "react/jsx-no-leaked-render": "error",
+      "react/jsx-sort-props": [
+        "error",
+        {
+          "callbacksLast": false,
+          "shorthandFirst": true,
+          "shorthandLast": false,
+          "multiline": "last",
+          "ignoreCase": true,
+          "noSortAlphabetically": false,
+          "reservedFirst": [
+            "key",
+            "ref"
+          ],
+          "locale": "auto"
+        }
+      ],
+      "react/no-unsafe": "error",
+      "react/prefer-stateless-function": [
+        "error",
+        {
+          "ignorePureComponents": false
+        }
+      ],
+      "react/prop-types": "off"
+    }
+  }
+}
