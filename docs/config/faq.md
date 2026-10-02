@@ -1,4 +1,5 @@
 ---
+title: 'FAQ: Airbnb ESLint Flat Config'
 description: 'Answers to common questions about eslint-config-airbnb-extended: .eslintrc support, monorepos, import vs import-x, and why plugins are exported separately.'
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: 'Config Extensions: Parser & Resolver'
 description: 'Extensions combine parser options, import resolver settings and rules so you can build a custom Airbnb ESLint flat config.'
 ---
 

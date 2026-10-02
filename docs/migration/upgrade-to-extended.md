@@ -1,4 +1,5 @@
 ---
+title: 'Migrate from Airbnb ESLint to Flat Config'
 description: 'Migrate from eslint-config-airbnb, airbnb-base or airbnb-typescript to an ESLint 9 flat config with eslint-config-airbnb-extended.'
 ---
 

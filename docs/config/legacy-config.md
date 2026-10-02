@@ -1,4 +1,5 @@
 ---
+title: 'Legacy Config: Drop-in Airbnb Replacement'
 description: 'Drop-in flat config replacement for eslint-config-airbnb, eslint-config-airbnb-base and eslint-config-airbnb-typescript on ESLint 9.'
 ---
 

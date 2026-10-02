@@ -1,4 +1,5 @@
 ---
+title: 'create-airbnb-x-config CLI Guide'
 description: 'Use the create-airbnb-x-config CLI to generate an Airbnb ESLint flat config (eslint.config.mjs) for TypeScript, React, Next.js or Node.'
 ---
 

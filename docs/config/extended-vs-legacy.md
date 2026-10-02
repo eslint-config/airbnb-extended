@@ -1,4 +1,5 @@
 ---
+title: 'Extended vs Legacy Airbnb ESLint Config'
 description: 'Compare the Extended and Legacy Airbnb ESLint flat configs and choose the right one for a new project or a migration from old Airbnb configs.'
 ---
 

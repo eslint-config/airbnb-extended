@@ -1,4 +1,5 @@
 ---
+title: 'Upgrade to v3: Migration Guide'
 description: 'Upgrade eslint-config-airbnb-extended to v3: ESM-only, bundled plugins, Node 18.18+ and redesigned CLI options.'
 ---
 

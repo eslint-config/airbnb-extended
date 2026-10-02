@@ -1,4 +1,5 @@
 ---
+title: 'Helpers: Import Settings & TS Resolver'
 description: 'Helper utilities for Airbnb ESLint flat config: file extensions, dev dependency globs, import-x resolver settings and a monorepo-aware TypeScript resolver.'
 ---
 

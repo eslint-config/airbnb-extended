@@ -1,4 +1,5 @@
 ---
+title: 'Getting Started: Airbnb ESLint Flat Config'
 description: 'Get started with eslint-config-airbnb-extended, the maintained Airbnb ESLint config for ESLint 9 flat config with TypeScript, React, Next.js and Node support.'
 ---
 

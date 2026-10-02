@@ -1,4 +1,5 @@
 ---
+title: 'Bundled ESLint Plugins'
 description: 'ESLint plugins bundled with eslint-config-airbnb-extended: Stylistic, import-x, n, React, React Hooks, JSX a11y, Next.js and typescript-eslint.'
 ---
 

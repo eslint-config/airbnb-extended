@@ -1,4 +1,5 @@
 ---
+title: 'Install Airbnb ESLint Flat Config'
 description: 'Install the Airbnb ESLint config for ESLint 9 flat config in seconds with the create-airbnb-x-config CLI using npm, yarn, pnpm or bun.'
 ---
 

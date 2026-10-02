@@ -1,4 +1,5 @@
 ---
+title: 'Strict Rules: Imports, React, TypeScript'
 description: 'Enable optional strict Airbnb ESLint rules for imports, React and TypeScript for tighter type safety and consistency.'
 ---
 

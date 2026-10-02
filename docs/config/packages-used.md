@@ -1,4 +1,5 @@
 ---
+title: 'Packages Used: ESLint Plugins & Resolvers'
 description: 'The ESLint plugins and resolvers behind eslint-config-airbnb-extended, including typescript-eslint, import-x, ESLint Stylistic and eslint-plugin-react.'
 ---
 

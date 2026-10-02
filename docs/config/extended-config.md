@@ -1,4 +1,5 @@
 ---
+title: 'Extended Config for ESLint 9 Flat Config'
 description: 'The Extended config is a modern Airbnb ESLint flat config for TypeScript and JavaScript, with import-x, ESLint Stylistic, Node and Next.js support.'
 ---
 

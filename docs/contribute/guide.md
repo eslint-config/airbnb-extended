@@ -1,4 +1,5 @@
 ---
+title: 'Contributing to Airbnb ESLint Extended'
 description: 'How to contribute to eslint-config-airbnb-extended: set up the pnpm monorepo, run lint checks and open a pull request.'
 ---
 

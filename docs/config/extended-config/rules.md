@@ -1,4 +1,5 @@
 ---
+title: 'Airbnb ESLint Rule Groups'
 description: 'Airbnb ESLint rule groups for base JavaScript, Node, React, Next.js and TypeScript, ready to use in your ESLint 9 flat config.'
 ---
 

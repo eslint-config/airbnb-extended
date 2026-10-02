@@ -1,4 +1,5 @@
 ---
+title: 'Why Airbnb ESLint Extended Exists'
 description: 'Why eslint-config-airbnb-extended exists: the original Airbnb ESLint config is unmaintained, lacks TypeScript support and does not work with ESLint 9 flat config.'
 ---
 
