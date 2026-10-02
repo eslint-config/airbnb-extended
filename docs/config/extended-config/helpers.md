@@ -1,3 +1,7 @@
+---
+description: 'Helper utilities for Airbnb ESLint flat config: file extensions, dev dependency globs, import-x resolver settings and a monorepo-aware TypeScript resolver.'
+---
+
 # Helpers {#helpers}
 
 The `helpers` object provides a set of reusable utilities designed to simplify ESLint configuration and reduce duplication across JavaScript and TypeScript setups.
@@ -24,7 +28,7 @@ A centralized collection of file extensions and glob patterns used across the co
 ```ts
 import { helpers } from 'eslint-config-airbnb-extended';
 
-const { jsFiles, tsFiles } = helpers;
+const { jsFiles, tsFiles } = helpers.extensions;
 
 export default [
   {
@@ -46,7 +50,7 @@ type GetDevDepsList = (language: 'javascript' | 'typescript') => string[];
   - Mocks
   - Config files (Jest, Vite, Webpack, ESLint, etc.)
 
-- Automatically adapts extensions based on the selected language
+- Covers both JavaScript and TypeScript file extensions, so mixed projects work with either value
 - Helps configure rules like `import-x/no-extraneous-dependencies`
 
 ### Example {#get-dev-deps-list-example}
@@ -96,11 +100,11 @@ type GetImportSettingsParams = {
 ### Example {#get-import-settings-example}
 
 ```ts
-import { getImportSettings } from '@/helpers';
+import { helpers } from 'eslint-config-airbnb-extended';
 
 export default [
   {
-    settings: getImportSettings({
+    settings: helpers.getImportSettings({
       javascript: false,
       typescript: true,
       jsx: true,

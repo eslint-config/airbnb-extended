@@ -1,3 +1,7 @@
+---
+description: 'Compare the Extended and Legacy Airbnb ESLint flat configs and choose the right one for a new project or a migration from old Airbnb configs.'
+---
+
 # Extended vs Legacy {#extended-vs-legacy}
 
 `eslint-config-airbnb-extended` ships in two flavors. Both are **flat-config only** (no `.eslintrc*`) and work great with TypeScript, what differs is their philosophy and how opinionated they are.

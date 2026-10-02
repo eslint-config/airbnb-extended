@@ -1,3 +1,7 @@
+---
+description: 'Enable optional strict Airbnb ESLint rules for imports, React and TypeScript for tighter type safety and consistency.'
+---
+
 # Strict Rules {#strict-rules}
 
 The `eslint-config-airbnb-extended` package comes with a set of **stricter ESLint rules** for `Imports`, `React`, and `TypeScript` that go beyond the default configuration.
@@ -40,11 +44,10 @@ This setup ensures that the strict rules are applied on top of your current conf
 These rules are designed to keep your imports **organized, efficient, and predictable**.
 Key features include:
 
-- Enforcing a consistent and logical import order (e.g., external → internal → local modules).
+- Enforcing a consistent and logical import order (e.g., external → internal → local modules), with type imports grouped separately.
 - Differentiating clearly between **type imports** (`import type`) and **value imports**.
-- Preventing duplicate imports or unnecessary re-exports.
-- Detecting unresolved imports earlier.
-- and many more...
+- Disallowing namespace imports (`import * as foo`).
+- Disallowing anonymous default exports, so every export has a searchable name.
 
 This ensures your codebase remains **clean and easy to navigate**, even as it scales.
 

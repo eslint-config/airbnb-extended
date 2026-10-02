@@ -1,3 +1,7 @@
+---
+description: 'Airbnb ESLint rule groups for base JavaScript, Node, React, Next.js and TypeScript, ready to use in your ESLint 9 flat config.'
+---
+
 # Rules {#rules}
 
 The `rules` are the **building blocks** of each config. Every config is just a collection of these rule groups.
@@ -9,7 +13,7 @@ The `rules` are the **building blocks** of each config. Every config is just a c
 | **Best Practices** | Enforces common best practices to improve code quality and maintainability.     |
 | **Errors**         | Helps catch runtime errors and unsafe patterns early.                           |
 | **ES6**            | Provides rules specific to ES6+ syntax and features.                            |
-| **Imports**        | Ensures proper import/export usage with `eslint-plugin-import`.                 |
+| **Imports**        | Ensures proper import/export usage with `eslint-plugin-import-x`.               |
 | **Imports Strict** | See [Strict Imports](../../customization/strict-rules.md#strict-imports-rules). |
 | **Strict**         | Enables strict mode rules.                                                      |
 | **Style**          | Covers general code style rules such as spacing, quotes, and semicolons.        |
