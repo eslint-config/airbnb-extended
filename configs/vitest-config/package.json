@@ -28,7 +28,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "vitest": "^3.2.4"
+    "vitest": "catalog:"
   },
   "devDependencies": {
     "@airbnb-extended/typescript-config": "workspace:*"
