@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eslint-airbnb-extended.nishargshah.dev/sitemap.xml

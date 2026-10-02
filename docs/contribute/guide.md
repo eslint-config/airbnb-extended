@@ -1,3 +1,8 @@
+---
+title: 'Contributing to Airbnb ESLint Extended'
+description: 'How to contribute to eslint-config-airbnb-extended: set up the pnpm monorepo, run lint checks and open a pull request.'
+---
+
 # Contributing {#contributing}
 
 Thank you for considering contributing to `eslint-config-airbnb-extended`. We welcome all contributions, whether it’s fixing a bug, improving documentation, or suggesting new rules.
@@ -75,7 +80,21 @@ We follow **Conventional Commits** for a clean commit history. Examples:
 - `fix: resolve path alias issue in eslint-import-resolver-typescript`
 - `docs: update installation steps`
 
-### 7. Running Scripts {#running-scripts}
+### 7. Running Tests {#running-tests}
+
+Both packages have a [Vitest](https://vitest.dev) suite in their `tests/` folder:
+
+```sh
+$ pnpm test
+```
+
+If you change a rule or a config on purpose, a snapshot test will fail. Review the diff, then update the snapshots and commit them:
+
+```sh
+$ pnpm test -u
+```
+
+### 8. Running Scripts {#running-scripts}
 
 Before pushing, ensure all scripts pass:
 
@@ -83,7 +102,7 @@ Before pushing, ensure all scripts pass:
 $ pnpm script:lint
 ```
 
-### 8. Submitting a PR {#submitting-pr}
+### 9. Submitting a PR {#submitting-pr}
 
 - Push your branch and open a Pull Request against `canary`.
 - Clearly describe the problem, your solution, and reference any related issues/discussions.

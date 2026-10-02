@@ -1,0 +1,72 @@
+{
+  "typescriptImportsRules": {
+    "name": "airbnb/config/typescript/import-x",
+    "files": [
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "import-x/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "cjs": "never",
+          "mjs": "never",
+          "jsx": "never",
+          "ts": "never",
+          "cts": "never",
+          "mts": "never",
+          "tsx": "never"
+        }
+      ],
+      "import-x/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "test/**",
+            "tests/**",
+            "spec/**",
+            "**/__tests__/**",
+            "**/__mocks__/**",
+            "test.{js,cjs,mjs,ts,cts,mts}",
+            "test-*.{js,cjs,mjs,ts,cts,mts}",
+            "**/*{.,_}{test,spec}.{js,cjs,mjs,ts,cts,mts}",
+            "**/jest.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/jest.setup.{js,cjs,mjs,ts,cts,mts}",
+            "**/vue.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/webpack.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/webpack.config.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/rollup.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/rollup.config.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/gulpfile.{js,cjs,mjs,ts,cts,mts}",
+            "**/gulpfile.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/Gruntfile{,.{js,cjs,mjs,ts,cts,mts}}",
+            "**/protractor.conf.{js,cjs,mjs,ts,cts,mts}",
+            "**/protractor.conf.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/karma.conf.{js,cjs,mjs,ts,cts,mts}",
+            "**/.eslintrc.{js,cjs,mjs,ts,cts,mts}",
+            "**/*.eslint.{js,cjs,mjs,ts,cts,mts}",
+            "**/eslint.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/prettier.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/lint-staged.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/vite.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/vitest.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/tailwind.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/tsdown.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/tsup.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/drizzle.config.{js,cjs,mjs,ts,cts,mts}"
+          ],
+          "optionalDependencies": false,
+          "peerDependencies": true,
+          "bundledDependencies": true
+        }
+      ],
+      "import-x/named": "off",
+      "import-x/no-named-as-default-member": "off"
+    }
+  }
+}

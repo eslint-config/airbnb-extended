@@ -1,0 +1,59 @@
+[
+  {
+    "name": "airbnb/config/react-typescript-react",
+    "files": [
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".jsx",
+            ".tsx"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "airbnb/config/react-typescript-settings-extensions-configurations",
+    "files": [
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "settings": {
+      "import-x/resolver-next": [
+        "[resolver: eslint-plugin-import-x:node]",
+        "[resolver: eslint-import-resolver-typescript/auto]"
+      ],
+      "import-x/extensions": [
+        ".ts",
+        ".cts",
+        ".mts",
+        ".tsx",
+        ".d.ts"
+      ],
+      "import-x/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts",
+          ".cts",
+          ".mts",
+          ".tsx",
+          ".d.ts"
+        ]
+      },
+      "import-x/external-module-folders": [
+        "node_modules",
+        "node_modules/@types"
+      ]
+    }
+  }
+]

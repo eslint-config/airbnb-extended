@@ -60,6 +60,10 @@ export const nextBaseRules = defineConfigObject({
     // https://nextjs.org/docs/messages/no-img-element
     '@next/next/no-img-element': 'warn',
 
+    // Prevent usage of location.assign or location.href assignment to navigate to internal Next.js pages.
+    // https://nextjs.org/docs/messages/no-location-assign-relative-destination
+    '@next/next/no-location-assign-relative-destination': 'warn',
+
     // Prevent page-only custom fonts.
     // https://nextjs.org/docs/messages/no-page-custom-font
     '@next/next/no-page-custom-font': 'warn',

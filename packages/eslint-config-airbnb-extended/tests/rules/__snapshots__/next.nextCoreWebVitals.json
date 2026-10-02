@@ -1,0 +1,20 @@
+{
+  "nextCoreWebVitalsRules": {
+    "name": "airbnb/config/next/core-web-vitals",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "@next/next/no-html-link-for-pages": "error",
+      "@next/next/no-sync-scripts": "error"
+    }
+  }
+}

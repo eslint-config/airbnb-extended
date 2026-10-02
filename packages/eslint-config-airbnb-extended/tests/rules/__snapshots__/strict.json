@@ -1,0 +1,22 @@
+{
+  "strictRules": {
+    "name": "airbnb/config/strict",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "strict": [
+        "error",
+        "never"
+      ]
+    }
+  }
+}

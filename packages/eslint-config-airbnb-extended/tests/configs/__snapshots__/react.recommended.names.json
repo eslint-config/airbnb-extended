@@ -1,0 +1,9 @@
+[
+  "airbnb/config/react",
+  "airbnb/config/react-jsx-a11y",
+  "airbnb/config/react-hooks",
+  "airbnb/config/react/stylistic",
+  "airbnb/config/react-settings-extensions-configurations",
+  "airbnb/config/react-configurations",
+  "airbnb/config/react-stylistic"
+]

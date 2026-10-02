@@ -36,12 +36,16 @@
     "build": "tsdown",
     "build:dev": "tsdown --watch",
     "dev": "tsx index.ts",
-    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore",
-    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore",
+    "format": "prettier . --check --log-level silent --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
+    "format:fix": "prettier . --write --log-level silent --ignore-path ../../.gitignore --ignore-path ../../.prettierignore",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "script:lint": "bash -e ../../scripts/lint.sh --filter=create-airbnb-x-config",
     "start": "node ./dist/index.mjs",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -54,10 +58,14 @@
   },
   "devDependencies": {
     "@airbnb-extended/typescript-config": "workspace:*",
+    "@airbnb-extended/vitest-config": "workspace:*",
     "@types/cross-spawn": "^6.0.6",
     "@types/prompts": "^2.4.9",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
     "tsdown": "catalog:",
-    "tsx": "catalog:"
+    "tsx": "catalog:",
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"

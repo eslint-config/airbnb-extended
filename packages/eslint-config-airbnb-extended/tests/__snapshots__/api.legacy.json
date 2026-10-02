@@ -1,0 +1,38 @@
+{
+  "configs": {
+    "base": {
+      "legacy": "[array of 6]",
+      "recommended": "[array of 9]",
+      "typescript": "[array of 3]"
+    },
+    "react": {
+      "base": "[array of 9]",
+      "hooks": "[array of 1]",
+      "legacy": "[array of 6]",
+      "recommended": "[array of 11]",
+      "typescript": "[array of 5]"
+    }
+  },
+  "rules": {
+    "base": {
+      "bestPractices": null,
+      "errors": null,
+      "es6": null,
+      "imports": null,
+      "node": null,
+      "strict": null,
+      "style": null,
+      "variables": null
+    },
+    "react": {
+      "base": null,
+      "hooks": null,
+      "jsxA11y": null
+    },
+    "typescript": {
+      "base": null,
+      "overrides": null,
+      "settings": null
+    }
+  }
+}

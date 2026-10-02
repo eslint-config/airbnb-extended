@@ -1,3 +1,8 @@
+---
+title: 'CLI Options for Airbnb ESLint Config'
+description: 'All create-airbnb-x-config CLI flags to generate an Airbnb ESLint flat config without prompts: config, language, runtime, strict rules and package manager.'
+---
+
 # Setup {#setup}
 
 When you run the CLI, it launches an **interactive wizard**.

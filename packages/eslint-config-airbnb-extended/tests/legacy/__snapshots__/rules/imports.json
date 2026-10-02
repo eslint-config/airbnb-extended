@@ -1,0 +1,263 @@
+{
+  "legacyImportsRules": {
+    "name": "airbnb/config/import/legacy",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "plugins": {
+      "import": "[plugin]"
+    },
+    "languageOptions": {
+      "globals": {
+        "Array": false,
+        "ArrayBuffer": false,
+        "Boolean": false,
+        "DataView": false,
+        "Date": false,
+        "decodeURI": false,
+        "decodeURIComponent": false,
+        "encodeURI": false,
+        "encodeURIComponent": false,
+        "Error": false,
+        "escape": false,
+        "eval": false,
+        "EvalError": false,
+        "Float32Array": false,
+        "Float64Array": false,
+        "Function": false,
+        "Infinity": false,
+        "Int16Array": false,
+        "Int32Array": false,
+        "Int8Array": false,
+        "Intl": false,
+        "isFinite": false,
+        "isNaN": false,
+        "JSON": false,
+        "Map": false,
+        "Math": false,
+        "NaN": false,
+        "Number": false,
+        "Object": false,
+        "parseFloat": false,
+        "parseInt": false,
+        "Promise": false,
+        "Proxy": false,
+        "RangeError": false,
+        "ReferenceError": false,
+        "Reflect": false,
+        "RegExp": false,
+        "Set": false,
+        "String": false,
+        "Symbol": false,
+        "SyntaxError": false,
+        "TypeError": false,
+        "Uint16Array": false,
+        "Uint32Array": false,
+        "Uint8Array": false,
+        "Uint8ClampedArray": false,
+        "undefined": false,
+        "unescape": false,
+        "URIError": false,
+        "WeakMap": false,
+        "WeakSet": false
+      },
+      "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+      }
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".cjs",
+            ".mjs",
+            ".json"
+          ]
+        }
+      },
+      "import/extensions": [
+        ".js",
+        ".cjs",
+        ".mjs",
+        ".jsx"
+      ],
+      "import/core-modules": [],
+      "import/ignore": [
+        "node_modules",
+        "\\.(coffee|scss|css|less|hbs|svg|json)$"
+      ]
+    },
+    "rules": {
+      "import/no-unresolved": [
+        "error",
+        {
+          "commonjs": true,
+          "caseSensitive": true
+        }
+      ],
+      "import/named": "error",
+      "import/default": "off",
+      "import/namespace": "off",
+      "import/export": "error",
+      "import/no-named-as-default": "error",
+      "import/no-named-as-default-member": "error",
+      "import/no-deprecated": "off",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "test/**",
+            "tests/**",
+            "spec/**",
+            "**/__tests__/**",
+            "**/__mocks__/**",
+            "test.{js,cjs,mjs,ts,cts,mts}",
+            "test-*.{js,cjs,mjs,ts,cts,mts}",
+            "**/*{.,_}{test,spec}.{js,cjs,mjs,ts,cts,mts}",
+            "**/jest.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/jest.setup.{js,cjs,mjs,ts,cts,mts}",
+            "**/vue.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/webpack.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/webpack.config.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/rollup.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/rollup.config.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/gulpfile.{js,cjs,mjs,ts,cts,mts}",
+            "**/gulpfile.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/Gruntfile{,.{js,cjs,mjs,ts,cts,mts}}",
+            "**/protractor.conf.{js,cjs,mjs,ts,cts,mts}",
+            "**/protractor.conf.*.{js,cjs,mjs,ts,cts,mts}",
+            "**/karma.conf.{js,cjs,mjs,ts,cts,mts}",
+            "**/.eslintrc.{js,cjs,mjs,ts,cts,mts}",
+            "**/*.eslint.{js,cjs,mjs,ts,cts,mts}",
+            "**/eslint.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/prettier.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/lint-staged.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/vite.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/vitest.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/tailwind.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/tsdown.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/tsup.config.{js,cjs,mjs,ts,cts,mts}",
+            "**/drizzle.config.{js,cjs,mjs,ts,cts,mts}"
+          ],
+          "optionalDependencies": false
+        }
+      ],
+      "import/no-mutable-exports": "error",
+      "import/no-commonjs": "off",
+      "import/no-amd": "error",
+      "import/no-nodejs-modules": "off",
+      "import/first": "error",
+      "import/imports-first": "off",
+      "import/no-duplicates": "error",
+      "import/no-namespace": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "mjs": "never",
+          "jsx": "never"
+        }
+      ],
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            [
+              "builtin",
+              "external",
+              "internal"
+            ]
+          ]
+        }
+      ],
+      "import/newline-after-import": "error",
+      "import/prefer-default-export": "error",
+      "import/no-restricted-paths": "off",
+      "import/max-dependencies": [
+        "off",
+        {
+          "max": 10
+        }
+      ],
+      "import/no-absolute-path": "error",
+      "import/no-dynamic-require": "error",
+      "import/no-internal-modules": [
+        "off",
+        {
+          "allow": []
+        }
+      ],
+      "import/unambiguous": "off",
+      "import/no-webpack-loader-syntax": "error",
+      "import/no-unassigned-import": "off",
+      "import/no-named-default": "error",
+      "import/no-anonymous-default-export": [
+        "off",
+        {
+          "allowArray": false,
+          "allowArrowFunction": false,
+          "allowAnonymousClass": false,
+          "allowAnonymousFunction": false,
+          "allowLiteral": false,
+          "allowObject": false
+        }
+      ],
+      "import/exports-last": "off",
+      "import/group-exports": "off",
+      "import/no-default-export": "off",
+      "import/no-named-export": "off",
+      "import/no-self-import": "error",
+      "import/no-cycle": [
+        "error",
+        {
+          "maxDepth": "∞"
+        }
+      ],
+      "import/no-useless-path-segments": [
+        "error",
+        {
+          "commonjs": true
+        }
+      ],
+      "import/dynamic-import-chunkname": [
+        "off",
+        {
+          "importFunctions": [],
+          "webpackChunknameFormat": "[0-9a-zA-Z-_/.]+"
+        }
+      ],
+      "import/no-relative-parent-imports": "off",
+      "import/no-unused-modules": [
+        "off",
+        {
+          "ignoreExports": [],
+          "missingExports": true,
+          "unusedExports": true
+        }
+      ],
+      "import/no-import-module-exports": [
+        "error",
+        {
+          "exceptions": []
+        }
+      ],
+      "import/no-relative-packages": "error",
+      "import/consistent-type-specifier-style": [
+        "off",
+        "prefer-inline"
+      ],
+      "import/no-empty-named-blocks": "off"
+    }
+  }
+}

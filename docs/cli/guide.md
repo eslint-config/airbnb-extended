@@ -1,3 +1,8 @@
+---
+title: 'create-airbnb-x-config CLI Guide'
+description: 'Use the create-airbnb-x-config CLI to generate an Airbnb ESLint flat config (eslint.config.mjs) for TypeScript, React, Next.js or Node.'
+---
+
 # CLI {#cli}
 
 The `create-airbnb-x-config` tool helps you quickly scaffold an **ESLint configuration** based on the `eslint-config-airbnb-extended` presets.
@@ -109,8 +114,6 @@ No matter which config type you choose, the CLI will end with these questions:
 - **Yes →** Skips auto-installation. At the end, you’ll see a list of **Commands** you can run manually.
 - **No →** Automatically installs everything for you. At the end, you’ll also see the **Executed Commands** for reference.
 
-Here’s a polished rephrase in simpler, user-friendly language:
-
 ## Example Output {#example-output}
 
 Once you finish answering the prompts, the CLI will show you a **ready-to-run command** that installs all the required dependencies using your preferred package manager.
@@ -120,19 +123,19 @@ Example installation command:
 ::: code-group
 
 ```sh [npm]
-$ npm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ npm install -D eslint@^9 @eslint/compat @eslint/js@^9 eslint-config-airbnb-extended
 ```
 
 ```sh [yarn]
-$ yarn add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ yarn add -D eslint@^9 @eslint/compat @eslint/js@^9 eslint-config-airbnb-extended
 ```
 
 ```sh [pnpm]
-$ pnpm install -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ pnpm install -D eslint@^9 @eslint/compat @eslint/js@^9 eslint-config-airbnb-extended
 ```
 
 ```sh [bun]
-$ bun add -D eslint @eslint/compat @eslint/js eslint-config-airbnb-extended
+$ bun add -D eslint@^9 @eslint/compat @eslint/js@^9 eslint-config-airbnb-extended
 ```
 
 :::
