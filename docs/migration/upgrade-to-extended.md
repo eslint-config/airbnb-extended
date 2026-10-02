@@ -1,3 +1,7 @@
+---
+description: 'Migrate from eslint-config-airbnb, airbnb-base or airbnb-typescript to an ESLint 9 flat config with eslint-config-airbnb-extended.'
+---
+
 # Migration Guide {#migration}
 
 Migrating from the old Airbnb ESLint configs to **eslint-config-airbnb-extended** is straightforward, but there are a few key changes you need to be aware of, especially around ESLint’s new **Flat Config** system.

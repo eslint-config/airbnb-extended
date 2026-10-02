@@ -1,3 +1,7 @@
+---
+description: 'Drop-in flat config replacement for eslint-config-airbnb, eslint-config-airbnb-base and eslint-config-airbnb-typescript on ESLint 9.'
+---
+
 # Legacy Config {#legacy-config}
 
 The **Legacy Config** is designed for teams who want a **One-To-One/Drop-In Replacement** for the original Airbnb ESLint configs, but with support for **Flat Config** (ESLint 9+).

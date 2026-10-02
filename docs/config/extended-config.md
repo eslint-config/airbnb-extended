@@ -1,3 +1,7 @@
+---
+description: 'The Extended config is a modern Airbnb ESLint flat config for TypeScript and JavaScript, with import-x, ESLint Stylistic, Node and Next.js support.'
+---
+
 # Extended Config {#extended-config}
 
 The **Extended config** is a modern version of Airbnb’s ESLint setup, built for today’s **TypeScript** and **JavaScript** projects. It uses the latest **Flat Config format**, adds better support for **imports**, **styles**, and **TypeScript**, and is fully ready for **ESLint 9+**.
@@ -13,7 +17,7 @@ The **Extended config** is a modern version of Airbnb’s ESLint setup, built fo
 
 ## Overview {#overview}
 
-The **Extended package** in `eslint-config-airbnb-extended` provides four main exports:
+The **Extended package** in `eslint-config-airbnb-extended` provides five main exports:
 
 - **Rules** → Core rule groups that enforce good coding practices and are used in configs.
 - **Plugins** → External ESLint plugins used to power specific rules (e.g., React, TypeScript, Next.js).

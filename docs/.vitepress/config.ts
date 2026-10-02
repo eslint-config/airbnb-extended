@@ -6,6 +6,8 @@ import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import llmstxt from 'vitepress-plugin-llms';
 
+import type { HeadConfig } from 'vitepress';
+
 const projectRoot = fileURLToPath(new URL('../..', import.meta.url));
 const { version } = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'));
 
@@ -17,10 +19,39 @@ const title = 'ESLint Airbnb Extended';
 const description =
   'A powerful ESLint configuration extending the popular Airbnb style guide, with added support for TypeScript.';
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: title,
+      url: siteUrl,
+      description,
+    },
+    {
+      '@type': 'SoftwareSourceCode',
+      name: 'eslint-config-airbnb-extended',
+      description,
+      url: siteUrl,
+      codeRepository: githubUrl,
+      programmingLanguage: ['TypeScript', 'JavaScript'],
+      runtimePlatform: 'Node.js',
+      license: 'https://opensource.org/licenses/MIT',
+      version,
+      author: {
+        '@type': 'Person',
+        name: 'Nisharg Shah',
+      },
+    },
+  ],
+};
+
 export default defineConfig({
   title,
+  titleTemplate: `:title | ${title}`,
   description,
   cleanUrls: true,
+  srcExclude: ['README.md'],
   lastUpdated: true,
   rewrites: {},
   markdown: {
@@ -33,6 +64,34 @@ export default defineConfig({
   },
   sitemap: {
     hostname: siteUrl,
+  },
+  transformPageData(pageData) {
+    const pagePath = pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '');
+
+    const pageUrl = `${siteUrl}/${pagePath}`;
+    const pageTitle =
+      !pageData.title || pageData.title === title ? title : `${pageData.title} | ${title}`;
+    const pageDescription = pageData.description || description;
+
+    const head = [
+      ...(pageData.frontmatter.head ?? []),
+      ['link', { rel: 'canonical', href: pageUrl }],
+      ['meta', { property: 'og:title', content: pageTitle }],
+      ['meta', { property: 'og:description', content: pageDescription }],
+      ['meta', { property: 'og:url', content: pageUrl }],
+      ['meta', { name: 'twitter:title', content: pageTitle }],
+      ['meta', { name: 'twitter:description', content: pageDescription }],
+      ...(pageData.relativePath === 'index.md'
+        ? [['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)] as HeadConfig]
+        : []),
+    ];
+
+    return {
+      frontmatter: {
+        ...pageData.frontmatter,
+        head,
+      },
+    };
   },
   themeConfig: {
     logo: '/logo.png',
@@ -208,30 +267,10 @@ export default defineConfig({
     ['meta', { name: 'author', content: `${title} Team` }],
     [
       'meta',
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' },
-    ],
-    [
-      'meta',
-      {
-        name: 'description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
       {
         name: 'keywords',
         content:
           'eslint, airbnb, airbnb config, eslint config airbnb, eslint config airbnb base, eslint config airbnb typescript, eslint config airbnb extended, eslint airbnb, eslint airbnb base, eslint airbnb typescript, eslint airbnb extended',
-      },
-    ],
-    // OG
-    ['meta', { property: 'og:title', content: title }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: description,
       },
     ],
     [
@@ -242,17 +281,7 @@ export default defineConfig({
       },
     ],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:url', content: siteUrl }],
     ['meta', { property: 'og:site_name', content: title }],
-    // TWITTER
-    ['meta', { name: 'twitter:title', content: title }],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content: description,
-      },
-    ],
     [
       'meta',
       {

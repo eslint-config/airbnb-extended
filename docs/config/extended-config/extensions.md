@@ -1,3 +1,7 @@
+---
+description: 'Extensions combine parser options, import resolver settings and rules so you can build a custom Airbnb ESLint flat config.'
+---
+
 # Extensions {#extensions}
 
 Normally, many plugins hide their **recommended configs**. That means if you want to build a fully custom config, you can’t access everything. Extensions solve this problem.

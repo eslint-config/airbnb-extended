@@ -1,3 +1,7 @@
+---
+description: 'Answers to common questions about eslint-config-airbnb-extended: .eslintrc support, monorepos, import vs import-x, and why plugins are exported separately.'
+---
+
 # FAQ {#faq}
 
 Here are some of the most common questions and clarifications about using `eslint-config-airbnb-extended`. This section will help you understand differences, setup tips, and design decisions behind the package.
@@ -26,7 +30,7 @@ Here are your options:
 
 ::: tip
 
-If you skip the the package installation in the CLI, the CLI will generate a set of ready-to-use commands based on your selection, so you can copy-paste and adapt them to your monorepo’s structure.
+If you skip the package installation in the CLI, the CLI will generate a set of ready-to-use commands based on your selection, so you can copy-paste and adapt them to your monorepo’s structure.
 
 :::
 
