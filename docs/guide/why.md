@@ -1,3 +1,8 @@
+---
+title: 'Why Airbnb ESLint Extended Exists'
+description: 'Why eslint-config-airbnb-extended exists: the original Airbnb ESLint config is unmaintained, lacks TypeScript support and does not work with ESLint 9 flat config.'
+---
+
 # Why? {#why}
 
 Writing clean and consistent code is super important, not just for you, but for your entire team. A consistent coding style makes projects easier to maintain, reduces bugs, and helps every developer quickly understand each other’s code.
@@ -15,4 +20,4 @@ But here’s the issue:
 - It lacks **TypeScript support**.
 - It contains **some rules** that create unnecessary friction.
 
-In today’s fast-moving JavaScript ecosystem, three years is a long time. By the time ESLint 9 came around, the old Airbnb config simply couldn’t keep up.
+In today’s fast-moving JavaScript ecosystem, four years is a long time. By the time ESLint 9 came around, the old Airbnb config simply couldn’t keep up.

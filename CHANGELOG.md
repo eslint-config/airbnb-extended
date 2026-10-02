@@ -1,3 +1,21 @@
+## 3.3.0 (2026-10-03)
+
+### 🚨 Breaking Changes
+
+- **eslint-config-airbnb-extended:** Introduced the `n/prefer-import/assert-strict` rule with `error` severity, `node:assert` must now be replaced by `node:assert/strict`
+
+### 🚀 Features
+
+- **eslint-config-airbnb-extended:** Introduced the `n/prefer-process-get-builtin-module` rule, set to `off`
+- **eslint-config-airbnb-extended:** Introduced the `@next/next/no-location-assign-relative-destination` rule with `warn` severity
+- **eslint-config-airbnb-extended:** Added a Vitest test suite with rule snapshots and plugin rule coverage checks
+
+### 🩹 Fixes
+
+- **eslint-config-airbnb-extended:** Improved the Node base rules
+- Improved docs SEO and titles
+- Updated deps
+
 ## 3.2.0 (2026-08-03)
 
 ### 🚀 Features

@@ -1,6 +1,8 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: ESLint Airbnb Extended
+titleTemplate: Airbnb ESLint Flat Config for ESLint 9 & TypeScript
 
 hero:
   name: 'ESLint'

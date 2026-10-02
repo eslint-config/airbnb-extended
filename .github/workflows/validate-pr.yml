@@ -38,3 +38,6 @@ jobs:
 
       - name: Checking Linting
         run: pnpm --silent script:lint --for=ci
+
+      - name: Running Tests
+        run: pnpm test

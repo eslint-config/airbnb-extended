@@ -1,0 +1,92 @@
+[
+  {
+    "name": "airbnb/config/react-settings-extensions-configurations",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx"
+    ],
+    "settings": {
+      "import-x/resolver-next": [
+        "[resolver: eslint-plugin-import-x:node]"
+      ],
+      "import-x/extensions": [
+        ".js",
+        ".cjs",
+        ".mjs",
+        ".jsx"
+      ]
+    }
+  },
+  {
+    "name": "airbnb/config/react-configurations",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
+          ],
+          "allowAfterThis": false,
+          "allowAfterSuper": false,
+          "enforceInMethodNames": true
+        }
+      ],
+      "class-methods-use-this": [
+        "error",
+        {
+          "exceptMethods": [
+            "render",
+            "getInitialState",
+            "getDefaultProps",
+            "getChildContext",
+            "componentWillMount",
+            "UNSAFE_componentWillMount",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "UNSAFE_componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentWillUpdate",
+            "UNSAFE_componentWillUpdate",
+            "componentDidUpdate",
+            "componentWillUnmount",
+            "componentDidCatch",
+            "getSnapshotBeforeUpdate"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "airbnb/config/react-stylistic",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "@stylistic/jsx-quotes": [
+        "error",
+        "prefer-double"
+      ]
+    }
+  }
+]

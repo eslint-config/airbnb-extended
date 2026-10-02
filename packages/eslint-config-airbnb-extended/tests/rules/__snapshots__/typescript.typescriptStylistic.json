@@ -1,0 +1,40 @@
+{
+  "typescriptStylisticRules": {
+    "name": "airbnb/config/typescript/typescript-stylistic",
+    "files": [
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "@stylistic/comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "always-multiline",
+          "importAttributes": "never",
+          "dynamicImports": "never",
+          "enums": "always-multiline",
+          "generics": "always-multiline",
+          "tuples": "always-multiline"
+        }
+      ],
+      "@stylistic/member-delimiter-style": "error",
+      "@stylistic/space-infix-ops": [
+        "error",
+        {
+          "int32Hint": false,
+          "ignoreTypes": false
+        }
+      ],
+      "@stylistic/type-annotation-spacing": "error",
+      "@stylistic/type-generic-spacing": "error",
+      "@stylistic/type-named-tuple-spacing": "off"
+    }
+  }
+}

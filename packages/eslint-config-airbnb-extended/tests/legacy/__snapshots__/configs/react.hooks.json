@@ -1,0 +1,30 @@
+[
+  {
+    "name": "airbnb/config/react-hooks/legacy",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "plugins": {
+      "react-hooks": "[plugin: eslint-plugin-react-hooks]"
+    },
+    "languageOptions": {
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      }
+    },
+    "rules": {
+      "react-hooks/exhaustive-deps": "error",
+      "react-hooks/rules-of-hooks": "error"
+    }
+  }
+]

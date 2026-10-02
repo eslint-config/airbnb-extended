@@ -1,3 +1,8 @@
+---
+title: 'Upgrade to v3: Migration Guide'
+description: 'Upgrade eslint-config-airbnb-extended to v3: ESM-only, bundled plugins, Node 18.18+ and redesigned CLI options.'
+---
+
 # Upgrade to v3 {#upgrade-to-v3}
 
 Version **v3** is the biggest upgrade so far, introducing several long-awaited improvements and structural changes.

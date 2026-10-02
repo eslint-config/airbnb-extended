@@ -10,8 +10,8 @@ allowBuilds:
 
 catalog:
   eslint: ^9.39.5
-  tsdown: ^0.22.14
-  tsx: ^4.23.1
+  tsdown: ^0.23.0
+  tsx: ^4.23.15
   typescript: ^6.0.3
 
 minimumReleaseAge: 1440

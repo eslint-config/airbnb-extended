@@ -1,0 +1,78 @@
+{
+  "importsStrictRules": {
+    "name": "airbnb/config/import-x/strict",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "import-x/consistent-type-specifier-style": [
+        "error",
+        "prefer-top-level"
+      ],
+      "import-x/no-anonymous-default-export": [
+        "error",
+        {
+          "allowArray": true,
+          "allowObject": true
+        }
+      ],
+      "import-x/no-namespace": "error",
+      "import-x/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            [
+              "parent",
+              "sibling",
+              "index"
+            ],
+            "object",
+            [
+              "unknown",
+              "type"
+            ]
+          ],
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "external",
+              "position": "before"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": [
+            "type"
+          ],
+          "distinctGroup": true,
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc",
+            "orderImportKind": "asc",
+            "caseInsensitive": true
+          },
+          "named": {
+            "enabled": true,
+            "import": true,
+            "export": true,
+            "require": true,
+            "cjsExports": true,
+            "types": "types-last"
+          },
+          "warnOnUnassignedImports": true,
+          "sortTypesGroup": true,
+          "newlines-between-types": "always"
+        }
+      ]
+    }
+  }
+}

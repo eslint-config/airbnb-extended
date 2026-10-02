@@ -1,0 +1,20 @@
+{
+  "nodePromisesRules": {
+    "name": "airbnb/config/node/promises",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "n/prefer-promises/dns": "error",
+      "n/prefer-promises/fs": "error"
+    }
+  }
+}

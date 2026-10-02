@@ -1,0 +1,13 @@
+[
+  "airbnb/config/react",
+  "airbnb/config/react-jsx-a11y",
+  "airbnb/config/react-hooks",
+  "airbnb/config/react/stylistic",
+  "airbnb/config/react-settings-extensions-configurations",
+  "airbnb/config/react-configurations",
+  "airbnb/config/react-stylistic",
+  "airbnb/config/next/base",
+  "airbnb/config/next/core-web-vitals",
+  "airbnb/config/next-import-x",
+  "airbnb/config/next-react-jsx-runtime"
+]

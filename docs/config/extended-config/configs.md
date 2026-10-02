@@ -1,3 +1,8 @@
+---
+title: 'Ready-to-Use Airbnb ESLint Configs'
+description: 'Ready-to-use Airbnb ESLint flat configs for base JavaScript, TypeScript, React, Next.js and Node projects, with recommended and all variants.'
+---
+
 # Configs {#configs}
 
 **Configs** are ready-to-use collections of rule groups combined with extensions.

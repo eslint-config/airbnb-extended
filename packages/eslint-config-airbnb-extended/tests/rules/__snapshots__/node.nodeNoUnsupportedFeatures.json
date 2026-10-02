@@ -1,0 +1,21 @@
+{
+  "nodeNoUnsupportedFeaturesRules": {
+    "name": "airbnb/config/node/unsupported-features",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "n/no-unsupported-features/es-builtins": "error",
+      "n/no-unsupported-features/es-syntax": "off",
+      "n/no-unsupported-features/node-builtins": "error"
+    }
+  }
+}

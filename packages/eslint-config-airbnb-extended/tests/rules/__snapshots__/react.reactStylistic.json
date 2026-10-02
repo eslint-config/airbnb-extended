@@ -1,0 +1,72 @@
+{
+  "reactStylisticRules": {
+    "name": "airbnb/config/react/stylistic",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "@stylistic/jsx-child-element-spacing": "off",
+      "@stylistic/jsx-closing-bracket-location": "off",
+      "@stylistic/jsx-closing-tag-location": "off",
+      "@stylistic/jsx-curly-brace-presence": "off",
+      "@stylistic/jsx-curly-newline": "off",
+      "@stylistic/jsx-curly-spacing": "off",
+      "@stylistic/jsx-equals-spacing": "off",
+      "@stylistic/jsx-first-prop-new-line": "off",
+      "@stylistic/jsx-function-call-newline": "off",
+      "@stylistic/jsx-indent-props": "off",
+      "@stylistic/jsx-max-props-per-line": "off",
+      "@stylistic/jsx-newline": "off",
+      "@stylistic/jsx-one-expression-per-line": "off",
+      "@stylistic/jsx-pascal-case": "off",
+      "@stylistic/jsx-props-no-multi-spaces": "off",
+      "@stylistic/jsx-quotes": "off",
+      "@stylistic/jsx-self-closing-comp": "off",
+      "@stylistic/jsx-tag-spacing": "off",
+      "@stylistic/jsx-wrap-multilines": "off"
+    }
+  },
+  "deprecatedReactStylisticRules": {
+    "name": "airbnb/config/react/stylistic/deprecated",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "@stylistic/jsx-indent": "off",
+      "@stylistic/jsx-sort-props": "off"
+    }
+  },
+  "experimentalReactStylisticRules": {
+    "name": "airbnb/config/react/stylistic/experimental",
+    "files": [
+      "**/*.js",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.cts",
+      "**/*.mts",
+      "**/*.tsx",
+      "**/*.d.ts"
+    ],
+    "rules": {
+      "@stylistic/exp-jsx-props-style": "off"
+    }
+  }
+}
