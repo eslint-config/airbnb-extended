@@ -11,7 +11,6 @@ concurrency:
 
 permissions:
   contents: write
-  pull-requests: write
   id-token: write
 
 jobs:
@@ -37,24 +36,28 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Create Version PR or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          version: pnpm changeset version
-          publish: pnpm pkg:publish
-          title: 'chore: bump version'
-          commit: 'chore: bump version'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and publish to npm
+        run: pnpm pkg:publish
+
+      - name: Push package tags
+        run: git push origin --tags
 
       - name: Create GitHub Release
-        if: steps.changesets.outputs.published == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           VERSION=$(node -p "require('./packages/eslint-config-airbnb-extended/package.json').version")
           TAG="V${VERSION}"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release ${TAG} already exists, skipping"
+            exit 0
+          fi
+
+          if ! npm view "eslint-config-airbnb-extended@${VERSION}" version >/dev/null 2>&1; then
+            echo "eslint-config-airbnb-extended@${VERSION} is not on npm, skipping"
+            exit 0
+          fi
 
           # Notes: the matching section of CHANGELOG.md
           awk -v v="$VERSION" '
